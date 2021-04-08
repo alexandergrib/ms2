@@ -62,5 +62,7 @@ input[type=text] {
     background: #ccc;
 }
 
-
+.hide {
+    visibility:hidden
+}
 /**/
