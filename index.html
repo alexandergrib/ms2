@@ -21,16 +21,27 @@
 </head>
 <body>
 <!--whole page div wrapper-->
-<div id="main">
-    <!--Search place holder-->
-    <div class="container search-div make-center">
-        <input id="searhField" type="text" placeholder="Search.." name="search">
-        <button id="search-button" type="submit"><i class="fa fa-search"></i></button>
-    </div>
-    <!--Info text placeholder-->
-    <div id="info-text" class="make-center"><p>Here will be how to use this website text</p></div>
 
-    <div class="container make-center">
+<!--Search place holder-->
+<div class="container search-div make-center">
+    <form>
+        <input id="searchField" type="text" placeholder="Search for a city" name="search">
+        <button id="search-button" type="submit"><i class="fa fa-search"></i></button>
+        <br>
+        <span class="msg"></span>
+    </form>
+    <!-- Rounded switch -->
+    <label class="switch">
+        <input id="checkbox" type="checkbox" name="checkbox" checked>
+        <span class="slider round"></span>
+    </label>
+</div>
+
+
+<!--Info text placeholder-->
+<div id="info-text" class="make-center"><p>Here will be how to use this website text</p></div>
+<div id="main" class=""> <!-- class hide removes whole section -->
+    <div class="container make-center ">
         <div class="row">
             <!--    containter for news-->
             <div class="col-sm-12 col-md-6" id="news">
@@ -44,7 +55,13 @@
             <!--container for weather-->
             <div class="col-sm-12 col-md-6" id="weather">
                 <div class="row">
-                    <div class="col-12">main</div>
+                    <div class="col-12">
+                        <div class="ajax-section">
+                            <div class="container">
+                                <ul class="cities"></ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-4">sub1</div>
@@ -63,7 +80,7 @@
     <!--The div element for the map -->
     <div id="map"></div>
 
-    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+
 
     <!--footer-->
 
@@ -74,9 +91,9 @@
 <!--        async defer>-->
 <!--</script>-->
 <script src="assets/js/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"-->
+<!--        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"-->
+<!--        crossorigin="anonymous"></script>-->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
