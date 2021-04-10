@@ -132,11 +132,13 @@ form.addEventListener("submit", e => {
 //http://twitter.github.io/typeahead.js/examples/
 //TODO add states into file
 
-import citiesList from './cities.js';
+// import citiesList from './cities.js';
 
-console.log(citiesList);
+
 
 var states = citiesList;
+
+console.log(states);
 //
 // var states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
 //     'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii',
