@@ -133,10 +133,7 @@ input:checked + .slider:before {
 
 
 /*--weather section----------------------------------*/
-#news {
-    background-color: #97a1b5;
-    width: 350px;
-}
+
 
 #weather {
     background-color: #1e2432;
@@ -247,4 +244,50 @@ ul {
     float: right;
     width: 500px;
     height: 300px;
+}
+
+/*news section----------------------*/
+#news {
+    background-color: #97a1b5;
+    width: 650px; /*350*/
+}
+
+
+
+
+#news h2 {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.article {
+    padding: 5px 0px;
+    margin-bottom: 5px;
+
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.article a {
+    font-size: 1.2em;
+    /*overflow: hidden;*/
+    color: #1e2432;
+}
+
+.article a:hover {
+    text-decoration: none;
+    color: #0f161c;
+    background-color: #53627c;
+
+
+    white-space: normal;
+    overflow: visible;
+    width: 100%;
+}
+
+
+.article a:visited {
+    color: #444856;
 }

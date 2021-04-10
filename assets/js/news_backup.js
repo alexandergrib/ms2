@@ -12,27 +12,25 @@ function fetchNews(country) {
 
 function populateNews(data) {
     if (data.status === "ok") {
-        console.log(data.articles);
+        console.log(data);
         //    -----------------------------------------------------------------------
-        const articles = data.articles;
-
-        if (document.querySelector("#news li:last-child")) {
-            for (let i=0; i< articles.length; i++) {
-                const li = document.createElement("li");
-                // console.log(articles[i]);
-                li.classList.add("article");
-                let markup = `
-                <a href="${articles[i].url}">
-                    ${articles[i].title}
+        const articles = data;
+        const markup = `
+                <a href="${articles[0].url}">
+                <h2 class="article-name">${articles[0].title}</h2>
                 </a>
                 
               `;
-                li.innerHTML = markup;
+        if (document.querySelector(".cities li:last-child")) {
+            const listItem = document.querySelector(".news--class li:last-child");
+            const li = document.createElement("li");
+            li.classList.add("article");
 
-                newsList.appendChild(li);
-            }
+            //  place HTML template here
 
+            li.innerHTML = markup;
 
+            listItem.parentNode.replaceChild(li, listItem);
 
         } else {
 
