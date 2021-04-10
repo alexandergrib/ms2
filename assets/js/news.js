@@ -22,7 +22,8 @@ function populateNews(data) {
                 // console.log(articles[i]);
                 li.classList.add("article");
                 let markup = `
-                <a href="${articles[i].url}">
+                <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                <a href="${articles[i].url}" title="${articles[i].title}">
                     ${articles[i].title}
                 </a>
                 

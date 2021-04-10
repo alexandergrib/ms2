@@ -55,7 +55,7 @@ form.addEventListener("submit", e => {
             } ...otherwise be more specific by providing the country code as well 😉`;
 
             form.reset();
-            input.focus();
+            // input.focus();
             return;
         }
     }
@@ -146,7 +146,7 @@ form.addEventListener("submit", e => {
 
     msg.textContent = "";
     form.reset();
-    input.focus();
+    // input.focus();
 });
 
 

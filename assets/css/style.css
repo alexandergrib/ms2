@@ -145,7 +145,7 @@ input:checked + .slider:before {
 /*.main-weather{*/
 /*    width: 100%;*/
 /*}*/
-ul {
+#weather ul {
     list-style: none;
 }
 
@@ -250,9 +250,14 @@ ul {
 #news {
     background-color: #97a1b5;
     width: 650px; /*350*/
+    padding-bottom: 20px;
 }
 
-
+.news--class {
+    overflow-y: auto;
+    height: 400px;
+    list-style: none;
+}
 
 
 #news h2 {
@@ -280,14 +285,35 @@ ul {
     text-decoration: none;
     color: #0f161c;
     background-color: #53627c;
-
-
-    white-space: normal;
-    overflow: visible;
-    width: 100%;
 }
 
 
 .article a:visited {
-    color: #444856;
+    color: #5d6375;
 }
+
+
+.article a[title]:hover:after {
+    content: attr(title);
+    padding: 4px 8px;
+    color: #333;
+    position: absolute;
+    left: 10%;
+    top: 90%;
+    white-space: nowrap;
+    z-index: 99999;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 0 4px #222;
+    -webkit-box-shadow: 0 0 4px #222;
+    box-shadow: 0 0 4px #222;
+    background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #eeeeee), color-stop(1, #cccccc));
+    background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
+    background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+    background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
+    background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
+}
+
+
