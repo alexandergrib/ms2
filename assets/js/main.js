@@ -6,6 +6,16 @@ const list = document.querySelector(".ajax-section .cities");
 /*SUBSCRIBE HERE FOR API KEY: https://home.openweathermap.org/users/sign_up*/
 const apiKey = "888a73a8b27eb54c8d1ba56ed02ec435";
 
+var locations = [
+      // ['Bondi Beach',  51.4541078, 0.314],
+      // ['Coogee Beach',  51.4541078, 0.464],
+      // ['Cronulla Beach',  51.4541078, 0.564],
+      // ['Manly Beach',  51.4541078, 0.664],
+      // ['Maroubra Beach',  51.4541078, 0.764]
+    ];
+
+
+
 //listens search event
 form.addEventListener("submit", e => {
     e.preventDefault();
@@ -109,7 +119,7 @@ form.addEventListener("submit", e => {
 
             document.getElementById("textPlaceHolder").innerHTML = `${name}, ${coord.lat}, ${coord.lon} `;  //replace with call to google map api
             //TODO create news API call
-            // populateNews();
+
 
 
             //post coordinates
@@ -117,9 +127,12 @@ form.addEventListener("submit", e => {
                 lat: coord.lat,
                 lng: coord.lon
             };
-            console.log(coordinates)
-            setHome(name, coord); //sets home position marker
-            setMarkers(name, coord);
+
+            let cc = [name, coord.lat, coord.lon]
+            locations.push(cc);
+            console.log(locations);
+             //sets home position marker
+            setMarkers(locations, coord);
 
         })
         .catch(() => {

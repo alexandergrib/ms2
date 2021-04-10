@@ -1,6 +1,7 @@
 // map
 // Initialize and add the map
 
+
 let map;
 let service;
 let infowindow;
@@ -17,63 +18,30 @@ function initMap() {
     });
 }
 
+//https://stackoverflow.com/questions/3059044/google-maps-js-api-v3-simple-multiple-marker-example
+function setMarkers(locations, coord) {
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 10,
+      center: new google.maps.LatLng(coord.lat, coord.lon),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
 
-//displaying home marker on the map
-function setHome(name, coord) {
-    var myLatlng = new google.maps.LatLng(coord.lat, coord.lon);
-    var mapOptions = {
-        zoom: 10,
-        center: myLatlng
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
     }
-    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-
-    var marker = new google.maps.Marker({
-        position: myLatlng,
-        title: name
-    });
-
-    // To add the marker to the map, call setMap();
-    marker.setMap(map);
-
-}
-
-
-function setMarkers(name, coord) {
-    console.log('hi');
-        infowindow = new google.maps.InfoWindow();
-// Create an array of alphabetical characters used to label the markers.
-    const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    var myLatlng = new google.maps.LatLng(coord.lat, coord.lon);
-    var mapOptions = {
-        zoom: 10,
-        center: myLatlng
-    };
-
-    const locations = [
-        {lat: 51.4541078, lng: 0.364},
-        {lat: 51.4541078, lng: 0.3641},
-        {lat: 51.4541078, lng: 0.3642},
-        {lat: 51.4541078, lng: 0.3643},
-        {lat: 51.4541078, lng: 0.3644},
-        {lat: 51.4541078, lng: 0.3645}
-    ];
-
-    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-    // Add some markers to the map.
-    // Note: The code uses the JavaScript Array.prototype.map() method to
-    // create an array of markers based on a given "locations" array.
-    // The map() method here has nothing to do with the Google Maps API.
-    const markers = locations.map((location, i) => {
-        return new google.maps.Marker({
-            position: location,
-            label: labels[i % labels.length],
-        });
-    });
-    // Add a marker clusterer to manage the markers.
-    new MarkerClusterer(map, markers, {
-        imagePath:
-            "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
-    });
-
 
 }
