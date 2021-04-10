@@ -177,18 +177,6 @@ ul {
     color: #53627c;
 }
 
-/*.ajax-section .city::after {*/
-/*    content: '';*/
-/*    width: 90%;*/
-/*    height: 10px; !*50px*!*/
-/*    position: absolute;*/
-/*    bottom: -12px;*/
-/*    left: 5%;*/
-/*    z-index: -1;*/
-/*    opacity: 0.3;*/
-/*    border-radius: 20px;*/
-/*    background: #fff;*/
-/*}*/
 
 /*weather footer*/
 .ajax-section figcaption {
@@ -225,4 +213,38 @@ ul {
     /*margin-top: px;*/
     width: 80px;
     height: auto;
+}
+
+/*typeahead ----------------------*/
+
+.typeahead-wrapper {
+    display: block;
+    margin: 50px 0;
+}
+
+.tt-menu {
+    background-color: #ff0000;
+    border: 1px solid #000;
+}
+
+.tt-dropdown-menu {
+    background-color: #ff0000;
+    border: 1px solid #000;
+}
+
+.tt-suggestion.tt-cursor {
+    background-color: #ffc9c9;
+    border: 1px solid #000;
+}
+
+.tt-dropdown-menu :hover {
+    background-color: #ffc9c9;
+    border: 1px solid #000;
+}
+
+
+.triggered-events {
+    float: right;
+    width: 500px;
+    height: 300px;
 }

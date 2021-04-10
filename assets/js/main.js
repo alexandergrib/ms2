@@ -6,6 +6,7 @@ const list = document.querySelector(".ajax-section .cities");
 /*SUBSCRIBE HERE FOR API KEY: https://home.openweathermap.org/users/sign_up*/
 const apiKey = "888a73a8b27eb54c8d1ba56ed02ec435";
 
+//listens search event
 form.addEventListener("submit", e => {
     e.preventDefault();
     let inputVal = input.value;
@@ -34,6 +35,7 @@ form.addEventListener("submit", e => {
                 //athens
                 content = el.querySelector(".city-name span").textContent.toLowerCase();
             }
+
             return content == inputVal.toLowerCase();
         });
 
@@ -103,7 +105,9 @@ form.addEventListener("submit", e => {
 
                 list.appendChild(li);
             }
-            document.getElementById("map").innerHTML = `${name}, ${coord.lat}, ${coord.lon} `;  //replace with call to google map api
+
+
+            document.getElementById("textPlaceHolder").innerHTML = `${name}, ${coord.lat}, ${coord.lon} `;  //replace with call to google map api
             //TODO create news API call
             // populateNews();
 
@@ -115,7 +119,7 @@ form.addEventListener("submit", e => {
             };
             console.log(coordinates)
             setHome(name, coord); //sets home position marker
-
+            setMarkers(name, coord);
 
         })
         .catch(() => {
@@ -130,28 +134,11 @@ form.addEventListener("submit", e => {
 
 //typeahead code reused from example provided by typeahead
 //http://twitter.github.io/typeahead.js/examples/
-//TODO add states into file
 
-// import citiesList from './cities.js';
+var states = citiesList; //reads cities.js to get array with cities
 
-
-
-var states = citiesList;
-
-console.log(states);
-//
-// var states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
-//     'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii',
-//     'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'London',
-//     'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
-//     'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
-//     'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
-//     'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island',
-//     'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
-//     'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
-// ];
-
-
+//----------------------------------------------------------------------
+//Typeahead
 // constructs the suggestion engine
 var states = new Bloodhound({
     datumTokenizer: Bloodhound.tokenizers.whitespace,
@@ -170,37 +157,4 @@ $('#search-div .typeahead').typeahead({
         source: states
     });
 
-
-// map
-// Initialize and add the map
-function initMap() {
-    // The location of Uluru
-    const uluru = {lat: 51.4541078441724, lng: 0.36448899153277886};
-    // The map, centered at Uluru
-    const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 6,
-        center: uluru,
-    });
-}
-
-
-//displaying home marker on the map
-function setHome(name, coord) {
-    var myLatlng = new google.maps.LatLng(coord.lat, coord.lon);
-    var mapOptions = {
-        zoom: 10,
-        center: myLatlng
-    }
-    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-
-    var marker = new google.maps.Marker({
-        position: myLatlng,
-        title: name
-    });
-
-    // To add the marker to the map, call setMap();
-    marker.setMap(map);
-    //--------------------------------
-
-//---------------------------------------
-}
+//----------------------------------------------------------------------
