@@ -151,7 +151,7 @@ Testing.md
 ## Credits for text and modules
 [Weather api](https://webdesign.tutsplus.com/tutorials/build-a-simple-weather-app-with-vanilla-javascript--cms-33893)
 [typeahead](//http://twitter.github.io/typeahead.js/examples/)
-
+[world cities database](https://simplemaps.com/data/world-cities)
 ## Credits for images used
  
 

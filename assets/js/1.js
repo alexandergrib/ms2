@@ -24,6 +24,8 @@ form.addEventListener("submit", e => {
             }@2x.png`;
             document.getElementById("info-text").classList.add("hide");  //hides instructions container
             document.getElementById("main").classList.remove("hide");  // show all data container
+            // document.getElementsByClassName("cities").innerHTML = "";
+
             //checks status fo checkbox
             let checkbox = document.querySelector("input[name=checkbox]");
             if (checkbox.checked) {
@@ -35,7 +37,8 @@ form.addEventListener("submit", e => {
 
             const li = document.createElement("li");
             li.classList.add("city");
-            const markup = `
+            //const
+            let markup = `                
         <h2 class="city-name" data-name="${name},${sys.country}">
           <span>${name}</span>
           <sup>${sys.country}</sup>
@@ -46,8 +49,11 @@ form.addEventListener("submit", e => {
           <figcaption>${weather[0]["description"]}</figcaption>
         </figure>
       `;
+
             li.innerHTML = markup;
+
             list.appendChild(li);
+            // list.replaceChild(li);
             document.getElementById("map").innerHTML = `${name}, ${coord.lat}, ${coord.lon} `;  //replace with call to google map api
             //TODO create news API call
             // populateNews();
