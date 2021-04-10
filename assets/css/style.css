@@ -10,7 +10,7 @@ body {
     /*background-color: black;*/
 }
 
-/*Search button*/
+/*Search button-----------------------------------------------*/
 .make-center {
     display: flex;
     justify-content: center;
@@ -70,7 +70,7 @@ input[type=text] {
 /**/
 
 
-/*Switch css*/
+/*Switch css-----------------------------------------------------------*/
 .switch {
     position: relative;
     display: inline-block;
@@ -175,7 +175,7 @@ input:checked + .slider:before {
 }
 
 
-/*weather footer*/
+/*weather footer--------------------------*/
 .ajax-section figcaption {
     margin-top: 18px; /*10px*/
     align-content: center;
@@ -185,7 +185,7 @@ input:checked + .slider:before {
     letter-spacing: 0.05em;
 }
 
-/*temperature digits*/
+/*temperature digits----------------*/
 .ajax-section .city-temp {
     font-size: 5rem;
     font-weight: bold;
@@ -222,6 +222,10 @@ input:checked + .slider:before {
 .tt-menu {
     background-color: #ff0000;
     border: 1px solid #000;
+    width: 210px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
 }
 
 .tt-dropdown-menu {
@@ -240,17 +244,18 @@ input:checked + .slider:before {
 }
 
 
-.triggered-events {
-    float: right;
-    width: 500px;
-    height: 300px;
-}
+/*.triggered-events {*/
+/*    float: right;*/
+/*    width: 500px;*/
+/*    height: 300px;*/
+/*}*/
 
 /*news section----------------------*/
 #news {
     background-color: #97a1b5;
-    width: 650px; /*350*/
+    width: 100vw; /*650px*/
     padding-bottom: 20px;
+
 }
 
 .news--class {
@@ -268,11 +273,12 @@ input:checked + .slider:before {
 .article {
     padding: 5px 0px;
     margin-bottom: 5px;
-
+    margin-left: -7px;
     white-space: nowrap;
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
+
 }
 
 .article a {
@@ -285,6 +291,7 @@ input:checked + .slider:before {
     text-decoration: none;
     color: #0f161c;
     background-color: #53627c;
+
 }
 
 
@@ -294,6 +301,7 @@ input:checked + .slider:before {
 
 
 .article a[title]:hover:after {
+
     content: attr(title);
     padding: 4px 8px;
     color: #333;
