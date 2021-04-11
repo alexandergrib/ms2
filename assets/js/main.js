@@ -5,161 +5,167 @@ const msg = document.querySelector(".search-div .msg");
 const list = document.querySelector(".ajax-section .cities");
 
 
-
 let temperature;
 let tempIndicator;
 
 //handle browser location
 
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else {
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
+if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition, error);
 
-
-function showPosition(position) {
-  console.log(position.coords.latitude, position.coords.longitude);
+} else {
+    alert("Geolocation is not supported by this browser.");
 }
 
-
+function error(){
+    alert('Sorry, no position available.');
+}
 
 //listens search event
-form.addEventListener("submit", e => {
-    e.preventDefault();
-    let inputVal = input.value;
+    form.addEventListener("submit", e => {
+        e.preventDefault();
+        let inputVal = input.value;
 
-    //check if there's already a city
-    const listItems = list.querySelectorAll(".ajax-section .city");
-    const listItemsArray = Array.from(listItems);
+        //check if there's already a city
+        const listItems = list.querySelectorAll(".ajax-section .city");
+        const listItemsArray = Array.from(listItems);
 
 
-    if (listItemsArray.length > 0) {
+        if (listItemsArray.length > 0) {
 
-        const filteredArray = listItemsArray.filter(el => {
-            let content = "";
-            //athens,gr
-            if (inputVal.includes(",")) {
-                //athens,grrrrrr->invalid country code, so we keep only the first part of inputVal
-                if (inputVal.split(",")[1].length > 2) {
-                    inputVal = inputVal.split(",")[0];
-                    content = el
-                        .querySelector(".city-name span")
-                        .textContent.toLowerCase();
+            const filteredArray = listItemsArray.filter(el => {
+                let content = "";
+                //athens,gr
+                if (inputVal.includes(",")) {
+                    //athens,grrrrrr->invalid country code, so we keep only the first part of inputVal
+                    if (inputVal.split(",")[1].length > 2) {
+                        inputVal = inputVal.split(",")[0];
+                        content = el
+                            .querySelector(".city-name span")
+                            .textContent.toLowerCase();
+                    } else {
+                        content = el.querySelector(".city-name").dataset.name.toLowerCase();
+                    }
                 } else {
-                    content = el.querySelector(".city-name").dataset.name.toLowerCase();
+                    //athens
+                    content = el.querySelector(".city-name span").textContent.toLowerCase();
                 }
-            } else {
-                //athens
-                content = el.querySelector(".city-name span").textContent.toLowerCase();
+
+                return content == inputVal.toLowerCase();
+            });
+
+            if (filteredArray.length > 0) {
+                msg.textContent = `You already know the weather for ${
+                    filteredArray[0].querySelector(".city-name span").textContent
+                } ...otherwise be more specific by providing the country code as well 😉`;
+
+                form.reset();
+                // input.focus();
+                return;
             }
-
-            return content == inputVal.toLowerCase();
-        });
-
-        if (filteredArray.length > 0) {
-            msg.textContent = `You already know the weather for ${
-                filteredArray[0].querySelector(".city-name span").textContent
-            } ...otherwise be more specific by providing the country code as well 😉`;
-
-            form.reset();
-            // input.focus();
-            return;
         }
-    }
 
-    getWeather(inputVal);
+        getWeather(inputVal);
 
-    //ajax here  //?lat={lat}&lon={lon}
-    // const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=metric`;
-    //
-    // fetch(url)
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         const {coord, main, name, sys, weather} = data;
-    //         const icon = `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${
-    //             weather[0]["icon"]
-    //         }.svg`;
-    //
-    //
-    //         temperature = main.temp;
-    //         tempIndicator = "C"
-    //
-    //
-    //         //Check if weather item exists and replaces itself with new data
-    //         if (document.querySelector(".cities li:last-child")) {
-    //             const listItem = document.querySelector(".cities li:last-child");
-    //             const li = document.createElement("li");
-    //             li.classList.add("city");
-    //             const markup = `
-    //             <h2 class="city-name" data-name="${name},${sys.country}">
-    //               <span>${name}</span>
-    //               <sup>${sys.country}</sup>
-    //             </h2>
-    //             <div class="city-temp">${Math.round(temperature)}<sup>°${tempIndicator}</sup></div>
-    //             <figure>
-    //               <img class="city-icon" src="${icon}" alt="${
-    //                 weather[0]["description"]
-    //             }">
-    //               <figcaption>${weather[0]["description"]}</figcaption>
-    //             </figure>
-    //           `;
-    //             li.innerHTML = markup;
-    //
-    //             listItem.parentNode.replaceChild(li, listItem);
-    //             locations.length = 0;  //empties array when searched for new location
-    //         } else {
-    //
-    //             //Executes on first search for the city
-    //             const li = document.createElement("li");
-    //             li.classList.add("city");
-    //             const markup = `
-    //             <h2 class="city-name" data-name="${name},${sys.country}">
-    //               <span>${name}</span>
-    //               <sup>${sys.country}</sup>
-    //             </h2>
-    //             <div class="city-temp">${Math.round(temperature)}<sup>°${tempIndicator}</sup></div>
-    //             <figure>
-    //               <img class="city-icon" src="${icon}" alt="${
-    //                 weather[0]["description"]
-    //             }">
-    //               <figcaption>${weather[0]["description"]}</figcaption>
-    //             </figure>
-    //           `;
-    //             li.innerHTML = markup;
-    //
-    //
-    //             list.appendChild(li);
-    //         }
-    //
-    //
-    //         document.getElementById("textPlaceHolder").innerHTML = `${name}, ${coord.lat}, ${coord.lon} `;  //replace with call to google map api
-    //         //TODO create news API call
-    //
-    //
-    //         //post coordinates
-    //         coordinates = {
-    //             lat: coord.lat,
-    //             lng: coord.lon
-    //         };
-    //
-    //
-    //         //requests news
-    //         fetchNews(sys.country.toLowerCase());
-    //
-    //         //sets home position marker
-    //         // setMarkers(coord);
-    //         //gets info for places around
-    //         getPlaces(coordinates);
-    //
-    //     })
-    //     .catch(() => {
-    //         msg.textContent = "Please search for a valid city 😩";
-    //     });
-    //
-    // msg.textContent = "";
-    // form.reset();
-});
+        //ajax here  //?lat={lat}&lon={lon}
+        // const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=metric`;
+        //
+        // fetch(url)
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         const {coord, main, name, sys, weather} = data;
+        //         const icon = `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${
+        //             weather[0]["icon"]
+        //         }.svg`;
+        //
+        //
+        //         temperature = main.temp;
+        //         tempIndicator = "C"
+        //
+        //
+        //         //Check if weather item exists and replaces itself with new data
+        //         if (document.querySelector(".cities li:last-child")) {
+        //             const listItem = document.querySelector(".cities li:last-child");
+        //             const li = document.createElement("li");
+        //             li.classList.add("city");
+        //             const markup = `
+        //             <h2 class="city-name" data-name="${name},${sys.country}">
+        //               <span>${name}</span>
+        //               <sup>${sys.country}</sup>
+        //             </h2>
+        //             <div class="city-temp">${Math.round(temperature)}<sup>°${tempIndicator}</sup></div>
+        //             <figure>
+        //               <img class="city-icon" src="${icon}" alt="${
+        //                 weather[0]["description"]
+        //             }">
+        //               <figcaption>${weather[0]["description"]}</figcaption>
+        //             </figure>
+        //           `;
+        //             li.innerHTML = markup;
+        //
+        //             listItem.parentNode.replaceChild(li, listItem);
+        //             locations.length = 0;  //empties array when searched for new location
+        //         } else {
+        //
+        //             //Executes on first search for the city
+        //             const li = document.createElement("li");
+        //             li.classList.add("city");
+        //             const markup = `
+        //             <h2 class="city-name" data-name="${name},${sys.country}">
+        //               <span>${name}</span>
+        //               <sup>${sys.country}</sup>
+        //             </h2>
+        //             <div class="city-temp">${Math.round(temperature)}<sup>°${tempIndicator}</sup></div>
+        //             <figure>
+        //               <img class="city-icon" src="${icon}" alt="${
+        //                 weather[0]["description"]
+        //             }">
+        //               <figcaption>${weather[0]["description"]}</figcaption>
+        //             </figure>
+        //           `;
+        //             li.innerHTML = markup;
+        //
+        //
+        //             list.appendChild(li);
+        //         }
+        //
+        //
+        //         document.getElementById("textPlaceHolder").innerHTML = `${name}, ${coord.lat}, ${coord.lon} `;  //replace with call to google map api
+        //         //TODO create news API call
+        //
+        //
+        //         //post coordinates
+        //         coordinates = {
+        //             lat: coord.lat,
+        //             lng: coord.lon
+        //         };
+        //
+        //
+        //         //requests news
+        //         fetchNews(sys.country.toLowerCase());
+        //
+        //         //sets home position marker
+        //         // setMarkers(coord);
+        //         //gets info for places around
+        //         getPlaces(coordinates);
+        //
+        //     })
+        //     .catch(() => {
+        //         msg.textContent = "Please search for a valid city 😩";
+        //     });
+        //
+        // msg.textContent = "";
+        // form.reset();
+    });
+
+
+//if succesuful in getting coordinates from browser
+function showPosition(position) {
+    console.log(position.coords.latitude, position.coords.longitude);
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    getWeatherByCoordinates(lat,lon)
+}
 
 
 //typeahead code reused from example provided by typeahead
@@ -199,8 +205,8 @@ checkbox.addEventListener('change', function () {
         // console.log(read.innerHTML); //20<sup>°C</sup>
     } else {
         //F
-        read.innerHTML = `${Math.round((temperature*1.8)+32)}<sup>°F</sup>`
-            // console.log(temperature)
-        }
+        read.innerHTML = `${Math.round((temperature * 1.8) + 32)}<sup>°F</sup>`
+        // console.log(temperature)
+    }
 
 });
