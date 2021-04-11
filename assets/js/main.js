@@ -7,7 +7,8 @@ const list = document.querySelector(".ajax-section .cities");
 const apiKey = "888a73a8b27eb54c8d1ba56ed02ec435";
 
 
-
+let temperature;
+let tempIndicator;
 
 
 //listens search event
@@ -54,7 +55,7 @@ form.addEventListener("submit", e => {
         }
     }
 
-    //ajax here
+    //ajax here  //?lat={lat}&lon={lon}
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=metric`;
 
     fetch(url)
@@ -64,6 +65,11 @@ form.addEventListener("submit", e => {
             const icon = `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${
                 weather[0]["icon"]
             }.svg`;
+
+
+            temperature = main.temp;
+            tempIndicator = "C"
+
 
             //Check if weather item exists and replaces itself with new data
             if (document.querySelector(".cities li:last-child")) {
@@ -75,7 +81,7 @@ form.addEventListener("submit", e => {
                   <span>${name}</span>
                   <sup>${sys.country}</sup>
                 </h2>
-                <div class="city-temp">${Math.round(main.temp)}<sup>°C</sup></div>
+                <div class="city-temp">${Math.round(temperature)}<sup>°${tempIndicator}</sup></div>
                 <figure>
                   <img class="city-icon" src="${icon}" alt="${
                     weather[0]["description"]
@@ -97,7 +103,7 @@ form.addEventListener("submit", e => {
                   <span>${name}</span>
                   <sup>${sys.country}</sup>
                 </h2>
-                <div class="city-temp">${Math.round(main.temp)}<sup>°C</sup></div>
+                <div class="city-temp">${Math.round(temperature)}<sup>°${tempIndicator}</sup></div>
                 <figure>
                   <img class="city-icon" src="${icon}" alt="${
                     weather[0]["description"]
@@ -116,13 +122,11 @@ form.addEventListener("submit", e => {
             //TODO create news API call
 
 
-
             //post coordinates
             coordinates = {
                 lat: coord.lat,
                 lng: coord.lon
             };
-
 
 
             //requests news
@@ -168,4 +172,20 @@ $('#search-div .typeahead').typeahead({
         source: states
     });
 
-//----------------------------------------------------------------------
+//checkbox listener----------------------------------------------------------------------
+var checkbox = document.querySelector("input[name=checkbox]");
+
+checkbox.addEventListener('change', function () {
+    let read = document.getElementsByClassName("city-temp").item(0);
+    let element = read.getElementsByTagName("SUP")[0].innerHTML;
+    if (this.checked) {
+        //C
+        read.innerHTML = `${Math.round(temperature)}<sup>°C</sup>`
+        console.log(read.innerHTML); //20<sup>°C</sup>
+    } else {
+        //F
+        read.innerHTML = `${Math.round((temperature*1.8)+32)}<sup>°F</sup>`
+            console.log(temperature)
+        }
+
+});

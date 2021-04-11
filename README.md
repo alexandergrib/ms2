@@ -146,6 +146,8 @@ Testing.md
   
 # Problems encountered: 
 
+- After searching for place map not center itself to that location
+
 # Credits  
 
 ## Credits for text and modules
