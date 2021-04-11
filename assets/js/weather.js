@@ -66,7 +66,7 @@ function getWeather(inputVal) {
 
 
             document.getElementById("textPlaceHolder").innerHTML = `${name}, ${coord.lat}, ${coord.lon} `;  //replace with call to google map api
-            //TODO create news API call
+
 
 
             //post coordinates
@@ -163,7 +163,7 @@ function getWeatherByCoordinates(lat, lon) {
 
 
             document.getElementById("textPlaceHolder").innerHTML = `${name}, ${coord.lat}, ${coord.lon} `;  //replace with call to google map api
-            //TODO create news API call
+
 
 
             //post coordinates
