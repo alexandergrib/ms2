@@ -181,11 +181,11 @@ checkbox.addEventListener('change', function () {
     if (this.checked) {
         //C
         read.innerHTML = `${Math.round(temperature)}<sup>°C</sup>`
-        console.log(read.innerHTML); //20<sup>°C</sup>
+        // console.log(read.innerHTML); //20<sup>°C</sup>
     } else {
         //F
         read.innerHTML = `${Math.round((temperature*1.8)+32)}<sup>°F</sup>`
-            console.log(temperature)
+            // console.log(temperature)
         }
 
 });
