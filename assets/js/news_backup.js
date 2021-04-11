@@ -12,38 +12,50 @@ function fetchNews(country) {
 
 function populateNews(data) {
     if (data.status === "ok") {
-        console.log(data);
+        // console.log(data.articles);
         //    -----------------------------------------------------------------------
-        const articles = data;
-        const markup = `
-                <a href="${articles[0].url}">
-                <h2 class="article-name">${articles[0].title}</h2>
+        const articles = data.articles;
+        if (document.querySelector(".news--class").getElementsByTagName('li')){
+            document.querySelector(".news--class").innerHTML="";
+        }
+        if (document.querySelector("#news li:last-child")) {
+            for (let i=0; i< articles.length; i++) {
+                const li = document.createElement("li");
+                // console.log(articles[i]);
+                li.classList.add("article");
+                let markup = `
+                <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                <a href="${articles[i].url}" title="${articles[i].title}">
+                    ${articles[i].title}
                 </a>
                 
               `;
-        if (document.querySelector(".cities li:last-child")) {
-            const listItem = document.querySelector(".news--class li:last-child");
-            const li = document.createElement("li");
-            li.classList.add("article");
+                li.innerHTML = markup;
+                console.log("if");
+                newsList.appendChild(li);
+            }
 
-            //  place HTML template here
 
-            li.innerHTML = markup;
-
-            listItem.parentNode.replaceChild(li, listItem);
 
         } else {
+            for (let i = 0; i < articles.length; i++) {
+                let markup = `
+                <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                <a href="${articles[i].url}" title="${articles[i].title}">
+                    ${articles[i].title}
+                </a>
+                
+              `;
+                //Executes on first search for the city
+                const li = document.createElement("li");
+                li.classList.add("article");
 
-            //Executes on first search for the city
-            const li = document.createElement("li");
-            li.classList.add("article");
+                li.innerHTML = markup;
+                console.log("else");
 
-            li.innerHTML = markup;
-
-
-            newsList.appendChild(li);
+                newsList.appendChild(li);
+            }
         }
-
 
         //    ------------------------------------------------------------
     } else {

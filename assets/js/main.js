@@ -122,15 +122,15 @@ form.addEventListener("submit", e => {
                 lat: coord.lat,
                 lng: coord.lon
             };
-            // deleteMarkers();
-            // console.log(locations);
+
+
 
             //requests news
             fetchNews(sys.country.toLowerCase());
 
             //sets home position marker
             // setMarkers(coord);
-
+            //gets info for places around
             getPlaces(coordinates);
 
         })
@@ -140,7 +140,6 @@ form.addEventListener("submit", e => {
 
     msg.textContent = "";
     form.reset();
-    // input.focus();
 });
 
 

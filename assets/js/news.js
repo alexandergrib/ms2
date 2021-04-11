@@ -15,27 +15,10 @@ function populateNews(data) {
         // console.log(data.articles);
         //    -----------------------------------------------------------------------
         const articles = data.articles;
-
-        if (document.querySelector("#news li:last-child")) {
-            for (let i=0; i< articles.length; i++) {
-                const li = document.createElement("li");
-                // console.log(articles[i]);
-                li.classList.add("article");
-                let markup = `
-                <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-                <a href="${articles[i].url}" title="${articles[i].title}">
-                    ${articles[i].title}
-                </a>
-                
-              `;
-                li.innerHTML = markup;
-
-                newsList.appendChild(li);
-            }
-
-
-
-        } else {
+        if (document.querySelector(".news--class").getElementsByTagName('li')) {
+            document.querySelector(".news--class").innerHTML = "";
+        }
+        if(data.totalResults > 0) {
             for (let i = 0; i < articles.length; i++) {
                 let markup = `
                 <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -49,10 +32,20 @@ function populateNews(data) {
                 li.classList.add("article");
 
                 li.innerHTML = markup;
-
-
                 newsList.appendChild(li);
             }
+        }else{
+            let markup = `
+                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                <strong>No news found, please try another city</strong>
+                
+              `;
+                //Executes on first search for the city
+                const li = document.createElement("li");
+                li.classList.add("article");
+
+                li.innerHTML = markup;
+                newsList.appendChild(li);
         }
 
         //    ------------------------------------------------------------
