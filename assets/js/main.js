@@ -6,13 +6,7 @@ const list = document.querySelector(".ajax-section .cities");
 /*SUBSCRIBE HERE FOR API KEY: https://home.openweathermap.org/users/sign_up*/
 const apiKey = "888a73a8b27eb54c8d1ba56ed02ec435";
 
-var locations = [
-      // ['Bondi Beach',  51.4541078, 0.314],
-      // ['Coogee Beach',  51.4541078, 0.464],
-      // ['Cronulla Beach',  51.4541078, 0.564],
-      // ['Manly Beach',  51.4541078, 0.664],
-      // ['Maroubra Beach',  51.4541078, 0.764]
-    ];
+
 
 
 
@@ -128,16 +122,14 @@ form.addEventListener("submit", e => {
                 lat: coord.lat,
                 lng: coord.lon
             };
-
-            let cc = [name, coord.lat, coord.lon]
-            locations.push(cc);
+            // deleteMarkers();
             // console.log(locations);
 
             //requests news
             fetchNews(sys.country.toLowerCase());
 
             //sets home position marker
-            // setMarkers(locations, coord);
+            // setMarkers(coord);
 
             getPlaces(coordinates);
 

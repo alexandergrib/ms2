@@ -31,6 +31,9 @@ if (navigator.geolocation) {
         };
         // var search = "restaurant";
         //service is a PlacesService instance.
+
+
+
         var placeService = new google.maps.places.PlacesService(map);
         let req = {
             location: pos,
@@ -45,7 +48,6 @@ if (navigator.geolocation) {
 
 
 function getPlaces(coord) {
-
     var placeService = new google.maps.places.PlacesService(map);
     let req = {
         location: coord,
@@ -60,9 +62,8 @@ function getPlaces(coord) {
 function callback(results, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
         for (var i = 0; i < results.length; i++) {
-            // console.log(results[i].name);
-            // markers.push(results[i]);
             createMarker(results[i]);
+            // locations.push(results[i])
         }
 
     }
@@ -71,6 +72,7 @@ function callback(results, status) {
 
 function createMarker(place) {
     if (!place.geometry || !place.geometry.location) return;
+
     const marker = new google.maps.Marker({
         map,
         position: place.geometry.location,
@@ -87,26 +89,28 @@ function createMarker(place) {
     })(marker));
 
 }
+
 //
 
 let markers = [];
+
 function setMapOnAll() {
     const haightAshbury = coordinates;
     let map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 12,
-    center: haightAshbury,
-    mapTypeId: "terrain",
-  });
-  for (let i = 0; i < markers.length; i++) {
-    markers[i].setMap(map);
-  }
+        zoom: 10,
+        center: haightAshbury,
+        mapTypeId: "terrain",
+    });
+    for (let i = 0; i < markers.length; i++) {
+        markers[i].setMap(map);
+    }
 }
 
 function clearMarkers() {
-  setMapOnAll(null);
+    setMapOnAll(null);
 }
 
 function deleteMarkers() {
-  clearMarkers();
-  markers = [];
+    clearMarkers();
+    markers = [];
 }
