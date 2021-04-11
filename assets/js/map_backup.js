@@ -19,7 +19,6 @@ function initMap() {
 }
 
 //https://stackoverflow.com/questions/3059044/google-maps-js-api-v3-simple-multiple-marker-example
-//coordinataes and locations comes from main.js L140
 function setMarkers(locations, coord) {
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 10,
@@ -27,7 +26,7 @@ function setMarkers(locations, coord) {
       mapTypeId: google.maps.MapTypeId.ROADMAP
     });
 
-    // var infowindow = new google.maps.InfoWindow();
+    var infowindow = new google.maps.InfoWindow();
 
     var marker, i;
 

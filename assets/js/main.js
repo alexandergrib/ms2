@@ -131,13 +131,15 @@ form.addEventListener("submit", e => {
 
             let cc = [name, coord.lat, coord.lon]
             locations.push(cc);
-            console.log(locations);
+            // console.log(locations);
 
             //requests news
             fetchNews(sys.country.toLowerCase());
 
             //sets home position marker
-            setMarkers(locations, coord);
+            // setMarkers(locations, coord);
+
+            getPlaces(coordinates);
 
         })
         .catch(() => {

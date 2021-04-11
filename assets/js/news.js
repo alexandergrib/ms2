@@ -12,7 +12,7 @@ function fetchNews(country) {
 
 function populateNews(data) {
     if (data.status === "ok") {
-        console.log(data.articles);
+        // console.log(data.articles);
         //    -----------------------------------------------------------------------
         const articles = data.articles;
 
@@ -36,17 +36,24 @@ function populateNews(data) {
 
 
         } else {
+            for (let i = 0; i < articles.length; i++) {
+                let markup = `
+                <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                <a href="${articles[i].url}" title="${articles[i].title}">
+                    ${articles[i].title}
+                </a>
+                
+              `;
+                //Executes on first search for the city
+                const li = document.createElement("li");
+                li.classList.add("article");
 
-            //Executes on first search for the city
-            const li = document.createElement("li");
-            li.classList.add("article");
-
-            li.innerHTML = markup;
+                li.innerHTML = markup;
 
 
-            newsList.appendChild(li);
+                newsList.appendChild(li);
+            }
         }
-
 
         //    ------------------------------------------------------------
     } else {
