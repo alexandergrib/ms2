@@ -262,6 +262,15 @@ input:checked + .slider:before {
     overflow-y: auto;
     height: 400px;
     list-style: none;
+
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+.fa-arrow-down{
+    float: right;
+    color: #5d6375;
 }
 
 .news--class strong{
