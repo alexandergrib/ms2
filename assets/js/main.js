@@ -64,6 +64,7 @@ function error(){
                 return;
             }
         }
+
         // deleteMarkers();
         getWeather(inputVal);
 
@@ -79,10 +80,16 @@ function showPosition(position) {
 }
 
 
+
+
+
+
+
+
 //typeahead code used from example provided by typeahead
 //http://twitter.github.io/typeahead.js/examples/
 
-var states = citiesList; //reads cities.js to get array with cities
+var states = citiesList; //reads cities.js to get array with cities for typeahead suggestions
 
 //----------------------------------------------------------------------
 //Typeahead
