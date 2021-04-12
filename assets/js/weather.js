@@ -161,19 +161,17 @@ function getWeatherByCoordinates(lat, lon) {
                 list.appendChild(li);
             }
 
-
-            document.getElementById("textPlaceHolder").innerHTML = `${name}, ${coord.lat}, ${coord.lon} `;  //replace with call to google map api
-
-
-
             //post coordinates
             coordinates = {
                 lat: coord.lat,
                 lng: coord.lon
             };
 
+            document.getElementById("textPlaceHolder").innerHTML = `${name}, ${coord.lat}, ${coord.lon} `;  //replace with call to google api thing to do section
             // console.log(sys.country.toLowerCase());
             //requests news  name = city name
+
+
 
             doSearch("news", name);
             // fetchNews(sys.country.toLowerCase());
