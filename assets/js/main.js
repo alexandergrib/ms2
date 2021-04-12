@@ -64,7 +64,7 @@ function error(){
                 return;
             }
         }
-
+        // deleteMarkers();
         getWeather(inputVal);
 
     });

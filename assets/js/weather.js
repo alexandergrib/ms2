@@ -44,8 +44,6 @@ function weatherHandler (data) {
 
             temperature = main.temp;
             tempIndicator = "C"
-
-
             //Check if weather item exists and replaces itself with new data
             if (document.querySelector(".cities li:last-child")) {
                 const listItem = document.querySelector(".cities li:last-child");
@@ -103,18 +101,17 @@ function weatherHandler (data) {
                 lng: coord.lon
             };
 
-
             //requests news
-            // fetchNews(sys.country.toLowerCase());
-            doSearch("news", name);
+            doSearch("news", name);  //selector , query
+
+
+            //search for things to do
+            doSearch("", `things+to+do+in+${name}`)
+
             //sets home position marker
             // setMarkers(coord);
             //gets info for places around
             // deleteMarkers();  //if activated markers are erased but not shown
-
-            // setTimeout(getPlaces(coordinates), 3000);
-
-
             getPlaces(coordinates);
 
 }

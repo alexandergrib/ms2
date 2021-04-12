@@ -2,7 +2,7 @@
 // let searchSelectors;// = "news"; // search //  images
 const newsList = document.querySelector("#news .news--class");
 let newsArray = [];
-//receives call from weather L80 + L178
+//receives call from weather L105
 function doSearch(searchSelectors, searchQuestion) {
     let param;
     if (searchSelectors === "news") {
@@ -37,85 +37,13 @@ function doSearch(searchSelectors, searchQuestion) {
 
 
 function searchResults(data) {
-    console.log(data);
-    for (let i = 0; i < data.entries.length; i++) {
-        newsArray.push(data.entries[i].title);  //data.entries[i].title  //returns news headlines  -> Plans for world's largest log church emerge in Oregon City - Pamplin Media Group
-    }
-    console.log(newsArray[0]);
-    populateNews(newsArray);
+    console.log(data.results[0].description);
+
 }
 
-//
 
 
-// link:  https://www.nola.com/news/crime_police/article_476ee896-ac14-11ea-9ddb-e3a59f9f0892.html
-// summary:"<a href=\"https://www.nola.com/news/crime_police/article_476ee896-ac14-11ea-9ddb-e3a59f9f0892.html\" target=\"_blank\">6 Grand Isle drowning deaths in 6 weeks: Man dies after saving godson from current</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NOLA.com</font>"
-
-
-//responce from searching for things to do in london
-//
-// {
-//     "results": [
-//         {
-//             "title": "THE 15 BEST Things to Do in London - 2021 (with Photos ...",
-//             "link": "https://www.tripadvisor.com/Attractions-g186338-Activities-London_England.html",
-//             "description": "Top Attractions in London · 1. Tower of London · 2. Tower Bridge · 3. Churchill War Rooms · 4. National Gallery · 5. The British Museum · 6. Westminster Abbey · 7. V&A ...",
-//             "g_review_stars": "What are the top attractions to visit in London?What are the best outdoor activities in London?What are the most popular things to do in London with kids?"
-//         },
-//         {
-//             "title": "21 Best Things to Do in London | U.S. News Travel",
-//             "link": "https://travel.usnews.com/London_England/Things_To_Do/",
-//             "description": "#1. British Museum. British Museum. free. #2. Tower of London. Tower of London. #2 in London. #3. Buckingham Palace. Buckingham Palace. #4. Portobello Road Market. Portobello Road Market. #5. Westminster Abbey. Westminster Abbey. #6. Piccadilly Circus. Piccadilly Circus. #7. Hyde Park & Kensington Gardens. Hyde Park & ...",
-//             "g_review_stars": "‎Tower of London · ‎British Museum · ‎Buckingham Palace · ‎Portobello Road Market"
-//         },
-//         {
-//             "title": "London Bucket List: 50 Epic Things to Do in London | Earth ...",
-//             "link": "https://www.earthtrekkers.com/london-bucket-list-must-have-experiences/",
-//             "description": "Apr 1, 2021 — Here are our ten favorite things to do in London. Tower of London. British Museum. Churchill War Rooms. Hop-On Hop-Off Bus Tour. Tower Bridge. St. Paul's Cathedral. Covent Garden. Buckingham Palace."
-//         },
-//         {
-//             "title": "25 Best Things To Do In London (England) - The Crazy Tourist",
-//             "link": "https://www.thecrazytourist.com/25-best-things-to-do-in-london/",
-//             "description": "25 Best Things To Do In London (England) · 1. Hyde Park · 2. Westminster · 3. Camden · 4. London Eye · 5. Soho · 6. Shoreditch · 7. Hampstead Heath · 8. BFI."
-//         },
-//         {
-//             "title": "Best things to do in London – events, sightseeing - visitlondon ...",
-//             "link": "https://www.visitlondon.com/things-to-do",
-//             "description": "Things to do in London · Tower of London · London Eye · Warner Bros. Studio Tour · London Aquarium."
-//         },
-//         {
-//             "title": "63 Best TOURS & THINGS TO DO in London (Must See & Do)",
-//             "link": "https://santorinidave.com/best-things-to-do-london",
-//             "description": "Oct 5, 2020 — Many of London's best-known landmarks – Houses of Parliament, the London Eye, Tate Modern, the Tower of London, Tower Bridge, Cutty Sark ..."
-//         },
-//         {
-//             "title": "Best Things To Do In London – Your Ultimate Guide To London",
-//             "link": "https://www.timeout.com/london/things-to-do/101-things-to-do-in-london",
-//             "description": "Oct 8, 2020 — The best things to do in London · See a world-class exhibition at the V&A · Eat your way around Borough Market · See free art at Tate Modern · Buy ..."
-//         },
-//         {
-//             "title": "Actually Cool Things to Do in London When You Visit - Thrillist",
-//             "link": "https://www.thrillist.com/travel/london/things-to-do-in-london",
-//             "description": "Nov 28, 2018 — Actually Cool Things to Do When You Visit London · Take the world's highest yoga class · Catch a cruise down the River Thames · Take in the ..."
-//         },
-//         {
-//             "title": "19 Top-Rated Tourist Attractions in London | PlanetWare",
-//             "link": "https://www.planetware.com/tourist-attractions-/london-eng-l-lon.htm",
-//             "description": "Mar 10, 2020 — It's little wonder London, England is one of the world's top tourist ... Read More: Visiting Buckingham Palace: Top-Rated Things to See & Do ..."
-//         }
-//     ],
-//     "image_results": [],
-//     "total": 1730000000,
-//     "answers": [
-//         "What should you not miss in London?",
-//         "What can you do for free in London?",
-//         "What is there to do in London?",
-//         "How can I spend 3 days in London?"
-//     ],
-//     "ts": 3.7951302528381348
-// }
-
-//weather L80 + L177
+//weather L105
 function populateNews(data) {
     //    -----------------------------------------------------------------------
     const articles = data.entries;
