@@ -12,7 +12,7 @@ function fetchNews(country) {
 
 function populateNews(data) {
     if (data.status === "ok") {
-        // console.log(data.articles);
+        console.log(data.articles);
         //    -----------------------------------------------------------------------
         const articles = data.articles;
         if (document.querySelector(".news--class").getElementsByTagName('li')) {

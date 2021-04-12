@@ -62,6 +62,7 @@ function getPlaces(coord) {
 function callback(results, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
         for (var i = 0; i < results.length; i++) {
+
             createMarker(results[i]);
             // locations.push(results[i])
         }
@@ -72,7 +73,7 @@ function callback(results, status) {
 
 function createMarker(place) {
     if (!place.geometry || !place.geometry.location) return;
-
+    // console.log(place.name, place.geometry.location.lat, place.geometry.location.lgn);
     const marker = new google.maps.Marker({
         map,
         position: place.geometry.location,

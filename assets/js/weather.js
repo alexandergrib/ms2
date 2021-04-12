@@ -77,7 +77,7 @@ function getWeather(inputVal) {
 
 
             //requests news
-            fetchNews(sys.country.toLowerCase());
+            // fetchNews(sys.country.toLowerCase());
 
             //sets home position marker
             // setMarkers(coord);
@@ -172,9 +172,9 @@ function getWeatherByCoordinates(lat, lon) {
                 lng: coord.lon
             };
 
-
+            // console.log(sys.country.toLowerCase());
             //requests news
-            fetchNews(sys.country.toLowerCase());
+            // fetchNews(sys.country.toLowerCase());
 
             //sets home position marker
             // setMarkers(coord);

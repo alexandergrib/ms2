@@ -145,8 +145,13 @@ Testing.md
 - Deployment made via GitHub pages.  Fork my repository, then go to Setting on forked repository scroll down to GitHub Pages and select in Source section the branch to be used.  
   
 # Problems encountered: 
-
+- Google debug console shows "places.js:37 Uncaught ReferenceError: google is not defined
+    at places.js:37" 
+    * This is not real error, it occurs due to code being in separate file from where maps init was declared
 - After searching for place map not center itself to that location
+
+- News API free version works only on localhost, to use it online i have to upgrade to piad account.
+    - switched API to Rapidapi.com
 
 # Credits  
 
