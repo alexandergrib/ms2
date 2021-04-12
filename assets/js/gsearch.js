@@ -1,43 +1,55 @@
-let searchQuestion = 'Elmers+End+news';  //'things+to+do+in+london&num=10'
-let searchSelectors = "news"; // search //  images
+// let searchQuestion;// = 'Elmers+End+news';  //'things+to+do+in+london&num=10'
+// let searchSelectors;// = "news"; // search //  images
 const newsList = document.querySelector("#news .news--class");
 let newsArray = [];
-
+//receives call from weather L80 + L178
 function doSearch(searchSelectors, searchQuestion) {
     let param;
-    if(searchSelectors === "news") {
+    if (searchSelectors === "news") {
         param = "news";
+        fetch(`https://google-search3.p.rapidapi.com/api/v1/${param}/q=${searchQuestion}+news`, {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-key": "7c79620503msha75a133aec10eb3p1c3ab8jsn3ff262c13833",
+                "x-rapidapi-host": "google-search3.p.rapidapi.com"
+            }
+        })
+            .then(response => response.json())
+            .then((data) => populateNews(data))
+
 
     } else {
         param = "search";
-    }
-    fetch(`https://google-search3.p.rapidapi.com/api/v1/${param}/q=${searchQuestion}`, {
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-key": "7c79620503msha75a133aec10eb3p1c3ab8jsn3ff262c13833",
-            "x-rapidapi-host": "google-search3.p.rapidapi.com"
-        }
-    })
-        .then(response => response.json())
-        .then((data) => populateNews(data))
+        fetch(`https://google-search3.p.rapidapi.com/api/v1/${param}/q=${searchQuestion}`, {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-key": "7c79620503msha75a133aec10eb3p1c3ab8jsn3ff262c13833",
+                "x-rapidapi-host": "google-search3.p.rapidapi.com"
+            }
+        })
+            .then(response => response.json())
+            .then((data) => searchResults(data))
 
 
-    function searchResults(data) {
-        console.log(data);
-        for (let i = 0; i < data.entries.length; i++) {
-            newsArray.push(data.entries[i].title);  //data.entries[i].title  //returns news headlines  -> Plans for world's largest log church emerge in Oregon City - Pamplin Media Group
-        }
-        console.log(newsArray[0]);
-        populateNews(newsArray);
     }
+
 }//
+
+
+function searchResults(data) {
+    console.log(data);
+    for (let i = 0; i < data.entries.length; i++) {
+        newsArray.push(data.entries[i].title);  //data.entries[i].title  //returns news headlines  -> Plans for world's largest log church emerge in Oregon City - Pamplin Media Group
+    }
+    console.log(newsArray[0]);
+    populateNews(newsArray);
+}
+
 //
 
 
 // link:  https://www.nola.com/news/crime_police/article_476ee896-ac14-11ea-9ddb-e3a59f9f0892.html
 // summary:"<a href=\"https://www.nola.com/news/crime_police/article_476ee896-ac14-11ea-9ddb-e3a59f9f0892.html\" target=\"_blank\">6 Grand Isle drowning deaths in 6 weeks: Man dies after saving godson from current</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">NOLA.com</font>"
-
-
 
 
 //responce from searching for things to do in london
@@ -116,7 +128,7 @@ function populateNews(data) {
             // console.log(articles[i].title);
             let markup = `
                 <i class="fa fa-newspaper-o" aria-hidden="true"></i>                
-                <a href="${articles[i].link}" title="${articles[i].title}">
+                <a href="${articles[i].link}" title="${articles[i].title}" target="_blank">
                     ${articles[i].title}
                 </a>
                 
@@ -131,7 +143,7 @@ function populateNews(data) {
     } else {
         let markup = `
                 <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                <strong>No news found, please try another city</strong>
+                <strong>No news found, please try again later.</strong>
                 
               `;
         //Executes on first search for the city
@@ -142,9 +154,9 @@ function populateNews(data) {
         newsList.appendChild(li);
     }
 
-   }
+}
 
-   doSearch(searchSelectors, searchQuestion);
+// doSearch(searchSelectors, searchQuestion);
 
 //responce for searching news in elmers end(location)
 //

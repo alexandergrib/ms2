@@ -78,7 +78,7 @@ function getWeather(inputVal) {
 
             //requests news
             // fetchNews(sys.country.toLowerCase());
-
+            doSearch("news", name);
             //sets home position marker
             // setMarkers(coord);
             //gets info for places around
@@ -173,7 +173,9 @@ function getWeatherByCoordinates(lat, lon) {
             };
 
             // console.log(sys.country.toLowerCase());
-            //requests news
+            //requests news  name = city name
+
+            doSearch("news", name);
             // fetchNews(sys.country.toLowerCase());
 
             //sets home position marker
