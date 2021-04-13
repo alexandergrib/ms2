@@ -1,3 +1,25 @@
+// const xhr = new XMLHttpRequest();
+// const url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=51.5285582%2C-0.2416782&radius=10000&keyword=things%20to%20do%20in%20London&rankby=prominence&key=AIzaSyA8QVgU4Ry5cuU67JUZVg7cnIOzInvCt0c';
+// let data;
+// xhr.open('GET', url);
+// xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+// xhr.onreadystatechange = function() {
+//         if (this.readyState == 4 && this.status == 200) {
+//             cb(JSON.parse(this.responseText));
+//         }
+//     };
+// xhr.send();
+//
+//
+// function setData(jsonData){
+//     data = jsonData;
+// };
+//
+//
+//
+// setTimeout(function () {
+//     console.log(data);
+// }, 500)
 
 //https://developers.google.com/maps/documentation/javascript/places?csw=1#place_search_requests
 //https://stackoverflow.com/questions/17912281/how-to-get-search-string-parameter-for-google-maps-api-v3
@@ -40,7 +62,7 @@ function getPlaces(coord) {
 function callback(results, status) {
     if (status == google.maps.places.PlacesServiceStatus.OK) {
         for (var i = 0; i < results.length; i++) {
-
+            console.log(results[i])
             createMarker(results[i]);
             // locations.push(results[i])
         }

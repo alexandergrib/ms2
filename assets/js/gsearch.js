@@ -1,9 +1,9 @@
 // let searchQuestion;// = 'Elmers+End+news';  //'things+to+do+in+london&num=10'
-// let searchSelectors;// = "news"; // search //  images
+
 
 
 //receives call from weather L105
-function doSearch(searchQuestion) {
+function doSearch(searchQuestion) {  //limit 600 query's/month
 
     fetch(`https://google-search3.p.rapidapi.com/api/v1/search/q=${searchQuestion}`, {
         "method": "GET",

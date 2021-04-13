@@ -9,7 +9,7 @@ function getWeather(inputVal) {
         .then(response => response.json())
         .then(data => weatherHandler(data))
         .catch(() => {
-            msg.textContent = "Please search for a valid city 😩";
+            msg.textContent = "Please search for a valid city.";
         });
 
     msg.textContent = "";
@@ -23,9 +23,10 @@ function getWeatherByCoordinates(lat, lon) {
     fetch(url)
         .then(response => response.json())
         .then(data => weatherHandler(data))
-        .catch(() => {
-            msg.textContent = "Please search for a valid city 😩";
-        });
+        // .catch(() => {
+        //     msg.textContent = "Please search for a valid city 😩";
+        //     console.log('error',error);
+        // });
 
     msg.textContent = "";
     form.reset();
@@ -65,7 +66,7 @@ function weatherHandler (data) {
                 li.innerHTML = markup;
 
                 listItem.parentNode.replaceChild(li, listItem);
-                locations.length = 0;  //empties array when searched for new location
+                // locations.length = 0;  //empties array when searched for new location
             } else {
 
                 //Executes on first search for the city
@@ -102,17 +103,18 @@ function weatherHandler (data) {
             };
 
             //requests news
-            // doSearch("news", name);  //selector , query
-            fetchNews(name);
+
+            // fetchNews(name);   //TODO: news working activate after project complete
 
 
             //search for things to do
-            // doSearch("", `things+to+do+in+${name}`)
+            // doSearch("", `things+to+do+in+${name}`)  //TODO: search working activate after project complete
 
             //sets home position marker
             // setMarkers(coord);
             //gets info for places around
             // deleteMarkers();  //if activated markers are erased but not shown
-            getPlaces(coordinates);
+            // getPlaces(coordinates);
+
 
 }

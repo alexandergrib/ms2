@@ -151,7 +151,8 @@ Testing.md
 - After searching for place map not center itself to that location
 
 - News API free version works only on localhost, to use it online i have to upgrade to piad account.
-    - switched API to Rapidapi.com
+    - switched API to Rapidapi.com. Tried to use Google search news, but response time was 3-4 seconds, this caused significant delay after page loaded and populating news feed.
+    - Switched to Newscatcher API from Rapidapi.com this helped to decrease response time down to 200-300ms.
 
 # Credits  
 
