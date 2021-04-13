@@ -102,11 +102,12 @@ function weatherHandler (data) {
             };
 
             //requests news
-            doSearch("news", name);  //selector , query
+            // doSearch("news", name);  //selector , query
+            fetchNews(name);
 
 
             //search for things to do
-            doSearch("", `things+to+do+in+${name}`)
+            // doSearch("", `things+to+do+in+${name}`)
 
             //sets home position marker
             // setMarkers(coord);
