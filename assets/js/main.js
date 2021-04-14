@@ -8,19 +8,6 @@ const list = document.querySelector(".ajax-section .cities");
 let temperature;
 let tempIndicator;
 
-//handle browser location
-
-if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition, error);
-
-} else {
-    alert("Geolocation is not supported by this browser. Please use search form.");
-}
-
-function error(){
-    alert('Sorry, no position available. Please use search form.');
-}
-
 //listens search event
     form.addEventListener("submit", e => {
         e.preventDefault();
@@ -71,13 +58,6 @@ function error(){
     });
 
 
-//if successful in getting coordinates from browser
-function showPosition(position) {
-    // console.log("main.js L164", position.coords.latitude, position.coords.longitude);
-    let lat = position.coords.latitude;
-    let lon = position.coords.longitude;
-    getWeatherByCoordinates(lat,lon)
-}
 
 
 

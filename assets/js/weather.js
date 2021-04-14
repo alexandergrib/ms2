@@ -102,7 +102,7 @@ function weatherHandler (data) {
                 lng: coord.lon
             };
 
-
+            getNearbyPlaces(coordinates, 'restaurants');  //search for nearby places with keyword
             // fetchNews(name);   //TODO: news working activate after project complete
 
 

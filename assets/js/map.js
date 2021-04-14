@@ -12,7 +12,8 @@ let pos;
       bounds = new google.maps.LatLngBounds();
       infoWindow = new google.maps.InfoWindow;
       currentInfoWindow = infoWindow;
-      /* TODO: Step 4A3: Add a generic sidebar */
+
+
       infoPane = document.getElementById('panel');
 
       // Try HTML5 geolocation
@@ -24,7 +25,7 @@ let pos;
           };
           map = new google.maps.Map(document.getElementById('map'), {
             center: pos,
-            zoom: 15
+            zoom: 18
           });
           bounds.extend(pos);
 
@@ -35,6 +36,12 @@ let pos;
 
           // Call Places Nearby Search on user's location
           getNearbyPlaces(pos, 'restaurants');
+
+
+          //Call weather API
+          getWeatherByCoordinates(pos.lat, pos.lng);
+
+
         }, () => {
           // Browser supports geolocation, but user has denied permission
           handleLocationError(true, infoWindow);
@@ -51,7 +58,7 @@ let pos;
       pos = { lat: -33.856, lng: 151.215 };
       map = new google.maps.Map(document.getElementById('map'), {
         center: pos,
-        zoom: 15
+        zoom: 18
       });
 
       // Display an InfoWindow at the map center
@@ -64,7 +71,16 @@ let pos;
 
       // Call Places Nearby Search on the default location
       getNearbyPlaces(pos, 'restaurants');
+
+
     }
+
+
+
+
+
+
+
 
     // Perform a Places Nearby Search Request
     function getNearbyPlaces(position, keyword) {
@@ -73,10 +89,24 @@ let pos;
         rankBy: google.maps.places.RankBy.DISTANCE,
         keyword: keyword
       };
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: position,
+        zoom: 18
+      });
+      map.setCenter(position);
 
       service = new google.maps.places.PlacesService(map);
       service.nearbySearch(request, nearbyCallback);
     }
+
+
+
+
+
+
+
+
+
 
     // Handle the results (up to 20) of the Nearby Search
     function nearbyCallback(results, status) {
@@ -94,7 +124,7 @@ let pos;
           title: place.name
         });
 
-        /* TODO: Step 4B: Add click listeners to the markers */
+
         // Add click listener to each marker
         google.maps.event.addListener(marker, 'click', () => {
           let request = {
@@ -119,7 +149,7 @@ let pos;
       map.fitBounds(bounds);
     }
 
-    /* TODO: Step 4C: Show place details in an info window */
+
     // Builds an InfoWindow to display details above the marker
     function showDetails(placeResult, marker, status) {
       if (status == google.maps.places.PlacesServiceStatus.OK) {
@@ -137,7 +167,7 @@ let pos;
       }
     }
 
-    /* TODO: Step 4D: Load place details in a sidebar */
+
     // Displays place details in a sidebar
     function showPanel(placeResult) {
       // If infoPane is already open, close it
