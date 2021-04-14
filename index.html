@@ -53,7 +53,7 @@
     <div class="container make-center ">
         <div class="row">
             <!--    containter for news-->
-            <div class="col-sm-12 col-md-6 " id="news">
+            <div class="col-sm-12 col-md-6" id="news">
                 <h2 class="d-flex justify-content-center">News</h2>
 <!--                                <ul class="news&#45;&#45;class">-->
                 <!--                    <li class="article">-->
@@ -537,11 +537,16 @@
     </div>
 
     <!--container for things to do-->
-    <div class="container make-center" id="toDoThings">
-        things todo placeholder
+    <div class="container-fluid" id="toDoThings">
+        <div class="row">
+            <div class="col-sm-12 col-md-4 align-middle" id="restaurants" onclick="searchOnclick('restaurants');">Restaurants</div>
+            <div class="col-sm-12 col-md-4 align-middle" id="hotels" onclick="searchOnclick('hotels');">Hotels</div>
+            <div class="col-sm-12 col-md-4 align-middle" id="entertainment" onclick="searchOnclick('entertainment');">Entertainment</div>
+        </div>
     </div>
-
-    <div id="textPlaceHolder"></div>
+<div class="row">
+    <div class="col make-center no-gutters" id="textPlaceHolder"></div>
+    </div>
     <!--The div element for the map -->
     <!-- The slide-out panel for showing place details -->
     <div id="panel"></div>

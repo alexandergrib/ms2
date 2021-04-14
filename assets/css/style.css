@@ -1,128 +1,71 @@
-/*map*/
-/*#container {*/
-/*    height: 800px;*/
-/*    display: flex;*/
-/*}*/
-
-/*#sidebar {*/
-/*    flex-basis: 5rem;*/
-/*    flex-grow: 1;*/
-/*    padding: 1rem;*/
-/*    max-width: 30rem;*/
-/*    height: 100%;*/
-/*    box-sizing: border-box;*/
-/*    display: flex;*/
-/*}*/
-
-#map {
-    flex-basis: 0;
-    flex-grow: 4;
-    height: 600px; /*100%*/
-    width: 100%;
-}
-
-/* Styling for an info pane that slides out from the left.
-    * Hidden by default. */
-#panel {
-    height: 100%;
-    width: null;
-    background-color: white;
-    position: fixed;
-    z-index: 1;
-    overflow-x: hidden;
-    transition: all .2s ease-out;
-}
-
-.open {
-    width: 250px;
-}
-
-/* Styling for place details */
-.hero {
-    width: 100%;
-    height: auto;
-    max-height: 166px;
-    display: block;
-}
-
-.place,
-p {
-    font-family: 'open sans', arial, sans-serif;
-    padding-left: 18px;
-    padding-right: 18px;
-}
-
-.details {
-    color: darkslategrey;
-}
-
-a {
-    text-decoration: none;
-    color: cadetblue;
-}
-
-
-
-/*#sidebar {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*}*/
-
-/*#container h2 {*/
-/*    font-size: 1.5rem;*/
-/*    margin: 0 0 5px 0;*/
-/*    flex-grow: 0;*/
-/*}*/
-
-/*#container ul {*/
-/*    list-style-type: none;*/
-/*    padding: 0;*/
-/*    margin: 0;*/
-/*    overflow-y: scroll;*/
-/*    flex-grow: 1;*/
-/*}*/
-
-/*#container li {*/
-/*    background-color: #f1f1f1;*/
-/*    padding: 10px;*/
-/*    text-overflow: ellipsis;*/
-/*    white-space: nowrap;*/
-/*    overflow: hidden;*/
-/*    font-size: 1.25rem;*/
-/*    cursor: pointer;*/
-/*}*/
-
-/*#container li:nth-child(odd) {*/
-/*    background-color: #fcfcfc;*/
-/*}*/
-
-/*#container button {*/
-/*    width: 100%;*/
-/*    padding: 1rem;*/
-/*    flex-grow: 0;*/
-/*    cursor: pointer;*/
-/*    background: #1a73e8;*/
-/*    font-size: 1.5rem;*/
-/*    color: white;*/
-/*    border: none;*/
-/*}*/
-
-/*#container button:hover {*/
-/*    color: #c5d4f0;*/
-/*}*/
-
-/*#container button:disabled {*/
-/*    background-color: #9fc1ee;*/
-/*    color: #c5d4f0;*/
-/*    cursor: auto;*/
-/*}*/
-
-
-/**/
 
 body {
     /*background-color: black;*/
 }
+
+
+#toDoThings {
+    width: 100%;
+
+    background-color: #97a1b5;
+    text-align: center;
+    vertical-align: center;
+    /*vertical-align: middle;*/
+    line-height: 25px;
+    text-transform: uppercase;
+    /*margin-bottom: 0;*/
+
+}
+
+#restaurants {
+    background-color: darkorange;
+    width: 100%;
+    height: 50px;
+    vertical-align: middle;
+    display: inline-block;
+    padding-top: 10px;
+}
+
+
+#hotels {
+    background-color: #4da5ef;
+    width: 100%;
+    display: inline-block;
+    height: 50px;
+    padding-top: 10px;
+}
+
+#hotels:hover {
+    background-color: #0088ff;
+    color: white;
+}
+
+#entertainment {
+    background-color: darkorange;
+    width: 100%;
+    height: 50px;
+    padding-top: 10px;
+}
+
+#restaurants:hover, #entertainment:hover {
+    background-color: #ff7e00;
+    color: white;
+}
+/**/
+
+
+/*Text placeholder*/
+#textPlaceHolder {
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    padding-top: 3px;
+    text-transform: uppercase;
+    background-color: #7b9dbe;
+    border: 1px solid #000000;
+}
+
+
 
 /*Search button-----------------------------------------------*/
 .make-center {
@@ -248,7 +191,6 @@ input:checked + .slider:before {
 
 /*--weather section----------------------------------*/
 
-
 #weather {
     background-color: #1e2432;
     width: 100%;
@@ -256,9 +198,6 @@ input:checked + .slider:before {
 
 }
 
-/*.main-weather{*/
-/*    width: 100%;*/
-/*}*/
 #weather ul {
     list-style: none;
 }
@@ -339,7 +278,6 @@ input:checked + .slider:before {
     width: 210px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-
 }
 
 .tt-dropdown-menu {
@@ -357,12 +295,6 @@ input:checked + .slider:before {
     border: 1px solid #000;
 }
 
-
-/*.triggered-events {*/
-/*    float: right;*/
-/*    width: 500px;*/
-/*    height: 300px;*/
-/*}*/
 
 /*news section----------------------*/
 #news {
@@ -453,3 +385,60 @@ input:checked + .slider:before {
 }
 
 
+/*map------------------------------------------*/
+#map {
+    /*margin-top: 75px;*/
+    flex-basis: 0;
+    flex-grow: 4;
+    height: 600px; /*100%*/
+    width: 100%;
+}
+
+/* Styling for an info pane that slides out from the left.
+    * Hidden by default. */
+#panel {
+    height: 600px;
+    /*width: none;*/
+    background-color: white;
+    position: absolute;  /*fixed*/
+    z-index: 1;
+    overflow-x: hidden;
+    transition: all .2s ease-out;
+    border: 1px solid #000000;
+}
+
+
+.open {
+    width: 250px;
+}
+
+/* Styling for place details */
+.hero {
+    width: 100%;
+    height: auto;
+    max-height: 166px;
+    display: block;
+}
+
+.place,
+p {
+    font-family: 'open sans', arial, sans-serif;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.details {
+    color: darkslategrey;
+}
+
+a {
+    text-decoration: none;
+    color: cadetblue;
+}
+
+
+@media only screen and (max-width: 768px) {
+    #news {
+        order: 2;
+    }
+}

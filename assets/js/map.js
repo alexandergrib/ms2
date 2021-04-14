@@ -1,6 +1,6 @@
 //https://developers.google.com/codelabs/maps-platform/google-maps-nearby-search-js#0
 //99% code from example by google
-let pos;
+    let pos;
     let map;
     let bounds;
     let infoWindow;
@@ -180,7 +180,7 @@ let pos;
         infoPane.removeChild(infoPane.lastChild);
       }
 
-      /* TODO: Step 4E: Display a Place Photo with the Place Details */
+      /*  Display a Place Photo with the Place Details */
       // Add the primary photo, if there is one
       if (placeResult.photos) {
         let firstPhoto = placeResult.photos[0];
