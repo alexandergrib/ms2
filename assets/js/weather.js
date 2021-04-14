@@ -102,19 +102,10 @@ function weatherHandler (data) {
                 lng: coord.lon
             };
 
-            //requests news
 
             // fetchNews(name);   //TODO: news working activate after project complete
 
 
             //search for things to do
             // doSearch("", `things+to+do+in+${name}`)  //TODO: search working activate after project complete
-
-            //sets home position marker
-            // setMarkers(coord);
-            //gets info for places around
-            // deleteMarkers();  //if activated markers are erased but not shown
-            // getPlaces(coordinates);
-
-
 }
