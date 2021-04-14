@@ -48,6 +48,7 @@
         });
       } else {
         // Browser doesn't support geolocation
+
         handleLocationError(false, infoWindow);
       }
     }
@@ -71,7 +72,7 @@
 
       // Call Places Nearby Search on the default location
       getNearbyPlaces(pos, 'restaurants');
-
+      alert("Cannot get location, please use search. Default location loaded.");
 
     }
 
