@@ -112,5 +112,5 @@ function weatherHandler(data) {
 }
 
 function searchOnclick(keyword) {
-    getNearbyPlaces(pos, keyword);
+    getNearbyPlaces(coordinates, keyword);
 }
