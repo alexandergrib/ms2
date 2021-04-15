@@ -85,6 +85,7 @@
 
     // Perform a Places Nearby Search Request
     function getNearbyPlaces(position, keyword) {
+      bounds = new google.maps.LatLngBounds();
       let request = {
         location: position,
         rankBy: google.maps.places.RankBy.DISTANCE,
@@ -92,7 +93,7 @@
       };
       map = new google.maps.Map(document.getElementById('map'), {
         center: position,
-        zoom: 18
+        zoom: 15
       });
       map.setCenter(position);
 
@@ -147,6 +148,11 @@
       });
       /* Once all the markers have been placed, adjust the bounds of the map to
        * show all the markers within the visible area. */
+
+
+
+
+
       map.fitBounds(bounds);
     }
 
