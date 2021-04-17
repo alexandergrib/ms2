@@ -24,7 +24,7 @@ function getWeatherByCoordinates(lat, lon) {
         .then(response => response.json())
         .then(data => weatherHandler(data))
     // .catch(() => {
-    //     msg.textContent = "Please search for a valid city 😩";
+    //     msg.textContent = "Please search for a valid city";
     //     console.log('error',error);
     // });
 
@@ -111,6 +111,13 @@ function weatherHandler(data) {
     // doSearch("", `things+to+do+in+${name}`)  //TODO: search working activate after project complete
 }
 
+
+
+
+
+
+
 function searchOnclick(keyword) {
     getNearbyPlaces(coordinates, keyword);
 }
+

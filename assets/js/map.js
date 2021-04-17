@@ -25,7 +25,7 @@
           };
           map = new google.maps.Map(document.getElementById('map'), {
             center: pos,
-            zoom: 18
+            zoom: 10
           });
           bounds.extend(pos);
 
@@ -40,7 +40,8 @@
 
           //Call weather API
           getWeatherByCoordinates(pos.lat, pos.lng);
-
+          document.getElementById("info-text").classList.add("hide");   //hide site description.
+          document.getElementById("main").classList.remove("hide");
 
         }, () => {
           // Browser supports geolocation, but user has denied permission
@@ -56,10 +57,10 @@
     // Handle a geolocation error
     function handleLocationError(browserHasGeolocation, infoWindow) {
       // Set default location to Sydney, Australia
-      pos = { lat: -33.856, lng: 151.215 };
+      pos = { lat: 51.49, lng: -0.138 };  //51.49040480754276, -0.13893831500671683
       map = new google.maps.Map(document.getElementById('map'), {
         center: pos,
-        zoom: 18
+        zoom: 10
       });
 
       // Display an InfoWindow at the map center
@@ -72,8 +73,9 @@
 
       // Call Places Nearby Search on the default location
       getNearbyPlaces(pos, 'restaurants');
-      alert("Cannot get location, please use search. Default location loaded.");
-
+      // alert("Cannot get location, please use search. Default location loaded.");
+      document.getElementById("info-text").classList.add("hide");   //hide site description.
+      // document.getElementById("main").classList.remove("hide");
     }
 
 
@@ -93,7 +95,7 @@
       };
       map = new google.maps.Map(document.getElementById('map'), {
         center: position,
-        zoom: 15
+        zoom: 10
       });
       map.setCenter(position);
 
@@ -163,8 +165,9 @@
         let placeInfowindow = new google.maps.InfoWindow();
         let rating = "None";
         if (placeResult.rating) rating = placeResult.rating;
-        placeInfowindow.setContent('<div><strong>' + placeResult.name +
+        placeInfowindow.setContent('<div class="marker--div"><strong>' + placeResult.name +
           '</strong><br>' + 'Rating: ' + rating + '</div>');
+
         placeInfowindow.open(marker.map, marker);
         currentInfoWindow.close();
         currentInfoWindow = placeInfowindow;

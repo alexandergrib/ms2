@@ -154,6 +154,12 @@ Testing.md
     - switched API to Rapidapi.com. Tried to use Google search news, but response time was 3-4 seconds, this caused significant delay after page loaded and populating news feed.
     - Switched to Newscatcher API from Rapidapi.com this helped to decrease response time down to 200-300ms.
 
+
+- Console error (Failed to load resource: the server responded with a status of 403 ())
+    - error coming from google API (need to investigate more what is causing it)
+    
+
+
 # Credits  
 
 ## Credits for text and modules

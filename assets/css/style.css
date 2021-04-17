@@ -4,6 +4,11 @@ body {
 }
 
 
+#main {
+    margin-top: 20px;
+}
+
+
 #toDoThings {
     width: 100%;
 
@@ -51,6 +56,7 @@ body {
     background-color: #ff7e00;
     color: white;
 }
+
 /**/
 
 
@@ -67,12 +73,29 @@ body {
 
 
 
-/*Search button-----------------------------------------------*/
 .make-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+
+
+/*Search button-----------------------------------------------*/
+.search-div {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    left: 15%;
+}
+
+label {
+    position: relative;
+    top: 15px;
+
+}
+
+
 
 .search-div a {
     float: left;
@@ -104,21 +127,34 @@ input[type=text] {
 }
 
 .search-div button {
-    float: right;
-    padding: 6px;
-    margin-top: 8px;
+    position: relative;
+    /* float: right; */
+    padding: 8px;
+    /* margin-top: 8px; */
     margin-right: 16px;
     background: #ddd;
     font-size: 17px;
     border: none;
     border-radius: 30%;
     cursor: pointer;
+    margin-left: 8px;
+    top: 17px;
+    left: -7px;
 }
 
 .search-div button:hover {
     background: #ccc;
 }
 
+
+.msg {
+    /*position: fixed;*/
+    /*top: 1vh;*/
+    height: 20px;
+}
+
+
+/**/
 .hide {
     /*visibility:hidden;*/ /* hides element but keeps its place*/
     display: none; /*removes completely*/
@@ -128,11 +164,23 @@ input[type=text] {
 
 
 /*Switch css-----------------------------------------------------------*/
+.switch--div .letter{
+    /*position: absolute;*/
+    /*display: block;*/
+    /*!*float: right;*!*/
+    /*left: 55%;*/
+    /*top: 0;*/
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+
 .switch {
     position: relative;
     display: inline-block;
     width: 60px;
     height: 34px;
+    top: -2px;
 }
 
 .switch input {
@@ -188,11 +236,15 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
+.letter {
+    font-size: x-large;
+    vertical-align: middle;
+}
 
 /*--weather section----------------------------------*/
 
 #weather {
-    background-color: #1e2432;
+    background-color: #6b7488;
     width: 100%;
 
 
@@ -202,6 +254,9 @@ input:checked + .slider:before {
     list-style: none;
 }
 
+.main-weather {
+    margin-top: 3%;
+}
 
 .ajax-section {
     margin: 1px;
@@ -400,7 +455,7 @@ input:checked + .slider:before {
     height: 600px;
     /*width: none;*/
     background-color: white;
-    position: absolute;  /*fixed*/
+    position: absolute; /*fixed*/
     z-index: 1;
     overflow-x: hidden;
     transition: all .2s ease-out;
@@ -436,6 +491,10 @@ a {
     color: cadetblue;
 }
 
+.marker--div {
+    height: 40px;
+    padding-right: 10px;
+}
 
 @media only screen and (max-width: 768px) {
     #news {
