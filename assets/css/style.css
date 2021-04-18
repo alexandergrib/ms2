@@ -91,6 +91,7 @@ body {
     margin-top: 10px;
     margin-bottom: 40px;
     left: 15%;
+    white-space: nowrap;
 }
 
 label {
@@ -242,6 +243,7 @@ input:checked + .slider:before {
 }
 #switch-and-letters{
     padding-top: 22px;
+    white-space: nowrap;
 }
 .letter {
     font-size: x-large;
@@ -363,6 +365,7 @@ input:checked + .slider:before {
     background-color: #97a1b5;
     width: 100vw; /*650px*/
     padding-bottom: 20px;
+
 
 }
 
