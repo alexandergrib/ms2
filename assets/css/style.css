@@ -62,6 +62,7 @@ body {
 
 /*Text placeholder*/
 #textPlaceHolder {
+    margin-right: 15px;
     height: 30px;
     display: inline-block;
     text-align: center;
