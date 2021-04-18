@@ -521,8 +521,15 @@ a {
     padding-right: 10px;
 }
 
+@media only screen and (max-width: 800px) {
+    form label{
+    display: none;  /*Hide label on small screens to fit search field*/
+}
+
 @media only screen and (max-width: 768px) {
     #news {
         order: 2;
     }
+}
+
 }
