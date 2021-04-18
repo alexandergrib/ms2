@@ -108,3 +108,6 @@ checkbox.addEventListener('change', function () {
     }
 
 });
+
+
+// Event listener to close panel on click

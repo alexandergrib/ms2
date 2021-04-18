@@ -466,6 +466,19 @@ input:checked + .slider:before {
     border: 1px solid #000000;
 }
 
+.close-ribbon{
+    position: absolute;
+    float: right;
+    font-size: xx-large;
+    top: 5px;
+    right: 10px;
+    color: #fff;
+    text-shadow: 1px 1px #000,
+    -1px -1px #000,
+    -1px 0px #000,
+    0px -1px #000;
+
+}
 
 .open {
     width: 250px;
