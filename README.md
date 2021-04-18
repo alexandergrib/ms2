@@ -141,16 +141,17 @@ o	Would you like to be contacted selector.
 # Testing
 Testing.md  
 
+# Site logic
+logic.md
+
 # Deployment  
 - Deployment made via GitHub pages.  Fork my repository, then go to Setting on forked repository scroll down to GitHub Pages and select in Source section the branch to be used.  
   
 # Problems encountered: 
-- Google debug console shows "places.js:37 Uncaught ReferenceError: google is not defined
-    at places.js:37" 
-    * This is not real error, it occurs due to code being in separate file from where maps init was declared
 - After searching for place map not center itself to that location
+  - Fixed by setting new boundaries instead of extending previous (bounds = new google.maps.LatLngBounds();) 
 
-- News API free version works only on localhost, to use it online i have to upgrade to piad account.
+- News API free version works only on localhost, to use it online i have to upgrade to paid account.
     - switched API to Rapidapi.com. Tried to use Google search news, but response time was 3-4 seconds, this caused significant delay after page loaded and populating news feed.
     - Switched to Newscatcher API from Rapidapi.com this helped to decrease response time down to 200-300ms.
 
@@ -166,6 +167,8 @@ Testing.md
 - [Weather api](https://webdesign.tutsplus.com/tutorials/build-a-simple-weather-app-with-vanilla-javascript--cms-33893)
 - [typeahead](//http://twitter.github.io/typeahead.js/examples/)
 - [world cities database](https://simplemaps.com/data/world-cities)
+
+
 ## Credits for images used
  
 
