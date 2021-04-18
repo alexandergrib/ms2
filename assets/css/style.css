@@ -152,6 +152,7 @@ input[type=text] {
     /*position: fixed;*/
     /*top: 1vh;*/
     height: 20px;
+    padding-top: 15px;
 }
 
 
@@ -236,7 +237,9 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
-
+#switch-and-letters{
+    padding-top: 22px;
+}
 .letter {
     font-size: x-large;
     vertical-align: middle;
