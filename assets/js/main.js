@@ -111,3 +111,10 @@ checkbox.addEventListener('change', function () {
 
 
 // Event listener to close panel on click
+// document.getElementsByClassName("close-ribbon").addEventListener("click", closeRibbon);
+
+function closeRibbon(){
+    document.getElementById("panel").classList.remove("open");
+    document.getElementById("panel").innerHTML = "";
+}
+

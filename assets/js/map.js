@@ -213,7 +213,7 @@ function showPanel(placeResult) {
     }
     let close = document.createElement('span'); //create span element to add X to close ribbon
     close.classList.add('close-ribbon');//add toggle class
-    close.innerHTML = '<i class="fa fa-times" aria-hidden="true"></i>';
+    close.innerHTML = '<i class="fa fa-times" onclick="closeRibbon();" aria-hidden="true"></i>';
     infoPane.appendChild(close);
     // Open the infoPane
     infoPane.classList.add("open");
