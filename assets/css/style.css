@@ -19,7 +19,10 @@ body {
     line-height: 25px;
     text-transform: uppercase;
     /*margin-bottom: 0;*/
+}
 
+#toDoThings:hover{
+    cursor: pointer;
 }
 
 #restaurants {
@@ -477,7 +480,9 @@ input:checked + .slider:before {
     -1px -1px #000,
     -1px 0px #000,
     0px -1px #000;
-
+}
+.close-ribbon a{
+    color: #fff;
 }
 
 .open {
