@@ -3,7 +3,7 @@
 <head>
     <title>Travel Master | Find your next adventure!</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
@@ -22,39 +22,54 @@
 
 
 <!--Search place holder-->
-<div class="container-fluid search-div" id="search-div">
+<div class="search-div" id="search-div">
+
+    <nav class="navbar">
+        <form>
+        <div class="input-group">
+            <input id="searchField" class="typeahead form-control" type="text" placeholder="Search for a city"
+                   name="search" aria-describedby="Enter city name">
+            <div class="input-group-append">
+                <button id="search-button" type="submit" class="input-group-text"><i class="fa fa-search"></i>
+                </button>
+                <button class="btn" type="button">°F/°C</button>
+            </div>
+        </div>
+
+        <label class="switch">
+            <input id="checkbox" type="checkbox" name="checkbox" checked>
+            <span class="slider round"></span>
+        </label>
+        </form>
+    </nav>
+
+
     <div class="row">
         <div class="col-8">
-            <form>
-                <label for="searchField">Enter city name (London) or (london, gb)</label>
-                <input id="searchField" class="typeahead" type="text" placeholder="Search for a city" name="search">
-                <button id="search-button" type="submit"><i class="fa fa-search"></i></button>
-            </form>
             <p class="msg" id="info--message">Text message</p>
         </div>
         <!-- Rounded switch -->
-        <div class="switch--div col-4">
-            <div id="switch-and-letters">
-                <span class="letter">°F</span>
-                <label class="switch">
-                    <input id="checkbox" type="checkbox" name="checkbox" checked>
-                    <span class="slider round"></span>
-                </label>
-                <span class="letter">°C</span>
-            </div>
-        </div>
+        <!--        <div class="switch&#45;&#45;div col-4">-->
+        <!--            <div id="switch-and-letters">-->
+        <!--                <span class="letter">°F</span>-->
+        <!--                -->
+        <!--                -->
+        <!--                <span class="letter">°C</span>-->
+        <!--            </div>-->
+        <!--        </div>-->
     </div>
 
 </div>
 
 
 <!--Info text placeholder-->
-<div id="info-text" class="make-center"><p>Here you can search for weather and you can find Cafe's, places to stay, or entertainment for the place you plan to visit.</p></div>
+<div id="info-text" class="make-center"><p>Here you can search for weather and you can find Cafe's, places to stay, or
+    entertainment for the place you plan to visit.</p></div>
 
 
 <!--whole page div wrapper-->
 <div id="main"> <!-- class hide removes whole section -->
-    <div class="container-fluid make-center ">
+    <div class="container make-center ">
         <div class="row">
             <!--    containter for news-->
             <div class="col-sm-12 col-md-6" id="news">
@@ -553,9 +568,8 @@
 
     <!-- The slide-out panel for showing place details -->
     <div id="panel"></div>
-     <!--The div element for the map -->
+    <!--The div element for the map -->
     <div id="map"></div>
-
 
 
     <!--footer-->
@@ -571,7 +585,6 @@
         crossorigin="anonymous"></script>
 
 
-
 <script src="assets/js/typeahead.bundle.js"></script>
 <script src="assets/js/cities.js"></script>
 <script src="assets/js/news.js"></script>
@@ -583,9 +596,6 @@
 <script async
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8QVgU4Ry5cuU67JUZVg7cnIOzInvCt0c&libraries=places&callback=initMap">
 </script>
-
-
-
 
 
 </body>
