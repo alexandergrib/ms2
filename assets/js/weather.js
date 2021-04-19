@@ -51,7 +51,7 @@ function weatherHandler(data) {
         li.classList.add("city");
         const markup = `
                 <h2 class="city-name" data-name="${name},${sys.country}">
-                  <span>${name}</span>
+                  <p>${name}</p>
                   <sup>${sys.country}</sup>
                 </h2>
                 <div class="city-temp">${Math.round(temperature)}<sup>°${tempIndicator}</sup></div>
@@ -73,7 +73,7 @@ function weatherHandler(data) {
         li.classList.add("city");
         const markup = `
                 <h2 class="city-name" data-name="${name},${sys.country}">
-                  <span>${name}</span>
+                  <p>${name}</p>
                   <sup>${sys.country}</sup>
                 </h2>
                 <div class="city-temp">${Math.round(temperature)}<sup>°${tempIndicator}</sup></div>

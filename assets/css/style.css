@@ -84,42 +84,6 @@ body {
 
 
 /*Search button-----------------------------------------------*/
-/*.search-div {*/
-/*    position: relative;*/
-/*    margin-top: 10px;*/
-/*    margin-bottom: 40px;*/
-/*    left: 15%;*/
-/*    white-space: nowrap;*/
-/*}*/
-
-/*label {*/
-/*    position: relative;*/
-/*    top: 15px;*/
-
-/*}*/
-
-
-/*.search-div a {*/
-/*    float: left;*/
-/*    display: block;*/
-/*    color: black;*/
-/*    text-align: center;*/
-/*    padding: 14px 16px;*/
-/*    text-decoration: none;*/
-/*    font-size: 17px;*/
-/*}*/
-
-/*.search-div a:hover {*/
-/*    background-color: #ddd;*/
-/*    color: black;*/
-/*}*/
-
-/*.search-div a.active {*/
-/*    background-color: #2196F3;*/
-/*    color: white;*/
-/*}*/
-
-
 .navbar {
     width: 65% !important;
     margin: 0px auto;
@@ -142,26 +106,6 @@ input[type=text] {
     -moz-border-radius-bottomleft: .25rem;
     /*width: 40px;*/
 }
-
-/*.search-div button {*/
-/*    !*position: relative;*!*/
-/*    !* float: right; *!*/
-/*    !*padding: 8px;*!*/
-/*    !* margin-top: 8px; *!*/
-/*    margin-right: 16px;*/
-/*    background: #ddd;*/
-/*    font-size: 17px;*/
-/*    border: none;*/
-/*    border-radius: 30%;*/
-/*    cursor: pointer;*/
-/*    margin-left: 8px;*/
-/*    top: 17px;*/
-/*    left: -7px;*/
-/*}*/
-
-/*.search-div button:hover {*/
-/*    background: #ccc;*/
-/*}*/
 
 
 .msg {
@@ -536,15 +480,10 @@ a {
     padding-right: 10px;
 }
 
-@media only screen and (max-width: 800px) {
-    form label {
-        display: none; /*Hide label on small screens to fit search field*/
-    }
 
-    @media only screen and (max-width: 768px) {
-        #news {
-            order: 2;
-        }
+@media only screen and (max-width: 768px) {
+    #news {
+        order: 2;
     }
-
 }
+
