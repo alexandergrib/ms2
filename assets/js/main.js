@@ -91,23 +91,19 @@ $('#search-div .typeahead').typeahead({
         source: states
     });
 
-//checkbox listener-------------switch between C and F----------------------------------------------------
-var checkbox = document.querySelector("input[name=checkbox]");
-
-checkbox.addEventListener('change', function () {
-    let read = document.getElementsByClassName("city-temp").item(0);
-    // let element = read.getElementsByTagName("SUP")[0].innerHTML;
-    if (this.checked) {
-        //C
-        read.innerHTML = `${Math.round(temperature)}<sup>°C</sup>`
-        // console.log(read.innerHTML); //20<sup>°C</sup>
-    } else {
-        //F
-        read.innerHTML = `${Math.round((temperature * 1.8) + 32)}<sup>°F</sup>`
-        // console.log(temperature)
+//-------------switch between C and F----------------------------------------------------
+function switchToF() {
+    let weatherItem = document.getElementsByClassName("city-temp").item(0);
+    let read = document.getElementById("change-output").innerHTML;
+    if (read === "°F"){
+       weatherItem.innerHTML = `${Math.round((temperature * 1.8) + 32)}<sup>°F</sup>`;
+       document.getElementById("change-output").innerHTML = "°C";
+    }else{
+        weatherItem.innerHTML = `${Math.round(temperature)}<sup>°C</sup>`;
+        document.getElementById("change-output").innerHTML = "°F";
     }
 
-});
+};
 
 
 // Event listener to close panel on click
