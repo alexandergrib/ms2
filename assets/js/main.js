@@ -28,14 +28,14 @@ let tempIndicator;
                     if (inputVal.split(",")[1].length > 2) {
                         inputVal = inputVal.split(",")[0];
                         content = el
-                            .querySelector(".city-name p")
+                            .querySelector(".city-name span")
                             .textContent.toLowerCase();
                     } else {
                         content = el.querySelector(".city-name").dataset.name.toLowerCase();
                     }
                 } else {
                     //athens
-                    content = el.querySelector(".city-name p").textContent.toLowerCase();
+                    content = el.querySelector(".city-name span").textContent.toLowerCase();
                 }
 
                 return content == inputVal.toLowerCase();
@@ -43,7 +43,7 @@ let tempIndicator;
 
             if (filteredArray.length > 0) {
                 msg.textContent = `You already know the weather for ${
-                    filteredArray[0].querySelector(".city-name p").textContent
+                    filteredArray[0].querySelector(".city-name span").textContent
                 }`;
 
                 form.reset();
