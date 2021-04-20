@@ -1,7 +1,7 @@
 /*SEARCH BY USING A CITY NAME (e.g. athens) OR A COMMA-SEPARATED CITY NAME ALONG WITH THE COUNTRY CODE (e.g. athens,gr)*/
-const form = document.querySelector(".navbar form");
+const form = document.querySelector(".search-div form");
 const input = document.querySelector("#searchField");
-const msg = document.querySelector(".navbar .msg");
+const msg = document.querySelector(".search-div .msg");
 const list = document.querySelector(".ajax-section .cities");
 
 
@@ -28,14 +28,14 @@ let tempIndicator;
                     if (inputVal.split(",")[1].length > 2) {
                         inputVal = inputVal.split(",")[0];
                         content = el
-                            .querySelector(".city-name span")
+                            .querySelector(".city-name p")
                             .textContent.toLowerCase();
                     } else {
                         content = el.querySelector(".city-name").dataset.name.toLowerCase();
                     }
                 } else {
                     //athens
-                    content = el.querySelector(".city-name span").textContent.toLowerCase();
+                    content = el.querySelector(".city-name p").textContent.toLowerCase();
                 }
 
                 return content == inputVal.toLowerCase();
@@ -43,7 +43,7 @@ let tempIndicator;
 
             if (filteredArray.length > 0) {
                 msg.textContent = `You already know the weather for ${
-                    filteredArray[0].querySelector(".city-name span").textContent
+                    filteredArray[0].querySelector(".city-name p").textContent
                 }`;
 
                 form.reset();
