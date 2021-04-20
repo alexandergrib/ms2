@@ -1,7 +1,7 @@
 /*SEARCH BY USING A CITY NAME (e.g. athens) OR A COMMA-SEPARATED CITY NAME ALONG WITH THE COUNTRY CODE (e.g. athens,gr)*/
-const form = document.querySelector(".search-div form");
+const form = document.querySelector(".navbar form");
 const input = document.querySelector("#searchField");
-const msg = document.querySelector(".search-div .msg");
+const msg = document.querySelector(".navbar .msg");
 const list = document.querySelector(".ajax-section .cities");
 
 
