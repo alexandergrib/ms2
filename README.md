@@ -127,16 +127,16 @@ o	Would you like to be contacted selector.
 ## Features left to implement:  
  
 # Technologies used:  
-	HTML   
-	CSS  
-	Javascript
-	Bootstrap  
-	Fontawesome  
-	Google Fonts    
-	Github  
-	Git  
-	Balsamiq  
-	[Trello](https://trello.com/b/AimOKUHW/ms1-project) for KANBAN project organizing
+*	HTML   
+*	Javascript
+*	Bootstrap  
+*	Fontawesome  
+*	Google Fonts    
+*	Github  
+*	Git  
+*	Balsamiq  
+*	[Trello](https://trello.com/b/AimOKUHW/ms1-project) for KANBAN project organizing
+*	CSS  
   
 # Testing
 Testing.md  
@@ -167,7 +167,7 @@ logic.md
 - [Weather api](https://webdesign.tutsplus.com/tutorials/build-a-simple-weather-app-with-vanilla-javascript--cms-33893)
 - [typeahead](//http://twitter.github.io/typeahead.js/examples/)
 - [world cities database](https://simplemaps.com/data/world-cities)
-
+- [map](https://developers.google.com/maps/documentation/javascript/examples/place-search-pagination#maps_place_search_pagination-css)
 
 ## Credits for images used
  
