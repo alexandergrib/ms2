@@ -6,6 +6,8 @@ body {
 
 #main {
     margin-top: 20px;
+    /*padding-left: 0px;*/
+    padding: 0;
 }
 
 
@@ -86,7 +88,7 @@ body {
 /*Search button-----------------------------------------------*/
 .navbar-brand {
     position: absolute;
-    left: 1%;
+    left: 2%;
     /*width: 65% !important;*/
     /*margin: 0px auto;*/
     /*left: 0;*/
@@ -323,8 +325,9 @@ input:checked + .slider:before {
 /*news section----------------------*/
 #news {
     background-color: #97a1b5;
-    width: 100vw; /*650px*/
+    width: 100%; /*650px*/
     padding-bottom: 20px;
+
 
 
 }
@@ -358,7 +361,7 @@ input:checked + .slider:before {
     padding: 5px 0px;
     margin-bottom: 5px;
     margin-left: -7px;
-    white-space: nowrap;
+    /*white-space: nowrap;*/
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
