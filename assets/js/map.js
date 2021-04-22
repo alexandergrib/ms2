@@ -204,7 +204,7 @@ function showPanel(placeResult) {
     if (placeResult.website) {
         let websitePara = document.createElement('p');
         let websiteLink = document.createElement('a');
-        let websiteUrl = document.createTextNode(placeResult.website);
+        let websiteUrl = document.createTextNode("Website");//placeResult.website
         websiteLink.appendChild(websiteUrl);
         websiteLink.title = placeResult.website;
         websiteLink.href = placeResult.website;
