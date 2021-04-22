@@ -41,8 +41,8 @@ function initMap() {
 
             //Call weather API
             getWeatherByCoordinates(pos.lat, pos.lng);
-            document.getElementById("info-text").classList.add("hide");   //hide site description.
-            document.getElementById("main").classList.remove("hide");
+            // document.getElementById("info-text").classList.add("hide");   //hide site description.
+            // document.getElementById("main").classList.remove("hide");
 
         }, () => {
             // Browser supports geolocation, but user has denied permission
