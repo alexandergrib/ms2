@@ -86,6 +86,9 @@ body {
 
 
 /*Search button-----------------------------------------------*/
+.search-div{
+    margin-top:10px;
+}
 .navbar-brand {
     position: absolute;
     left: 2%;
@@ -219,22 +222,26 @@ input:checked + .slider:before {
     width: 100%;
 
 
+
 }
 
 #weather ul {
     list-style: none;
 }
 
-.main-weather {
-    margin-top: 3%;
-}
+
 
 .ajax-section {
-    margin: 1px;
+    /*margin: 1px;*/
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: auto;
+    width: 250px;
+
 }
 
 .ajax-section .cities {
-    width: 300px;
+    width: 15rem;
     padding: 0.8vh 1%;
     margin-bottom: 0;
     /*display: grid;*/
