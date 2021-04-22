@@ -208,6 +208,7 @@ function showPanel(placeResult) {
         websiteLink.appendChild(websiteUrl);
         websiteLink.title = placeResult.website;
         websiteLink.href = placeResult.website;
+        websiteLink.target = "_blank";
         websitePara.appendChild(websiteLink);
         infoPane.appendChild(websitePara);
     }
