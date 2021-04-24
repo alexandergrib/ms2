@@ -11,10 +11,11 @@
     <!--    font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--    bootstrap-->
-<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"-->
-<!--          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+    <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"-->
+    <!--          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
     <!--    main css-->
     <link href="./assets/css/style.css" rel="stylesheet" type="text/css">
@@ -30,16 +31,17 @@
     <nav class="navbar justify-content-center">
         <a class="navbar-brand" href="#"><img src="./assets/img/logo.png" alt="Logo" style="width:60px;"></a>
         <form>
-        <div class="input-group ">
-            <input id="searchField" class="typeahead form-control " type="text" placeholder="Search for a city"
-                   name="search" aria-describedby="Enter city name">
-            <div class="input-group-append">
-                <button id="search-button" type="submit" class="input-group-text"><i class="fa fa-search"></i>
-                </button>
-<!--                <button class="btn" type="button" id="change-output" onclick="switchToF();">°F</button>-->
+            <div class="input-group ">
+                <input id="searchField" class="typeahead form-control " type="text" placeholder="Search for a city"
+                       name="search" aria-describedby="Enter city name">
+                <div class="input-group-append">
+                    <button id="search-button" type="submit" class="input-group-text"><i class="fa fa-search"></i>
+                    </button>
+                    <!--                <button class="btn" type="button" id="change-output" onclick="switchToF();">°F</button>-->
+                </div>
             </div>
-        </div>
         </form>
+        <div id="current-city"></div>
     </nav>
 
 
@@ -62,7 +64,8 @@
 
 
 <!--Info text placeholder-->
-<div id="info-text" class="make-center"><p>Here you can search for weather and you can find Cafe's, places to stay, or
+<div id="info-text" class="make-center"><p>You can search for current weather and you can find Cafe's, places to stay,
+    or
     entertainment for the place you plan to visit.</p></div>
 
 
@@ -523,39 +526,43 @@
             <div class="col-auto col-md-6" id="weather">
 
 
-                        <div class="ajax-section">
+                <div class="ajax-section">
 
-                                <ul class="cities">
-                                    <li class="city">
-                                        <h2 class="city-name" data-name="London,GB">
-                                            <span>London</span><br>
-                                            <sup>GB</sup>
-                                        </h2>
-                                        <div class="city-temp">20<sup>°C</sup></div>
-                                        <figure class="">
-                                            <img class="city-icon"
-                                                 src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/01d.svg"
-                                                 alt="clear sky">
-                                            <figcaption>clear sky</figcaption>
-                                        </figure>
-                                    </li>
-                                </ul>
+                    <ul class="cities">
+                        <li class="city">
+                            <h2 class="city-name" data-name="London,GB">
+                                <span>London</span><br>
+                                <sup>GB</sup>
+                            </h2>
+                            <div class="city-temp">20<sup>°C</sup></div>
+                            <figure class="">
+                                <img class="city-icon"
+                                     src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/01d.svg"
+                                     alt="clear sky">
+                                <figcaption>clear sky</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
 
-                        </div>
+                </div>
 
             </div>
         </div>
 
     </div>
-<!--<div class="container-fluid">-->
+    <!--<div class="container-fluid">-->
     <!--container for things to do-->
     <div class="container-fluid" id="toDoThings">
         <div class="row">
-            <div class="col-12 col-md-4 align-middle secondaryColor mainColor " id="restaurants" onclick="searchOnclick('restaurants');">
+            <div class="col-12 col-md-4 align-middle secondaryColor mainColor " id="restaurants"
+                 onclick="searchOnclick('restaurants');">
                 Restaurants
             </div>
-            <div class="col-12 col-md-4 align-middle secondaryColor" id="hotels" onclick="searchOnclick('hotels');">Hotels</div>
-            <div class="col-12 col-md-4 align-middle secondaryColor" id="entertainment" onclick="searchOnclick('things+to+do');">
+            <div class="col-12 col-md-4 align-middle secondaryColor" id="hotels" onclick="searchOnclick('hotels');">
+                Hotels
+            </div>
+            <div class="col-12 col-md-4 align-middle secondaryColor" id="entertainment"
+                 onclick="searchOnclick('things+to+do');">
                 Entertainment
             </div>
         </div>
@@ -568,11 +575,9 @@
     <div id="panel"></div>
     <!--The div element for the map -->
     <div id="map"></div>
-<!--</div>-->
+    <!--</div>-->
 </div>
-    <!--footer-->
-
-
+<!--footer-->
 
 
 <script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
@@ -582,7 +587,9 @@
 <!--        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"-->
 <!--        crossorigin="anonymous"></script>-->
 <!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
 
 
 <script src="assets/js/typeahead.bundle.js"></script>

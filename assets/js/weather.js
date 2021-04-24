@@ -94,9 +94,12 @@ function weatherHandler(data) {
     document.getElementById("textPlaceHolder").innerHTML = `<p>
          Your location: ${name}, ${coord.lat}, ${coord.lon} 
 </p>            
-`;  //Display your search querry
+`;  //Display your search query
 
-
+    document.getElementById("current-city").innerHTML = `<span>
+         ${name}
+</span>            
+`;
     //post coordinates
     coordinates = {
         lat: coord.lat,
@@ -107,8 +110,6 @@ function weatherHandler(data) {
     // fetchNews(name);   //TODO: news working activate after project complete
 
 
-    //search for things to do
-    // doSearch("", `things+to+do+in+${name}`)  //TODO: search working activate after project complete
 }
 
 
@@ -116,7 +117,6 @@ function searchOnclick(keyword) {
     let restaurants = document.getElementById("restaurants");
     let hotels = document.getElementById("hotels");
     let entertainment = document.getElementById("entertainment");
-
 
 
     getNearbyPlaces(coordinates, keyword);

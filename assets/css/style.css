@@ -78,9 +78,10 @@ body {
 
 
 /*Search button-----------------------------------------------*/
-.search-div{
-    margin-top:10px;
+.search-div {
+    margin-top: 10px;
 }
+
 .navbar-brand {
     position: absolute;
     left: 2%;
@@ -112,6 +113,20 @@ input[type=text] {
     /*top: 1vh;*/
     height: 20px;
     padding-top: 15px;
+    color: red;
+}
+
+/**/
+
+
+/*dipslay city next to search*/
+#current-city {
+    display: inline;
+    margin-left: 30px;
+    background-color: #c9cdd6;
+    padding: 6px 6px;
+    border-radius: 5%;
+
 }
 
 
@@ -124,95 +139,9 @@ input[type=text] {
 /**/
 
 
-/*!*Switch css-----------------------------------------------------------*!*/
-/*.switch--div .letter {*/
-/*    !*position: absolute;*!*/
-/*    !*display: block;*!*/
-/*    !*!*float: right;*!*!*/
-/*    !*left: 55%;*!*/
-/*    !*top: 0;*!*/
-/*    margin-top: auto;*/
-/*    margin-bottom: auto;*/
-
-/*}*/
-
-/*.switch {*/
-/*    position: relative;*/
-/*    display: inline-block;*/
-/*    width: 60px;*/
-/*    height: 34px;*/
-/*    top: -2px;*/
-/*}*/
-
-/*.switch input {*/
-/*    opacity: 0;*/
-/*    width: 0;*/
-/*    height: 0;*/
-/*}*/
-
-/*.slider {*/
-/*    position: absolute;*/
-/*    cursor: pointer;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    right: 0;*/
-/*    bottom: 0;*/
-/*    background-color: #ccc;*/
-/*    -webkit-transition: .4s;*/
-/*    transition: .4s;*/
-/*}*/
-
-/*.slider:before {*/
-/*    position: absolute;*/
-/*    content: "";*/
-/*    height: 26px;*/
-/*    width: 26px;*/
-/*    left: 4px;*/
-/*    bottom: 4px;*/
-/*    background-color: white;*/
-/*    -webkit-transition: .4s;*/
-/*    transition: .4s;*/
-/*}*/
-
-/*input:checked + .slider {*/
-/*    background-color: #2196F3;*/
-/*}*/
-
-/*input:focus + .slider {*/
-/*    box-shadow: 0 0 1px #2196F3;*/
-/*}*/
-
-/*input:checked + .slider:before {*/
-/*    -webkit-transform: translateX(26px);*/
-/*    -ms-transform: translateX(26px);*/
-/*    transform: translateX(26px);*/
-/*}*/
-
-/*!* Rounded sliders *!*/
-/*.slider.round {*/
-/*    border-radius: 34px;*/
-/*}*/
-
-/*.slider.round:before {*/
-/*    border-radius: 50%;*/
-/*}*/
-
-/*#switch-and-letters {*/
-/*    padding-top: 22px;*/
-/*    white-space: nowrap;*/
-/*}*/
-
-/*.letter {*/
-/*    font-size: x-large;*/
-/*    vertical-align: middle;*/
-/*}*/
-
-
-
-#info-text{
+#info-text {
     padding-top: 10px;
 }
-
 
 
 /*--weather section----------------------------------*/
@@ -222,13 +151,11 @@ input[type=text] {
     width: 100%;
 
 
-
 }
 
 #weather ul {
     list-style: none;
 }
-
 
 
 .ajax-section {
@@ -334,7 +261,6 @@ input[type=text] {
     background-color: #97a1b5;
     width: 100%; /*650px*/
     padding-bottom: 20px;
-
 
 
 }
@@ -499,3 +425,11 @@ a {
     }
 }
 
+@media only screen and (max-width: 415px) {
+    .navbar-brand {
+        display: none;
+    }
+    #current-city{
+        margin-top: 15px;
+    }
+}
