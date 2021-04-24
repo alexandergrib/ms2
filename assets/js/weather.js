@@ -118,6 +118,23 @@ function weatherHandler(data) {
 
 
 function searchOnclick(keyword) {
+    let mainColor = "rgba(255, 140, 0, 1)";
+    let secondaryColor = "rgba(77, 165, 239, 0.5)";
     getNearbyPlaces(coordinates, keyword);
+    if (keyword === "restaurants"){
+        document.getElementById("restaurants").style.backgroundColor = mainColor;
+        document.getElementById("hotels").style.backgroundColor = secondaryColor;
+        document.getElementById("entertainment").style.backgroundColor = secondaryColor;
+    }else if (keyword === "hotels") {
+        document.getElementById("restaurants").style.backgroundColor = secondaryColor;
+        document.getElementById("hotels").style.backgroundColor = mainColor;
+        document.getElementById("entertainment").style.backgroundColor = secondaryColor;
+    }else {
+        document.getElementById("restaurants").style.backgroundColor = secondaryColor;
+        document.getElementById("hotels").style.backgroundColor = secondaryColor;
+        document.getElementById("entertainment").style.backgroundColor = mainColor;
+    }
+
+
 }
 
