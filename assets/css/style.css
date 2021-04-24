@@ -27,7 +27,17 @@ body {
     cursor: pointer;
 }
 
-#restaurants {
+
+.secondaryColor {
+    background-color: rgba(77, 165, 239, 0.5);
+    border: 1px solid black;
+    width: 100%;
+    height: 50px;
+    padding-top: 10px;
+}
+
+
+.mainColor {
     background-color: rgba(255, 140, 0, 1);
     width: 100%;
     height: 50px;
@@ -38,30 +48,9 @@ body {
 }
 
 
-#hotels {
-    background-color: rgba(77, 165, 239, 0.5);
-    width: 100%;
-    border: 1px solid black;
-    display: inline-block;
-    height: 50px;
-    padding-top: 10px;
-}
-
-/*#hotels:hover {*/
-/*    background-color: #0088ff; !*77,165,239*!*/
-/*    color: white;*/
-/*}*/
-
-#entertainment {
-    background-color: rgba(77, 165, 239, 0.5);
-    border: 1px solid black;
-    width: 100%;
-    height: 50px;
-    padding-top: 10px;
-}
-
 #restaurants:hover, #entertainment:hover, #hotels:hover {
-    background-color: #ff7e00;
+    background-color: rgba(40, 63, 112, 1);
+    border: 1px solid black;
     color: white;
 }
 

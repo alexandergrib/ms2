@@ -112,27 +112,26 @@ function weatherHandler(data) {
 }
 
 
-
-
-
-
-
 function searchOnclick(keyword) {
-    let mainColor = "rgba(255, 140, 0, 1)";
-    let secondaryColor = "rgba(77, 165, 239, 0.5)";
+    let restaurants = document.getElementById("restaurants");
+    let hotels = document.getElementById("hotels");
+    let entertainment = document.getElementById("entertainment");
+
+
+
     getNearbyPlaces(coordinates, keyword);
-    if (keyword === "restaurants"){
-        document.getElementById("restaurants").style.backgroundColor = mainColor;
-        document.getElementById("hotels").style.backgroundColor = secondaryColor;
-        document.getElementById("entertainment").style.backgroundColor = secondaryColor;
-    }else if (keyword === "hotels") {
-        document.getElementById("restaurants").style.backgroundColor = secondaryColor;
-        document.getElementById("hotels").style.backgroundColor = mainColor;
-        document.getElementById("entertainment").style.backgroundColor = secondaryColor;
-    }else {
-        document.getElementById("restaurants").style.backgroundColor = secondaryColor;
-        document.getElementById("hotels").style.backgroundColor = secondaryColor;
-        document.getElementById("entertainment").style.backgroundColor = mainColor;
+    if (keyword === "restaurants") {
+        restaurants.classList.add("mainColor");
+        hotels.classList.remove("mainColor");
+        entertainment.classList.remove("mainColor");
+    } else if (keyword === "hotels") {
+        restaurants.classList.remove("mainColor");
+        hotels.classList.add("mainColor");
+        entertainment.classList.remove("mainColor");
+    } else {
+        restaurants.classList.remove("mainColor");
+        hotels.classList.remove("mainColor");
+        entertainment.classList.add("mainColor");
     }
 
 
