@@ -92,6 +92,9 @@ let tempC = document.getElementById("temp-c");
 let tempF = document.getElementById("temp-f");
 
 function switchToC() {
+        if (typeof(temperature) === "undefined"){
+        temperature = 20;
+    }
     let weatherItem = document.getElementsByClassName("city-temp").item(0);
     weatherItem.innerHTML = `${Math.round(temperature)}<sup>°C</sup>`;
     tempF.classList.remove("switch-highlight");
@@ -101,8 +104,13 @@ function switchToC() {
 };
 
 function switchToF() {
+    if (typeof(temperature) === "undefined"){
+        temperature = 20;
+    }
+
     let weatherItem = document.getElementsByClassName("city-temp").item(0);
-    weatherItem.innerHTML = `${Math.round((temperature * 1.8) + 32)}<sup>°F</sup>`;
+    console.log(temperature);
+    weatherItem.innerHTML = `${Math.round((temperature* 1.8) + 32)}<sup>°F</sup>`;
     tempC.classList.remove("switch-highlight");
     tempC.classList.add("switch-base-color");
     tempF.classList.add("switch-highlight");
