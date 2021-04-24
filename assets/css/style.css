@@ -83,7 +83,7 @@ body {
 }
 
 .navbar-brand {
-    position: absolute;
+    /*position: absolute;*/
     left: 2%;
     /*width: 65% !important;*/
     /*margin: 0px auto;*/
@@ -104,7 +104,7 @@ input[type=text] {
 
     -moz-border-radius-topleft: .25rem;
     -moz-border-radius-bottomleft: .25rem;
-    /*width: 40px;*/
+    width: 10rem;
 }
 
 
@@ -128,7 +128,9 @@ input[type=text] {
     border-radius: 5%;
 
 }
-#temp-c, #temp-f{
+
+#temp-c, #temp-f {
+    display: inline-block;
     margin-left: 20px;
     text-align: center;
     vertical-align: center;
@@ -139,27 +141,42 @@ input[type=text] {
     padding-top: 2px;
 }
 
-.switch-base-color{
+.switch-base-color {
     background-color: #c9cdd6;
 }
-.switch-highlight{
+
+.switch-highlight {
     background-color: rgba(255, 140, 0, 1);
 }
 
-#temp-f{
+#temp-f {
     margin-left: 0px;
 }
 
 
-#temp-c:hover, #temp-f:hover{
+#temp-c:hover, #temp-f:hover {
     cursor: pointer;
 }
-#stick{
+
+#stick {
     width: 10px;
     height: 30px;
 
 
     text-align: center;
+}
+
+#dropdownMenuButton {
+    margin-top: 20px;
+}
+
+.dropdown-menu {
+    left: -90px;
+    min-width: 8rem;
+}
+
+.dropdown-item {
+    padding: .25rem .5rem;
 }
 
 /**/
@@ -455,13 +472,17 @@ a {
     #news {
         order: 2;
     }
+
 }
 
-@media only screen and (max-width: 415px) {
-    .navbar-brand {
-        display: none;
+@media only screen and (max-width: 485px) {
+    .navbar-brand{
+        margin-bottom: 5px;
     }
-    #current-city{
-        margin-top: 15px;
+    #current-city {
+        margin-top: 10px;
+        /* width: 90px; */
+        margin-left: 10%;
+        margin-right: 10%;
     }
 }
