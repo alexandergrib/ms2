@@ -11,6 +11,7 @@ body {
 }
 
 
+
 #toDoThings {
     width: 100%;
 
@@ -113,7 +114,13 @@ input[type=text] {
     /*top: 1vh;*/
     height: 20px;
     padding-top: 15px;
+    padding-bottom: 20px;
     color: red;
+}
+
+.msg span{
+    display: inline-block;
+
 }
 
 /**/
@@ -212,12 +219,12 @@ input[type=text] {
     padding-top: 5px;
     padding-bottom: 5px;
     margin: auto;
-    width: 20rem;
+    /*width: 20rem;*/
 
 }
 
 .ajax-section .cities {
-    width: 15rem;
+    /*width: 20rem;*/
     padding: 0.8vh 1%;
     margin-bottom: 0;
     /*display: grid;*/
@@ -226,7 +233,7 @@ input[type=text] {
 }
 
 .ajax-section .city {
-    position: relative;
+    /*position: relative;*/
     /*left: 10px;*/
     padding: 2vh 30%;
     border-radius: 20px;
@@ -476,9 +483,10 @@ a {
 }
 
 @media only screen and (max-width: 485px) {
-    .navbar-brand{
+    .navbar-brand {
         margin-bottom: 5px;
     }
+
     #current-city {
         margin-top: 10px;
         /* width: 90px; */
