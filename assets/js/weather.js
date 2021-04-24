@@ -4,6 +4,7 @@ let coordinates;
 
 //function called in main.js L71
 function getWeather(inputVal) {
+
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=metric`;
     fetch(url)
         .then(response => response.json())

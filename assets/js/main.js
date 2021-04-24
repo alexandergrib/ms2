@@ -11,7 +11,9 @@ let tempIndicator;
 //listens search event
 form.addEventListener("submit", e => {
     e.preventDefault();
-    let inputVal = input.value;
+    let text = input.value;
+    let inputVal = text.replace(/\s/g, '');
+
 
     //check if there's already a city
     const listItems = list.querySelectorAll(".ajax-section .city");
@@ -37,6 +39,7 @@ form.addEventListener("submit", e => {
                 //athens
                 content = el.querySelector(".city-name span").textContent.toLowerCase();
             }
+
 
             return content == inputVal.toLowerCase();
         });
