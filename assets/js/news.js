@@ -15,7 +15,7 @@ function fetchNews(searchQuestion) {
 }
 
 
-//called from weather.js L105
+
 function populateNews(data) {
 
     const newsList = document.querySelector("#news .news--class");

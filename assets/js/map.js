@@ -57,8 +57,8 @@ function initMap() {
 
 // Handle a geolocation error
 function handleLocationError(browserHasGeolocation, infoWindow) {
-    // Set default location to Sydney, Australia
-    pos = {lat: 51.49, lng: -0.138};  //51.49040480754276, -0.13893831500671683
+    // Set default location
+    pos = {lat: 51.49, lng: -0.138};
     map = new google.maps.Map(document.getElementById('map'), {
         center: pos,
         zoom: 10
@@ -74,9 +74,9 @@ function handleLocationError(browserHasGeolocation, infoWindow) {
 
     // Call Places Nearby Search on the default location
     getNearbyPlaces(pos, 'restaurants');
-    // alert("Cannot get location, please use search. Default location loaded.");
-    document.getElementById("info-text").classList.add("hide");   //hide site description.
-    // document.getElementById("main").classList.remove("hide");
+
+
+
 }
 
 

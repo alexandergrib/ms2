@@ -23,10 +23,6 @@ function getWeatherByCoordinates(lat, lon) {
     fetch(url)
         .then(response => response.json())
         .then(data => weatherHandler(data))
-    // .catch(() => {
-    //     msg.textContent = "Please search for a valid city";
-    //     console.log('error',error);
-    // });
 
     msg.textContent = "";
     form.reset();
@@ -65,7 +61,7 @@ function weatherHandler(data) {
         li.innerHTML = markup;
 
         listItem.parentNode.replaceChild(li, listItem);
-        // locations.length = 0;  //empties array when searched for new location
+
     } else {
 
         //Executes on first search for the city
@@ -133,7 +129,5 @@ function searchOnclick(keyword) {
         hotels.classList.remove("mainColor");
         entertainment.classList.add("mainColor");
     }
-
-
 }
 

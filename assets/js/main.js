@@ -24,7 +24,7 @@ form.addEventListener("submit", e => {
             let content = "";
             //athens,gr
             if (inputVal.includes(",")) {
-                //athens,grrrrrr->invalid country code, so we keep only the first part of inputVal
+                //"athens,grrrrrr"->invalid country code, so we keep only the first part of inputVal
                 if (inputVal.split(",")[1].length > 2) {
                     inputVal = inputVal.split(",")[0];
                     content = el
@@ -107,8 +107,6 @@ function switchToF() {
 
 
 // Event listener to close panel on click
-// document.getElementsByClassName("close-ribbon").addEventListener("click", closeRibbon);
-
 function closeRibbon() {
     document.getElementById("panel").classList.remove("open");
     document.getElementById("panel").innerHTML = "";
