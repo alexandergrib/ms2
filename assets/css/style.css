@@ -128,7 +128,39 @@ input[type=text] {
     border-radius: 5%;
 
 }
+#temp-c, #temp-f{
+    margin-left: 20px;
+    text-align: center;
+    vertical-align: center;
+    width: 30px;
+    height: 30px;
 
+    border-radius: 50%;
+    padding-top: 2px;
+}
+
+.switch-base-color{
+    background-color: #c9cdd6;
+}
+.switch-highlight{
+    background-color: rgba(255, 140, 0, 1);
+}
+
+#temp-f{
+    margin-left: 0px;
+}
+
+
+#temp-c:hover, #temp-f:hover{
+    cursor: pointer;
+}
+#stick{
+    width: 10px;
+    height: 30px;
+
+
+    text-align: center;
+}
 
 /**/
 .hide {

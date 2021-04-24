@@ -9,61 +9,53 @@ let temperature;
 let tempIndicator;
 
 //listens search event
-    form.addEventListener("submit", e => {
-        e.preventDefault();
-        let inputVal = input.value;
+form.addEventListener("submit", e => {
+    e.preventDefault();
+    let inputVal = input.value;
 
-        //check if there's already a city
-        const listItems = list.querySelectorAll(".ajax-section .city");
-        const listItemsArray = Array.from(listItems);
+    //check if there's already a city
+    const listItems = list.querySelectorAll(".ajax-section .city");
+    const listItemsArray = Array.from(listItems);
 
 
-        if (listItemsArray.length > 0) {
+    if (listItemsArray.length > 0) {
 
-            const filteredArray = listItemsArray.filter(el => {
-                let content = "";
-                //athens,gr
-                if (inputVal.includes(",")) {
-                    //athens,grrrrrr->invalid country code, so we keep only the first part of inputVal
-                    if (inputVal.split(",")[1].length > 2) {
-                        inputVal = inputVal.split(",")[0];
-                        content = el
-                            .querySelector(".city-name span")
-                            .textContent.toLowerCase();
-                    } else {
-                        content = el.querySelector(".city-name").dataset.name.toLowerCase();
-                    }
+        const filteredArray = listItemsArray.filter(el => {
+            let content = "";
+            //athens,gr
+            if (inputVal.includes(",")) {
+                //athens,grrrrrr->invalid country code, so we keep only the first part of inputVal
+                if (inputVal.split(",")[1].length > 2) {
+                    inputVal = inputVal.split(",")[0];
+                    content = el
+                        .querySelector(".city-name span")
+                        .textContent.toLowerCase();
                 } else {
-                    //athens
-                    content = el.querySelector(".city-name span").textContent.toLowerCase();
+                    content = el.querySelector(".city-name").dataset.name.toLowerCase();
                 }
-
-                return content == inputVal.toLowerCase();
-            });
-
-            if (filteredArray.length > 0) {
-                msg.textContent = `You already know the weather for ${
-                    filteredArray[0].querySelector(".city-name span").textContent
-                }`;
-
-                form.reset();
-                // input.focus();
-                return;
+            } else {
+                //athens
+                content = el.querySelector(".city-name span").textContent.toLowerCase();
             }
+
+            return content == inputVal.toLowerCase();
+        });
+
+        if (filteredArray.length > 0) {
+            msg.textContent = `You already know the weather for ${
+                filteredArray[0].querySelector(".city-name span").textContent
+            }`;
+
+            form.reset();
+            // input.focus();
+            return;
         }
+    }
 
-        // deleteMarkers();
-        getWeather(inputVal);
+    // deleteMarkers();
+    getWeather(inputVal);
 
-    });
-
-
-
-
-
-
-
-
+});
 
 
 //typeahead code used from example provided by typeahead
@@ -91,25 +83,33 @@ $('#search-div .typeahead').typeahead({
         source: states
     });
 
-//-------------switch between C and F----------------------------------------------------
+//-------------switch between C and F----------------------------------------------------  //maincolor
+//
+let tempC = document.getElementById("temp-c");
+let tempF = document.getElementById("temp-f");
+
+function switchToC() {
+    let weatherItem = document.getElementsByClassName("city-temp").item(0);
+    weatherItem.innerHTML = `${Math.round(temperature)}<sup>°C</sup>`;
+    tempF.classList.remove("switch-highlight");
+    tempF.classList.add("switch-base-color");
+    tempC.classList.add("switch-highlight");
+
+};
+
 function switchToF() {
     let weatherItem = document.getElementsByClassName("city-temp").item(0);
-    let read = document.getElementById("change-output").innerHTML;
-    if (read === "°F"){
-       weatherItem.innerHTML = `${Math.round((temperature * 1.8) + 32)}<sup>°F</sup>`;
-       document.getElementById("change-output").innerHTML = "°C";
-    }else{
-        weatherItem.innerHTML = `${Math.round(temperature)}<sup>°C</sup>`;
-        document.getElementById("change-output").innerHTML = "°F";
-    }
-
+    weatherItem.innerHTML = `${Math.round((temperature * 1.8) + 32)}<sup>°F</sup>`;
+    tempC.classList.remove("switch-highlight");
+    tempC.classList.add("switch-base-color");
+    tempF.classList.add("switch-highlight");
 };
 
 
 // Event listener to close panel on click
 // document.getElementsByClassName("close-ribbon").addEventListener("click", closeRibbon);
 
-function closeRibbon(){
+function closeRibbon() {
     document.getElementById("panel").classList.remove("open");
     document.getElementById("panel").innerHTML = "";
 }
