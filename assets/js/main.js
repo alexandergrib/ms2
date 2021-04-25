@@ -109,7 +109,6 @@ function switchToF() {
     }
 
     let weatherItem = document.getElementsByClassName("city-temp").item(0);
-    console.log(temperature);
     weatherItem.innerHTML = `${Math.round((temperature* 1.8) + 32)}<sup>°F</sup>`;
     tempC.classList.remove("switch-highlight");
     tempC.classList.add("switch-base-color");
