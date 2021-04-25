@@ -12,7 +12,7 @@ let tempIndicator;
 form.addEventListener("submit", e => {
     e.preventDefault();
     let text = input.value;
-    let inputVal = text.replace(/\s/g, '');
+    let inputVal = text.replace(/,\s+/g, ',');
 
 
     //check if there's already a city
