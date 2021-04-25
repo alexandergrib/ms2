@@ -104,7 +104,7 @@ function weatherHandler(data) {
     };
 
     getNearbyPlaces(coordinates, 'restaurants');  //search for nearby places with keyword
-    // fetchNews(name);   //TODO: news working activate after project complete
+    fetchNews(name);   //TODO: news working activate after project complete
 
 
 }
@@ -131,4 +131,3 @@ function searchOnclick(keyword) {
         entertainment.classList.add("mainColor");
     }
 }
-
