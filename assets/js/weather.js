@@ -23,7 +23,7 @@ function getWeatherByCoordinates(lat, lon) {
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
     fetch(url)
         .then(response => response.json())
-        .then(data => weatherHandler(data))
+        .then(data => weatherHandler(data));
 
     msg.textContent = "";
     form.reset();

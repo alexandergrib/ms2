@@ -1,4 +1,5 @@
-/*SEARCH BY USING A CITY NAME (e.g. athens) OR A COMMA-SEPARATED CITY NAME ALONG WITH THE COUNTRY CODE (e.g. athens,gr)*/
+/*SEARCH BY USING A CITY NAME (e.g. athens) OR A COMMA-SEPARATED CITY NAME
+ALONG WITH THE COUNTRY CODE (e.g. athens,gr)*/
 const form = document.querySelector(".search-div form");
 const input = document.querySelector("#searchField");
 const msg = document.querySelector(".search-div .msg");
@@ -12,7 +13,7 @@ let tempIndicator;
 form.addEventListener("submit", e => {
     e.preventDefault();
     let text = input.value;
-    let inputVal = text.replace(/,\s+/g, ',');
+    let inputVal = text.replace(/,\s+/g, ',');  //uses regex to fix formatting, if entered (city, country) removes space after ","
 
 
     //check if there's already a city
@@ -50,7 +51,6 @@ form.addEventListener("submit", e => {
             }`;
 
             form.reset();
-            // input.focus();
             return;
         }
     }
@@ -101,7 +101,7 @@ function switchToC() {
     tempF.classList.add("switch-base-color");
     tempC.classList.add("switch-highlight");
 
-};
+}
 
 function switchToF() {
     if (typeof(temperature) === "undefined"){
@@ -114,7 +114,7 @@ function switchToF() {
     tempC.classList.remove("switch-highlight");
     tempC.classList.add("switch-base-color");
     tempF.classList.add("switch-highlight");
-};
+}
 
 
 // Event listener to close panel on click

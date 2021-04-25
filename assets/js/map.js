@@ -1,5 +1,5 @@
 //https://developers.google.com/codelabs/maps-platform/google-maps-nearby-search-js#0
-//99% code from example by google
+//98% code in this file from example by google
 let pos;
 let map;
 let bounds;
@@ -41,8 +41,7 @@ function initMap() {
 
             //Call weather API
             getWeatherByCoordinates(pos.lat, pos.lng);
-            // document.getElementById("info-text").classList.add("hide");   //hide site description.
-            // document.getElementById("main").classList.remove("hide");
+
 
         }, () => {
             // Browser supports geolocation, but user has denied permission
@@ -128,7 +127,7 @@ function createMarkers(places) {
              * If we fetch the details for all place results as soon as we get
              * the search response, we will hit API rate limits. */
             service.getDetails(request, (placeResult, status) => {
-                showDetails(placeResult, marker, status)
+                showDetails(placeResult, marker, status);
             });
         });
 
