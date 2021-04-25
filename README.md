@@ -18,13 +18,13 @@ https://www.w3.org/TR/geolocation-API/
 # UX  
   
 ## Website owner business goals  
--	My website is aimed to target traveller visitors, to provide them all in one source of information they can check before visiting their destination.
--	My goal is to provide information about current and forecasted weather in selected city.
--	My goal is to provide information about what is happening in the country of selected city by displaying news headlines
--	My goal is to provide information about entertainment places and things to do around selected city
+-	My website is aimed to target traveling visitors, to provide them "all in one" source of information they can check before visiting their destination.
+-	My goal is to provide information about current weather in selected city.
+-	My goal is to provide information about relative news for selected city by displaying news headlines
+-	My goal is to provide information about entertainment places, places to stay and things to do around selected location
 -	Website user should have possibility to switch between restaurants, things to do and stay(hotels) after results are displayed
--	Website user should have possibility to switch between Centigrade and Fahrenheit for their convenience this also should reflect in other units of measure (wind speed for example)
--	Website user should be able to click on the card with a “things of interest” provided to get redirected over to the provided place own website which will open in the new window.
+-	Website user should have possibility to switch between Centigrade and Fahrenheit for their convenience 
+-	Website user should be able to click on the pins displayed on map to get more info about their plaice of interest
 
 
 ## User goals  
@@ -56,17 +56,17 @@ User will be offered to select which units to display by clicking on either “C
 Main page is split into 4 different sections
 1.	News section utilize news API to display current countrywide general news for the searched place.
 2.	Weather section is divided into 2 sub  sections. 
-a.	Main section will display today weather forecast with today date, current temperature, and icon for the current weather(clouds, sun, rain, etc.)
-b.	Second section will display minimalistic forecast for the next 3 days, and will include date, temperature, and weather icon.
+    -	Main section will display today weather forecast with today date, current temperature, and icon for the current weather(clouds, sun, rain, etc.)
+    -	Second section will display minimalistic forecast for the next 3 days, and will include date, temperature, and weather icon.
 3.	“Things to do” section located under first two and occupying full screen width, will consist with cards displaying relevant search information for the desired destination.
-a.	On the top of this section will also display selectors where user can choose between (Things to do, Places to eat, Places to stay), after selection made card will be updated with relevant information based on user selection.
-b.	Each card will be linked to relevant webpage for the place found, allowing user to explore place in interest. Page will open in the new page.
+    -	On the top of this section will also display selectors where user can choose between (Things to do, Places to eat, Places to stay), after selection made card will be updated with relevant information based on user selection.
+    -	Each card will be linked to relevant webpage for the place found, allowing user to explore place in interest. Page will open in the new page.
 4.	Last Section is a map with pins displayed based on selection made in section 3(things to do). 
 
 Bottom of the page will contain footer with contact site owner information and icons for GitHub repository.
   
 
-In case of any of the API get failed, error message will be displayed with an option to choose to load default information for the failed API. (Fill with dummy data if button was clicked).
+In case of any of the API get failed, error message will be displayed and default information will be loaded.
 
 ##Adaptivity
 Website will adapt to screen size by rearranging sections and adjusting their width to fit into smaller screen.
@@ -112,30 +112,23 @@ o	Weather section located next to the news section and occupying 60% of the scre
 o	“Things to do” section occupying 90% of the width located below weather and news section
 o	After “things to do”, map section with location pins displayed on the map. Location for the pins taken from “things to do” section and should be updated on user choice of selection in “things to do” section.
 ### Footer: 
-•	 Footer containing website owner contact information and icons for the GitHub repository
+•	 Footer containing website owner information
 
 
-  
-### Contact form (contact.html):  
-•	Contact form will be made of modulo and contain following field
-o	Your full name (required)
-o	Your email (required)
-o	Your message  (required)
-o	Would you like to be contacted selector.
-•	On submit, "Thank you" message will be shown. And email will be sent to me.
 
-## Features left to implement:  
  
 # Technologies used:  
 *	HTML   
 *	Javascript
+*   Jquery
 *	Bootstrap  
 *	Fontawesome  
-*	Google Fonts    
+*	Google API    
 *	Github  
 *	Git  
 *	Balsamiq  
-*	[Trello](https://trello.com/b/AimOKUHW/ms1-project) for KANBAN project organizing
+*   RapidApi
+*	[Trello](https://trello.com/b/fu6IEy31/ms2-prject) for KANBAN project organizing
 *	CSS  
   
 # Testing
@@ -159,7 +152,8 @@ logic.md
 - Console error (Failed to load resource: the server responded with a status of 403 ())
     - error coming from google API (need to investigate more what is causing it)
     
-
+- Sometimes warning in console show-up about security for API
+    - error dissapear on the page refresh
 
 # Credits  
 
@@ -170,5 +164,5 @@ logic.md
 - [map](https://developers.google.com/maps/documentation/javascript/examples/place-search-pagination#maps_place_search_pagination-css)
 
 ## Credits for images used
- 
+ - [Favicon creator tool](https://realfavicongenerator.net/)
 
