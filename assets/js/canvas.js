@@ -3,7 +3,7 @@
 const canvas = document.getElementById("canvas1");
 const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
-canvas.height = 400; // window.innerHeight;
+canvas.height = 300; // window.innerHeight;
 let particleArray = [];
 let adjustX = 6;
 let adjustY = 0;
