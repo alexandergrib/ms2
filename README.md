@@ -14,21 +14,16 @@
   * [Website owner business goals](#website-owner-business-goals)
   * [User goals](#user-goals)
 - [Structure of the website](#structure-of-the-website)
-    + [Medium size / tablet](#medium-size)
+    + [Medium size](#medium-size)
     + [Mobile screen](#mobile-screen)
 - [Wireframes](#wireframes)
-  - Desktop
-  - Mobile
 - [Surface](#surface)
   * [Fonts](#fonts)
   * [Colors](#colors)
   * [Images](#images)
   * [Text](#text)
 - [Features](#features)
-  * [Existing Features](#existing-features)
-    + Home (index.html)
-    +Footer
-- [Technologies used:](#technologies-used)
+- [Technologies used](#technologies-used)
 - [Testing](#testing)
 - [Site logic](#site-logic)
 - [Deployment](#deployment)
@@ -115,11 +110,13 @@ I decided to go with Google Roboto font and sans-serif as a fallback font.
 I think Roboto font is a most used font across whole internet, and it would not look too different for the user coming from any website they used to use.  This will create a more familiar feeling for the users.
 ## Colors  
 I used following colours:  
-- Body background color: #C6E7C6  
-- jumbotron color: #215020
-- Headings color: #474545
-- Text color: #474545  
-- Background color header and footer: #93C47D
+- Body background color: #8F8F8F26
+- News section color: #97A1B5
+- Weather section background: #6A7488 
+- menu color: #4DA5EF7F  
+- Info section color: #FBFBFB
+- Text color: #25383F  
+
     
 ## Images    
 ## Text  
@@ -159,10 +156,8 @@ I used following colours:
 *	CSS  
   
 # Testing
-Testing.md  
+[Testing.md](testing.md)
 
-# Site logic
-logic.md
 
 # Deployment  
 - Deployment made via GitHub pages.  Fork my repository, then go to Setting on forked repository scroll down to GitHub Pages and select in Source section the branch to be used.  
@@ -181,6 +176,11 @@ logic.md
     
 - Sometimes warning in console show-up about security for API
     - error disappear on the page refresh
+    
+- Console displaying: "Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'."
+    - don't know where this one coming from, need to investigate it.
+    
+
 
 # Credits  
 - Full credits for the game to [Frank's Laboratory](https://www.youtube.com/channel/UCEqc149iR-ALYkGM6TG-7vQ)
