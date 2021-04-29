@@ -14,11 +14,11 @@
   * [Website owner business goals](#website-owner-business-goals)
   * [User goals](#user-goals)
 - [Structure of the website](#structure-of-the-website)
-    + [Medium size / tablet](#medium-size---tablet)
+    + [Medium size / tablet](#medium-size)
     + [Mobile screen](#mobile-screen)
 - [Wireframes](#wireframes)
-  - [Desktop / Tablet](#-desktop---tablet)
-  - [Mobile](#-mobile)
+  - Desktop
+  - Mobile
 - [Surface](#surface)
   * [Fonts](#fonts)
   * [Colors](#colors)
@@ -26,13 +26,13 @@
   * [Text](#text)
 - [Features](#features)
   * [Existing Features](#existing-features)
-    + [Home (index.html):](#home--indexhtml--)
-    + [Footer](#footer-)
-- [Technologies used:](#technologies-used-)
+    + Home (index.html)
+    +Footer
+- [Technologies used:](#technologies-used)
 - [Testing](#testing)
 - [Site logic](#site-logic)
 - [Deployment](#deployment)
-- [Problems encountered:](#problems-encountered-)
+- [Problems encountered:](#problems-encountered)
 - [Credits](#credits)
   * [Credits for text and modules](#credits-for-text-and-modules)
   * [Credits for images used](#credits-for-images-used)
@@ -96,7 +96,7 @@ In case of any of the API get failed, error message will be displayed and defaul
 ##Adaptivity
 Website will adapt to screen size by rearranging sections and adjusting their width to fit into smaller screen.
 
-### Medium size / tablet
+### Medium size
 On medium screen size webpage will keep its layouts as on the larger screen but will get downsized to fit into user screen size.
 
 
@@ -106,8 +106,8 @@ On mobile devices and other small screens each section will occupy full width of
 
 # Wireframes  
 Wireframes can be found here:
-##### [Desktop / Tablet](wirefames/wireframes/Desktop.png)
-##### [Mobile](wirefames/wireframes/Mobile.png)
+#### [Desktop](wirefames/wireframes/Desktop.png)
+#### [Mobile](wirefames/wireframes/Mobile.png)
   ---
 # Surface  
 ## Fonts  
@@ -128,7 +128,7 @@ I used following colours:
 
 # Features    
 ## Existing Features    
-### Home (index.html):  
+### Home (index.html)
 -	Search field with search button
 -	Search field should contain typeahead functionality.
 -	Pop up message asking user to allow to use user device location
@@ -144,7 +144,7 @@ I used following colours:
 
 
  
-# Technologies used:  
+# Technologies used  
 *	HTML   
 *	Javascript
 *   Jquery
