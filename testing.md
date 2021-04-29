@@ -1,4 +1,5 @@
-#website functionality
+# website functionality
+
 On the first page load browser tries to get  user location with banner requesting to allow use user location.
 If successful it will pass coordinates to weather API, which will get weather information and city name for coordinates received.
 weather API then call News API and passes over city name from weather API response and also calls google Places API to display relevant places for current location.
