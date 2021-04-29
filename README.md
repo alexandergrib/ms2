@@ -4,7 +4,7 @@
   
 ## [Live website on github pages](https://alexandergrib.github.io/ms2/)  
   
-![Responsive display](helping_materials/responcive-img.JPG)
+![Responsive display](assets/img/responsive.PNG)
 
 ---
 
@@ -17,8 +17,8 @@
     + [Medium size / tablet](#medium-size---tablet)
     + [Mobile screen](#mobile-screen)
 - [Wireframes](#wireframes)
-        * [[Desktop / Tablet](wireframes/mobile.png)](#-desktop---tablet--wireframes-mobilepng-)
-        * [[Mobile](wireframes/mobile.png)](#-mobile--wireframes-mobilepng-)
+  - [[Desktop / Tablet](wirefames/wireframes/Desktop.png)](#-desktop---tablet--wireframes-mobilepng-)
+  - [[Mobile](wirefames/wireframes/Mobile.png)](#-mobile--wireframes-mobilepng-)
 - [Surface](#surface)
   * [Fonts](#fonts)
   * [Colors](#colors)
