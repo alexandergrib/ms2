@@ -133,7 +133,7 @@ input[type=text] {
 
 #temp-c, #temp-f {
     display: inline-block;
-    margin-left: 20px;
+    /*margin-left: 20px;*/
     text-align: center;
     vertical-align: center;
     width: 30px;
@@ -178,7 +178,8 @@ input[type=text] {
 }
 
 .dropdown-item {
-    padding: .25rem .5rem;
+    padding: .1rem .4rem;/*0.25 0.5*/
+    text-align: center;
 }
 
 /**/
