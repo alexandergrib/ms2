@@ -1,4 +1,4 @@
-# website functionality
+# Website functionality
 
 On the first page load browser tries to get  user location with banner requesting to allow use user location.
 If successful it will pass coordinates to weather API, which will get weather information and city name for coordinates received.

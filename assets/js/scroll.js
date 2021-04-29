@@ -9,7 +9,7 @@ $(function(){
   function moveTop(){
     $('.news--class').animate({
       top : -tickerHeight
-    },600, function(){
+    },300, function(){
      $('.news--class li:first-child').appendTo('.news--class');
       $('.news--class').css('top','');
     });
