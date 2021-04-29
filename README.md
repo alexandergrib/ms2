@@ -17,8 +17,8 @@
     + [Medium size / tablet](#medium-size---tablet)
     + [Mobile screen](#mobile-screen)
 - [Wireframes](#wireframes)
-  - [[Desktop / Tablet](wirefames/wireframes/Desktop.png)](#-desktop---tablet--wireframes-mobilepng-)
-  - [[Mobile](wirefames/wireframes/Mobile.png)](#-mobile--wireframes-mobilepng-)
+  - [Desktop / Tablet](#-desktop---tablet--wireframes-mobilepng-)
+  - [Mobile](#-mobile--wireframes-mobilepng-)
 - [Surface](#surface)
   * [Fonts](#fonts)
   * [Colors](#colors)
@@ -106,8 +106,8 @@ On mobile devices and other small screens each section will occupy full width of
 
 # Wireframes  
 Wireframes can be found here:
-##### [Desktop / Tablet](wireframes/mobile.png)
-##### [Mobile](wireframes/mobile.png)
+##### [Desktop / Tablet](wirefames/wireframes/Desktop.png)
+##### [Mobile](wirefames/wireframes/Mobile.png)
   ---
 # Surface  
 ## Fonts  
