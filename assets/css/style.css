@@ -497,15 +497,4 @@ a {
         margin-right: 10%;
     }
 }
-#canvas-container {
-   width: 1200px;
-   text-align:center;
-    height: 300px;
-    margin: auto;
-}
 
-#canvas1 {
-display: block;
-    transform: translate(-10%);
-
-}

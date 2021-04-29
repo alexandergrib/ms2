@@ -180,9 +180,10 @@ logic.md
     - error coming from google API (need to investigate more what is causing it)
     
 - Sometimes warning in console show-up about security for API
-    - error dissapear on the page refresh
+    - error disappear on the page refresh
 
 # Credits  
+- Full credits for the game to [Frank's Laboratory](https://www.youtube.com/channel/UCEqc149iR-ALYkGM6TG-7vQ)
 
 ## Credits for text and modules
 - [Weather api](https://webdesign.tutsplus.com/tutorials/build-a-simple-weather-app-with-vanilla-javascript--cms-33893)
