@@ -4,6 +4,102 @@ body {
 }
 
 
+/*--------------*/
+.header-wrapper {
+    display: block;
+    background-color: #5d6375;
+}
+
+.header-wrapper-inside {
+    position: relative;
+    max-width: 1280px;
+    height: 85px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+
+.header-wrapper-inside-left .header-wrapper-inside-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-wrapper-inside-left {
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.header-wrapper-inside-left img{
+    height: 75px;
+    width: auto;
+}
+
+
+
+.header-wrapper-inside-right {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+}
+
+.search-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+}
+
+.search-box {
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    margin: auto;
+    max-width: 380px;
+    border: 0;
+    border-radius: 20px;
+}
+
+.search-box input {
+    border: 0;
+    border-radius: 20px;
+
+}
+
+
+.temperature-switch {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+
+    color: #fff;
+    justify-content: flex-end;
+}
+
+.temperature-switch span{
+    font-size: 1.875rem;
+    padding: 0 6px;
+    border-right: 1px solid #fff;
+}
+
+.temperature-switch > i{
+    font-size: 1.1em;
+    padding: 0 6px;
+}
+
+/*hidden search label*/
+.search-label-visuallyHidden {
+    position: absolute!important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px,1px,1px,1px);
+    white-space: nowrap;
+}
+
+/*-------------------*/
 #main {
     margin-top: 20px;
     /*padding-left: 0px;*/
@@ -92,16 +188,16 @@ body {
     /*padding: 0;*/
 }
 
-input[type=text] {
-    /*padding: 6px;*/
-    /*margin-top: 8px;*/
-    font-size: 17px;
-    /*border: 1px solid black;*/
-    border: 1px solid #ced4da;
-    /*border-radius: 5px;*/
-    border-radius: .25rem 0 0 .25rem;
-    width: 10rem;
-}
+/*input[type=text] {*/
+/*    !*padding: 6px;*!*/
+/*    !*margin-top: 8px;*!*/
+/*    font-size: 17px;*/
+/*    !*border: 1px solid black;*!*/
+/*    border: 1px solid #ced4da;*/
+/*    !*border-radius: 5px;*!*/
+/*    border-radius: .25rem 0 0 .25rem;*/
+/*    width: 10rem;*/
+/*}*/
 
 
 .msg {
@@ -178,7 +274,7 @@ input[type=text] {
 }
 
 .dropdown-item {
-    padding: .1rem .4rem;/*0.25 0.5*/
+    padding: .1rem .4rem; /*0.25 0.5*/
     text-align: center;
 }
 

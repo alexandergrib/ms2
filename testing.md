@@ -44,3 +44,5 @@ weather API then call News API and passes over city name from weather API respon
 2. Layout should change to stacked    
 3. Minimum screen width is 290px, if less than that layout looks broken
 4. Mini-game not working properly on mobile screens as it monitors mouse position to function.
+
+# User Stories testing
