@@ -32,8 +32,9 @@ body {
 
 }
 
+/*logo image in navbar*/
 .header-wrapper-inside-left img {
-    height: 75px;
+    height: 60px;
     width: auto;
 }
 
@@ -58,27 +59,26 @@ body {
     margin: auto;
     max-width: 380px;
     border: 0;
-    border-radius: 20px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
 }
 
-.search-box input {
+#searchField {
     border: 0;
-    border-radius: 20px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+
 }
 
-.search-box i {
-    position: absolute;
-    top: 30%;
-    left: 90%;
-    cursor: pointer;
-
+.search-box button {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 .temperature-switch {
     display: flex;
     align-items: center;
     flex-shrink: 0;
-
     color: #fff;
     justify-content: flex-end;
 }
@@ -87,6 +87,7 @@ body {
     font-size: 1.875rem;
     padding: 0 6px;
     border-right: 1px solid #fff;
+    width: 45px;
 }
 
 .dropdown {
@@ -95,13 +96,16 @@ body {
     position: relative;
     display: inline-block;
 }
-
+.dropdown i:hover{
+    cursor: pointer;
+}
 
 .dropdown-content {
     display: none;
+    /*visibility: hidden;*/
     position: absolute;
-    top: 33px;
-    left: -62px;
+    top: 30px;
+    left: -60px;
     color: black;
     background-color: #f9f9f9;
     min-width: 95px;
@@ -111,7 +115,7 @@ body {
     z-index: 1;
 }
 
-.dropdown:hover .dropdown-content {
+.show-dropdown-content {
     display: block;
 }
 
@@ -256,15 +260,21 @@ body {
 
 #temp-c, #temp-f {
     display: inline-block;
-    /*margin-left: 20px;*/
     text-align: center;
     vertical-align: center;
     width: 30px;
     height: 30px;
-
     border-radius: 50%;
     padding-top: 2px;
 }
+
+
+#temp-c span, #temp-f span {
+    font-size: 1em;
+    margin-left: -2px;
+    padding-right: 10px;
+}
+
 
 .switch-base-color {
     background-color: #c9cdd6;
@@ -274,8 +284,14 @@ body {
     background-color: rgba(255, 140, 0, 1);
 }
 
+#temp-c {
+    border: 1px solid black;
+
+}
+
 #temp-f {
-    margin-left: 0;
+    margin-left: 6px;
+    border: 1px solid black;
 }
 
 
@@ -283,13 +299,13 @@ body {
     cursor: pointer;
 }
 
-#stick {
-    width: 10px;
-    height: 30px;
+/*#stick {*/
+/*    width: 10px;*/
+/*    height: 30px;*/
 
 
-    text-align: center;
-}
+/*    text-align: center;*/
+/*}*/
 
 #dropdownMenuButton {
     margin-top: 20px;

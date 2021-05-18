@@ -76,7 +76,7 @@ var states = new Bloodhound({
     local: states
 });
 
-$('#search-div .typeahead').typeahead({
+$('#search-div2 .typeahead').typeahead({
         hint: true,
         highlight: true,
         minLength: 1
@@ -87,12 +87,18 @@ $('#search-div .typeahead').typeahead({
     });
 
 //-------------switch between C and F----------------------------------------------------  //maincolor
-//
-let tempC = document.getElementById("temp-c");
-let tempF = document.getElementById("temp-f");
+
+//handle click on setting-gears
+function toggleDropDownMenu() {
+    let dropdownMenu = document.getElementsByClassName("dropdown-content").item(0);
+    dropdownMenu.classList.toggle("show-dropdown-content");
+}
 
 function switchToC() {
-        if (typeof(temperature) === "undefined"){
+    let tempC = document.getElementById("temp-c");
+    let tempF = document.getElementById("temp-f");
+    let  tempIndicator = document.getElementById("temp-indicator");
+    if (typeof (temperature) === "undefined") {
         temperature = 20;
     }
     let weatherItem = document.getElementsByClassName("city-temp").item(0);
@@ -100,23 +106,29 @@ function switchToC() {
     tempF.classList.remove("switch-highlight");
     tempF.classList.add("switch-base-color");
     tempC.classList.add("switch-highlight");
-
+    toggleDropDownMenu()
+    tempIndicator.innerHTML="°C"
 }
 
 function switchToF() {
-    if (typeof(temperature) === "undefined"){
+    let tempC = document.getElementById("temp-c");
+    let tempF = document.getElementById("temp-f");
+    let  tempIndicator = document.getElementById("temp-indicator");
+    if (typeof (temperature) === "undefined") {
         temperature = 20;
     }
 
     let weatherItem = document.getElementsByClassName("city-temp").item(0);
-    weatherItem.innerHTML = `${Math.round((temperature* 1.8) + 32)}<sup>°F</sup>`;
+    weatherItem.innerHTML = `${Math.round((temperature * 1.8) + 32)}<sup>°F</sup>`;
     tempC.classList.remove("switch-highlight");
     tempC.classList.add("switch-base-color");
     tempF.classList.add("switch-highlight");
+    toggleDropDownMenu()
+    tempIndicator.innerHTML="°F"
 }
 
 
-// Event listener to close panel on click
+// Event listener to close map side panel on click
 function closeRibbon() {
     document.getElementById("panel").classList.remove("open");
     document.getElementById("panel").innerHTML = "";
