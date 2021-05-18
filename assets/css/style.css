@@ -32,11 +32,10 @@ body {
 
 }
 
-.header-wrapper-inside-left img{
+.header-wrapper-inside-left img {
     height: 75px;
     width: auto;
 }
-
 
 
 .header-wrapper-inside-right {
@@ -65,9 +64,15 @@ body {
 .search-box input {
     border: 0;
     border-radius: 20px;
-
 }
 
+.search-box i {
+    position: absolute;
+    top: 30%;
+    left: 90%;
+    cursor: pointer;
+
+}
 
 .temperature-switch {
     display: flex;
@@ -78,24 +83,46 @@ body {
     justify-content: flex-end;
 }
 
-.temperature-switch span{
+.temperature-switch span {
     font-size: 1.875rem;
     padding: 0 6px;
     border-right: 1px solid #fff;
 }
 
-.temperature-switch > i{
+.dropdown {
     font-size: 1.1em;
     padding: 0 6px;
+    position: relative;
+    display: inline-block;
 }
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 33px;
+    left: -62px;
+    color: black;
+    background-color: #f9f9f9;
+    min-width: 95px;
+    border-radius: 25px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px 10px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 
 /*hidden search label*/
 .search-label-visuallyHidden {
-    position: absolute!important;
+    position: absolute !important;
     height: 1px;
     width: 1px;
     overflow: hidden;
-    clip: rect(1px,1px,1px,1px);
+    clip: rect(1px, 1px, 1px, 1px);
     white-space: nowrap;
 }
 

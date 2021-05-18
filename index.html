@@ -35,10 +35,20 @@
                     <div class="search-box">
                         <label for="searchField2" class="search-label-visuallyHidden">search field</label>
                         <input id="searchField2" class="typeahead form-control " type="text"
-                                                   placeholder="Search for a city" name="search"
-                                                   aria-describedby="info--message">
+                               placeholder="Search for a city" name="search"
+                               aria-describedby="info--message"><i class="fa fa-search" aria-hidden="true"></i>
                     </div>
-                    <div class="temperature-switch"><span class="LanguageSelector--unitDisplay--eg0E7">°C</span> <i class="fa fa-cogs" aria-hidden="true"></i></div>
+                    <div class="temperature-switch">
+                        <span class="LanguageSelector--unitDisplay--eg0E7">°C</span>
+                        <div class="dropdown"><i class="fa fa-cogs" aria-hidden="true"></i>
+                            <div class="dropdown-content">
+                                <div class=" switch-base-color switch-highlight" id="temp-c" onclick="switchToC();">°C
+                                                    </div>
+                                                     |
+                                                    <div class="switch-base-color" id="temp-f" onclick="switchToF();">°F</div>
+                            </div>
+                        </div>
+                    </div>
                     <!--                        <form>-->
                     <!--            <div class="input-group ">-->
                     <!--                <input id="searchField" class="typeahead form-control " type="text" placeholder="Search for a city"-->
