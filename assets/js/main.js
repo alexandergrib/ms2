@@ -1,6 +1,7 @@
 /*SEARCH BY USING A CITY NAME (e.g. athens) OR A COMMA-SEPARATED CITY NAME
 ALONG WITH THE COUNTRY CODE (e.g. athens,gr)*/
-const form = document.querySelector(".search-div form");
+
+// const form = document.getElementById("#search--form");
 const input = document.querySelector("#searchField");
 const msg = document.querySelector(".search-div .msg");
 const list = document.querySelector(".ajax-section .cities");
@@ -9,12 +10,23 @@ const list = document.querySelector(".ajax-section .cities");
 let temperature;
 let tempIndicator;
 
-//listens search event
-form.addEventListener("submit", e => {
-    e.preventDefault();
+function clearInputField(){
+    input.value='';
+}
+
+
+input.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("search-button").click();
+    }
+});
+
+
+function handleInputData(){
     let text = input.value;
     let inputVal = text.replace(/,\s+/g, ',');  //uses regex to fix formatting, if entered (city, country) removes space after ","
-
+    console.log(text);
 
     //check if there's already a city
     const listItems = list.querySelectorAll(".ajax-section .city");
@@ -49,16 +61,14 @@ form.addEventListener("submit", e => {
             msg.textContent = `You already know the weather for ${
                 filteredArray[0].querySelector(".city-name span").textContent
             }`;
-
-            form.reset();
             return;
         }
     }
 
     // deleteMarkers();
     getWeather(inputVal);
+}
 
-});
 
 
 //typeahead code used from example provided by typeahead
@@ -93,6 +103,9 @@ function toggleDropDownMenu() {
     let dropdownMenu = document.getElementsByClassName("dropdown-content").item(0);
     dropdownMenu.classList.toggle("show-dropdown-content");
 }
+
+
+
 
 function switchToC() {
     let tempC = document.getElementById("temp-c");

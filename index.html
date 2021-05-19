@@ -31,33 +31,38 @@
             </div>
             <!--        Search box -->
             <div class="header-wrapper-inside-right">
-                <div class="search-wrapper">
-                    <div class="input-group search-box" >
-                        <label for="searchField" class="search-label-visuallyHidden">search field</label>
-                        <input id="searchField"
-                               class="typeahead form-control"
-                               type="text"
-                               placeholder="Search for a city"
-                               name="search"
-                               aria-describedby="info--message">
-                        <div class="input-group-append">
-                            <button id="search-button" type="submit" class="input-group-text"><i
-                                    class="fa fa-search"></i>
-                            </button>
+
+                    <div class="search-wrapper">
+                        <div class="input-group search-box">
+                            <label for="searchField" class="search-label-visuallyHidden">search field</label>
+                            <input id="searchField"
+                                   class="typeahead form-control"
+                                   type="text"
+                                   placeholder="Search for a city"
+                                   name="search"
+                                   aria-describedby="info--message"
+                            onclick="clearInputField()">
+                            <div class="input-group-append">
+                                <button id="search-button" type="submit" class="input-group-text" onclick="handleInputData()">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="temperature-switch">
-                        <span id="temp-indicator">°C</span>
-                        <div class="dropdown"><i class="fa fa-cogs" aria-hidden="true" onclick="toggleDropDownMenu()"></i>
-                            <div class="dropdown-content">
-                                <div class=" switch-base-color switch-highlight" id="temp-c" onclick="switchToC();">
-                                    <span>°C</span>
+                        <div class="temperature-switch">
+                            <span id="temp-indicator">°C</span>
+                            <div class="dropdown"><i class="fa fa-cogs" aria-hidden="true"
+                                                     onclick="toggleDropDownMenu()"></i>
+                                <div class="dropdown-content">
+                                    <div class=" switch-base-color switch-highlight" id="temp-c" onclick="switchToC();">
+                                        <span>°C</span>
+                                    </div>
+                                    <div class="switch-base-color" id="temp-f" onclick="switchToF();"><span>°F</span>
+                                    </div>
                                 </div>
-                                <div class="switch-base-color" id="temp-f" onclick="switchToF();"><span>°F</span></div>
                             </div>
                         </div>
                     </div>
-                </div>
+
             </div>
         </div>
     </div>
@@ -67,17 +72,13 @@
 <!--Search place holder-->
 <div class="search-div" id="search-div">
 
-        <div id="current-city"></div>
-
-
-
-
     <div class="row justify-content-center">
-
-        <div class="col-auto">
+        <div class="col-3">
+            <div id="current-city"></div>
+        </div>
+        <div class="col-9 col-md-6">
             <p class="msg" id="info--message">Please search for destination <span>(London or London, GB)</span></p>
         </div>
-
     </div>
 
 </div>
