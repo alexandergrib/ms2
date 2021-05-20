@@ -56,6 +56,8 @@ body {
     flex: 1 1 auto;
 }
 
+
+
 .search-box {
     /*width: 100%;*/
     position: relative;
@@ -241,9 +243,10 @@ body {
     /*position: fixed;*/
     /*top: 1vh;*/
     height: 20px;
-    padding-top: 15px;
+    padding-top: 10px;
     padding-bottom: 20px;
     color: red;
+    font-size: 1.1em;
 }
 
 .msg span {
@@ -251,17 +254,23 @@ body {
 
 }
 
-/**/
-
+/*row under navbar*/
+.search-div{
+    background-color: #c9cdd6;
+}
 
 /*display city next to search*/
 #current-city {
-    display: inline;
     margin: 0 auto;
     background-color: #c9cdd6;
     padding: 6px 6px;
     border-radius: 5%;
 
+}
+
+.ribbon-weather-icon{
+    height: 1.8em;
+    width: auto;
 }
 
 #temp-c, #temp-f {

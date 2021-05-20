@@ -26,7 +26,6 @@ input.addEventListener("keyup", function(event) {
 function handleInputData(){
     let text = input.value;
     let inputVal = text.replace(/,\s+/g, ',');  //uses regex to fix formatting, if entered (city, country) removes space after ","
-    console.log(text);
 
     //check if there's already a city
     const listItems = list.querySelectorAll(".ajax-section .city");
@@ -74,16 +73,15 @@ function handleInputData(){
 //typeahead code used from example provided by typeahead
 //http://twitter.github.io/typeahead.js/examples/
 
-var states = citiesList; //reads cities.js to get array with cities for typeahead suggestions
+
 
 //----------------------------------------------------------------------
 //Typeahead
 // constructs the suggestion engine
-var states = new Bloodhound({
+const states = new Bloodhound({
     datumTokenizer: Bloodhound.tokenizers.whitespace,
     queryTokenizer: Bloodhound.tokenizers.whitespace,
-    // `states` is an array of state names defined in "The Basics"
-    local: states
+    local: citiesList //reads cities.js to get array with cities for typeahead suggestions
 });
 
 $('#search-div2 .typeahead').typeahead({
@@ -95,6 +93,7 @@ $('#search-div2 .typeahead').typeahead({
         name: 'states',
         source: states
     });
+
 
 //-------------switch between C and F----------------------------------------------------  //maincolor
 
@@ -116,6 +115,9 @@ function switchToC() {
     }
     let weatherItem = document.getElementsByClassName("city-temp").item(0);
     weatherItem.innerHTML = `${Math.round(temperature)}<sup>°C</sup>`;
+    weatherItem.innerHTML = `${Math.round(temperature)}<sup>°C</sup>`;
+    let ribbonWeatherItem = document.getElementsByClassName("ribbon-temp").item(0);
+    ribbonWeatherItem.innerHTML = `${Math.round(temperature)}°C`;
     tempF.classList.remove("switch-highlight");
     tempF.classList.add("switch-base-color");
     tempC.classList.add("switch-highlight");
@@ -133,6 +135,9 @@ function switchToF() {
 
     let weatherItem = document.getElementsByClassName("city-temp").item(0);
     weatherItem.innerHTML = `${Math.round((temperature * 1.8) + 32)}<sup>°F</sup>`;
+    //switch temperature indicator under header ribbon
+    let ribbonWeatherItem = document.getElementsByClassName("ribbon-temp").item(0);
+    ribbonWeatherItem.innerHTML = `${Math.round((temperature * 1.8) + 32)}°F`;
     tempC.classList.remove("switch-highlight");
     tempC.classList.add("switch-base-color");
     tempF.classList.add("switch-highlight");

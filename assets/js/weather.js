@@ -14,7 +14,6 @@ function getWeather(inputVal) {
         });
 
     msg.textContent = "";
-    form.reset();
 
 }
 
@@ -26,7 +25,7 @@ function getWeatherByCoordinates(lat, lon) {
         .then(data => weatherHandler(data));
 
     msg.textContent = "";
-    form.reset();
+
 
 }
 
@@ -93,9 +92,11 @@ function weatherHandler(data) {
 </p>            
 `;  //Display your search query
 
-    document.getElementById("current-city").innerHTML = `<span>
-         ${name}
-</span>            
+    document.getElementById("current-city").innerHTML = `<div>         
+         <span class="ribbon-temp">${Math.round(temperature)}°${tempIndicator}</span>              
+         <span><img class="ribbon-weather-icon" src="${icon}" alt="${weather[0]["description"]}"></span>
+         <span>${name}, ${sys.country}</span>       
+</div>            
 `;
     //post coordinates
     coordinates = {
