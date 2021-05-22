@@ -193,4 +193,5 @@ I used following colours:
 
 ## Credits for images used
  - [Favicon creator tool](https://realfavicongenerator.net/)
+ - [jetpack man](https://www.gamedeveloperstudio.com/graphics/viewgraphic.php?page-name=Jet-pack-man-game-character-2d-game-sprite&item=115h1m7u2p5899211p)
 
