@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 /*SUBSCRIBE HERE FOR API KEY: https://home.openweathermap.org/users/sign_up*/
 const apiKey = "888a73a8b27eb54c8d1ba56ed02ec435";
 let coordinates;
@@ -33,13 +34,14 @@ function getWeatherByCoordinates(lat, lon) {
 function weatherHandler(data) {
 
     const {coord, main, name, sys, weather} = data;
-    const icon = `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${
-        weather[0]["icon"]
-    }.svg`;
 
 
-    temperature = main.temp;
-    tempIndicator = "C"
+    const icon = `https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`;
+
+
+
+    let temperature = main.temp;
+    let tempIndicator = "C";
     //Check if weather item exists and replaces itself with new data
     if (document.querySelector(".cities li:last-child")) {
         const listItem = document.querySelector(".cities li:last-child");
@@ -55,7 +57,7 @@ function weatherHandler(data) {
                   <img class="city-icon" src="${icon}" alt="${
             weather[0]["description"]
         }">
-                  <figcaption>${weather[0]["description"]}</figcaption>
+                  <figcaption>${weather[0].description}</figcaption>
                 </figure>
               `;
         li.innerHTML = markup;
@@ -77,7 +79,7 @@ function weatherHandler(data) {
                   <img class="city-icon" src="${icon}" alt="${
             weather[0]["description"]
         }">
-                  <figcaption>${weather[0]["description"]}</figcaption>
+                  <figcaption>${weather[0].description}</figcaption>
                 </figure>
               `;
         li.innerHTML = markup;
@@ -94,7 +96,7 @@ function weatherHandler(data) {
 
     document.getElementById("current-city").innerHTML = `<div>         
          <span class="ribbon-temp">${Math.round(temperature)}°${tempIndicator}</span>              
-         <span><img class="ribbon-weather-icon" src="${icon}" alt="${weather[0]["description"]}"></span>
+         <span><img class="ribbon-weather-icon" src="${icon}" alt="${weather[0].description}"></span>
          <span>${name}, ${sys.country}</span>       
 </div>            
 `;

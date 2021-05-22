@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 /*SEARCH BY USING A CITY NAME (e.g. athens) OR A COMMA-SEPARATED CITY NAME
 ALONG WITH THE COUNTRY CODE (e.g. athens,gr)*/
 
@@ -121,8 +123,8 @@ function switchToC() {
     tempF.classList.remove("switch-highlight");
     tempF.classList.add("switch-base-color");
     tempC.classList.add("switch-highlight");
-    toggleDropDownMenu()
-    tempIndicator.innerHTML="°C"
+    toggleDropDownMenu();
+    tempIndicator.innerHTML="°C";
 }
 
 function switchToF() {
@@ -141,8 +143,8 @@ function switchToF() {
     tempC.classList.remove("switch-highlight");
     tempC.classList.add("switch-base-color");
     tempF.classList.add("switch-highlight");
-    toggleDropDownMenu()
-    tempIndicator.innerHTML="°F"
+    toggleDropDownMenu();
+    tempIndicator.innerHTML="°F";
 }
 
 

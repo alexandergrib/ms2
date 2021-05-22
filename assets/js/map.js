@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 //https://developers.google.com/codelabs/maps-platform/google-maps-nearby-search-js#0
 //98% code in this file from example by google
 let pos;
@@ -11,7 +12,7 @@ let infoPane;
 function initMap() {
     // Initialize variables
     bounds = new google.maps.LatLngBounds();
-    infoWindow = new google.maps.InfoWindow;
+    infoWindow = new google.maps.InfoWindow();
     currentInfoWindow = infoWindow;
 
 
