@@ -1,9 +1,33 @@
-#canvas{
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 5px solid black;
-    width: 600px;
-    height: 600px;
+body{
+    background-color: #6b7488;
+}
+h1 {
+    text-align: center;
+    color: white;
+}
+span{
+    color: white;
+    display: block;
+    text-align: center;
+    font-size: 140px;
+    font-weight: bolder;
+}
+a{
+    color: white;
+    font-size: large;
+}
+
+/*#canvas1{*/
+/*    position: absolute;*/
+/*    top: 35%;*/
+/*    left: 50%;*/
+/*    transform: translate(-25%, -25%);*/
+/*    !*border: 5px solid black;*!*/
+/*    width: 300px;*/
+/*    height: 300px;*/
+/*}*/
+
+.container a{
+    display: block;
+    text-align: center;
 }
