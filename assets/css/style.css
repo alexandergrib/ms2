@@ -1,15 +1,154 @@
 
 body {
     background-color: rgba(143, 143, 143, 0.15);
+     overflow-x: hidden;
+
 }
 
 
+/*--------------*/
+.header-wrapper {
+    display: block;
+    background-color: #5d6375;
+}
+
+.header-wrapper-inside {
+    position: relative;
+    max-width: 1280px;
+    height: 85px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+
+.header-wrapper-inside-left .header-wrapper-inside-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-wrapper-inside-left {
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+/*logo image in navbar*/
+.header-wrapper-inside-left img {
+    height: 60px;
+    width: auto;
+}
+
+
+.header-wrapper-inside-right {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+}
+
+.header-wrapper-inside-right form {
+    width: 100%;
+}
+
+.search-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+}
+
+
+
+.search-box {
+    /*width: 100%;*/
+    position: relative;
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 500px;
+    border: 0;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    flex-wrap: nowrap;
+}
+.search-box span {
+    width: 90%;
+}
+
+#searchField, .tt-hint {
+    display: block;
+    border: 0;
+    border-radius: 25px 0 0 25px;
+    width: 100%;
+}
+
+.search-box button {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.temperature-switch {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    color: #fff;
+    justify-content: flex-end;
+}
+
+.temperature-switch span {
+    font-size: 1.875rem;
+    padding: 0 6px;
+    border-right: 1px solid #fff;
+    width: 45px;
+}
+
+.dropdown {
+    font-size: 1.1em;
+    padding: 0 6px;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown i:hover {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    /*visibility: hidden;*/
+    position: absolute;
+    top: 30px;
+    left: -60px;
+    color: black;
+    background-color: #f9f9f9;
+    min-width: 95px;
+    border-radius: 25px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px 10px;
+    z-index: 1;
+}
+
+.show-dropdown-content {
+    display: block;
+}
+
+
+/*hidden search label*/
+.search-label-visuallyHidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+/*-------------------*/
 #main {
     margin-top: 20px;
     /*padding-left: 0px;*/
     padding: 0;
 }
-
 
 
 #toDoThings {
@@ -60,7 +199,7 @@ body {
 
 /*Text placeholder*/
 #textPlaceHolder {
-    margin-right: 15px;
+
     height: 30px;
     display: inline-block;
     text-align: center;
@@ -79,9 +218,6 @@ body {
 
 
 /*Search button-----------------------------------------------*/
-.search-div {
-    margin-top: 10px;
-}
 
 .navbar-brand {
     /*position: absolute;*/
@@ -93,56 +229,74 @@ body {
     /*padding: 0;*/
 }
 
-input[type=text] {
-    /*padding: 6px;*/
-    /*margin-top: 8px;*/
-    font-size: 17px;
-    /*border: 1px solid black;*/
-    border: 1px solid #ced4da;
-    /*border-radius: 5px;*/
-    border-radius: .25rem 0 0 .25rem;
-    width: 10rem;
-}
+/*input[type=text] {*/
+/*    !*padding: 6px;*!*/
+/*    !*margin-top: 8px;*!*/
+/*    font-size: 17px;*/
+/*    !*border: 1px solid black;*!*/
+/*    border: 1px solid #ced4da;*/
+/*    !*border-radius: 5px;*!*/
+/*    border-radius: .25rem 0 0 .25rem;*/
+/*    width: 10rem;*/
+/*}*/
 
 
 .msg {
     /*position: fixed;*/
     /*top: 1vh;*/
     height: 20px;
-    padding-top: 15px;
+    padding-top: 10px;
     padding-bottom: 20px;
     color: red;
+    font-size: 1.1em;
 }
 
-.msg span{
+.msg span {
     display: inline-block;
 
 }
 
-/**/
+/*row under navbar*/
+.search-div{
+    background-color: #c9cdd6;
+}
 
-
-/*dipslay city next to search*/
+/*display city next to search*/
 #current-city {
-    display: inline;
-    margin-left: 30px;
+
+    margin: 0 auto;
     background-color: #c9cdd6;
     padding: 6px 6px;
     border-radius: 5%;
 
 }
 
+#current-city span{
+        display: inline-block;
+}
+
+.ribbon-weather-icon{
+    height: 1.8em;
+    width: auto;
+}
+
 #temp-c, #temp-f {
     display: inline-block;
-    margin-left: 20px;
     text-align: center;
     vertical-align: center;
     width: 30px;
     height: 30px;
-
     border-radius: 50%;
     padding-top: 2px;
 }
+
+
+#temp-c span, #temp-f span {
+    font-size: 1em;
+    margin-left: -2px;
+    padding-right: 10px;
+}
+
 
 .switch-base-color {
     background-color: #c9cdd6;
@@ -152,8 +306,14 @@ input[type=text] {
     background-color: rgba(255, 140, 0, 1);
 }
 
+#temp-c {
+    border: 1px solid black;
+
+}
+
 #temp-f {
-    margin-left: 0px;
+    margin-left: 6px;
+    border: 1px solid black;
 }
 
 
@@ -161,13 +321,13 @@ input[type=text] {
     cursor: pointer;
 }
 
-#stick {
-    width: 10px;
-    height: 30px;
+/*#stick {*/
+/*    width: 10px;*/
+/*    height: 30px;*/
 
 
-    text-align: center;
-}
+/*    text-align: center;*/
+/*}*/
 
 #dropdownMenuButton {
     margin-top: 20px;
@@ -179,7 +339,8 @@ input[type=text] {
 }
 
 .dropdown-item {
-    padding: .25rem .5rem;
+    padding: .1rem .4rem; /*0.25 0.5*/
+    text-align: center;
 }
 
 /**/
@@ -235,7 +396,7 @@ input[type=text] {
 .ajax-section .city {
     /*position: relative;*/
     /*left: 10px;*/
-    padding: 9vh 6%;  /*2vh 30%*/
+    padding: 9vh 6%; /*2vh 30%*/
     border-radius: 20px;
 
     text-align: center;
@@ -277,11 +438,8 @@ input[type=text] {
 }
 
 .ajax-section .city-icon {
-    /*margin-top: px;*/
     width: 80px;
     height: auto;
-    /*width: 90%;*/
-    /*height: 100%;*/
     overflow: hidden;
 }
 
@@ -295,7 +453,7 @@ input[type=text] {
 .tt-menu {
     background-color: #97a1b5;
     border: 1px solid #000;
-    width: 125%;
+    width: 100%;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
@@ -351,7 +509,7 @@ input[type=text] {
 }
 
 .article {
-    padding: 5px 0px;
+    padding: 5px 0;
     margin-bottom: 5px;
     margin-left: -7px;
     /*white-space: nowrap;*/
@@ -437,8 +595,8 @@ input[type=text] {
     color: #fff;
     text-shadow: 1px 1px #000,
     -1px -1px #000,
-    -1px 0px #000,
-    0px -1px #000;
+    -1px 0 #000,
+    0 -1px #000;
 }
 
 .close-ribbon a {
@@ -489,7 +647,13 @@ a {
 @media only screen and (max-width: 485px) {
     .navbar-brand {
         margin-bottom: 5px;
+        padding-left: 5px;
     }
+    .navbar-brand img{
+        height: 35px;
+    }
+
+
 
     #current-city {
         margin-top: 10px;
@@ -497,5 +661,19 @@ a {
         margin-left: 10%;
         margin-right: 10%;
     }
+    #info--message{
+        height: 40px;
+        font-size: 0.9em;
+        align-self: center;
+        text-align: center;
+        margin-top: -5px;
+    }
+
+    #textPlaceHolder{
+        height: 55px;
+        text-align: center;
+    }
+
+
 }
 

@@ -1,18 +1,38 @@
-https://www.w3.org/TR/geolocation-API/
-
 
 
 # Milestone 2 project  
   
 ## [Live website on github pages](https://alexandergrib.github.io/ms2/)  
   
-![Responsive display](helping_materials/responcive-img.JPG)
+![Responsive display](assets/img/responsive.PNG)
 
 ---
+
 # Table of contents  
--
--
--
+
+- [UX](#ux)
+  * [Website owner business goals](#website-owner-business-goals)
+  * [User goals](#user-goals)
+- [Structure of the website](#structure-of-the-website)
+    + [Medium size](#medium-size)
+    + [Mobile screen](#mobile-screen)
+- [Wireframes](#wireframes)
+- [Surface](#surface)
+  * [Fonts](#fonts)
+  * [Colors](#colors)
+  * [Images](#images)
+  * [Text](#text)
+- [Features](#features)
+- [Technologies used](#technologies-used)
+- [Testing](#testing)
+- [Site logic](#site-logic)
+- [Deployment](#deployment)
+- [Problems encountered:](#problems-encountered)
+- [Credits](#credits)
+  * [Credits for text and modules](#credits-for-text-and-modules)
+  * [Credits for images used](#credits-for-images-used)
+
+
 
 
 # UX  
@@ -55,7 +75,7 @@ User will be offered to select which units to display by clicking on either “C
 
 Main page is split into 4 different sections
 1.	News section utilize news API to display current countrywide general news for the searched place.
-2.	Weather section is divided into 2 sub  sections. 
+2.	Weather section is divided into 2 subsections. 
     -	Main section will display today weather forecast with today date, current temperature, and icon for the current weather(clouds, sun, rain, etc.)
     -	Second section will display minimalistic forecast for the next 3 days, and will include date, temperature, and weather icon.
 3.	“Things to do” section located under first two and occupying full screen width, will consist with cards displaying relevant search information for the desired destination.
@@ -71,15 +91,18 @@ In case of any of the API get failed, error message will be displayed and defaul
 ##Adaptivity
 Website will adapt to screen size by rearranging sections and adjusting their width to fit into smaller screen.
 
-### Medium size / tablet
+### Medium size
 On medium screen size webpage will keep its layouts as on the larger screen but will get downsized to fit into user screen size.
+
 
 ### Mobile screen
 On mobile devices and other small screens each section will occupy full width of the screen and will be moved one under another.  
+
+
 # Wireframes  
 Wireframes can be found here:
-##### [Desktop / Tablet](wireframes/mobile.png)
-##### [Mobile](wireframes/mobile.png)
+#### [Desktop](wirefames/wireframes/Desktop.png)
+#### [Mobile](wirefames/wireframes/Mobile.png)
   ---
 # Surface  
 ## Fonts  
@@ -87,37 +110,38 @@ I decided to go with Google Roboto font and sans-serif as a fallback font.
 I think Roboto font is a most used font across whole internet, and it would not look too different for the user coming from any website they used to use.  This will create a more familiar feeling for the users.
 ## Colors  
 I used following colours:  
-- Body background color: #C6E7C6  
-- jumbotron color: #215020
-- Headings color: #474545
-- Text color: #474545  
-- Background color header and footer: #93C47D
+- Body background color: #8F8F8F26
+- News section color: #97A1B5
+- Weather section background: #6A7488 
+- menu color: #4DA5EF7F  
+- Info section color: #FBFBFB
+- Text color: #25383F  
+
     
 ## Images    
 ## Text  
 
- 
- 
+
 
 # Features    
 ## Existing Features    
-### Home (index.html):  
-•	Search field with search button
-o	Search field should contain typeahead functionality.
-•	Pop up message asking user to allow to use user device location
-•	Information section how to use this website and what it offers to the user
-•	Once search is made, Informational section will disappear and new 4 sections will be displayed
-o	News section occupying left side 30% of the screen
-o	Weather section located next to the news section and occupying 60% of the screen
-o	“Things to do” section occupying 90% of the width located below weather and news section
-o	After “things to do”, map section with location pins displayed on the map. Location for the pins taken from “things to do” section and should be updated on user choice of selection in “things to do” section.
-### Footer: 
-•	 Footer containing website owner information
+### Home (index.html)
+-	Search field with search button
+-	Search field should contain typeahead functionality.
+-	Pop up message asking user to allow to use user device location
+-	Information section how to use this website and what it offers to the user
+-	Once search is made, Informational section will disappear and new 4 sections will be displayed
+-	News section occupying left side 30% of the screen
+-	Weather section located next to the news section and occupying 60% of the screen
+-	“Things to do” section occupying 90% of the width located below weather and news section
+-	After “things to do”, map section with location pins displayed on the map. Location for the pins taken from “things to do” section and should be updated on user choice of selection in “things to do” section.
+### Footer
+-	 Footer containing website owner information
 
 
 
  
-# Technologies used:  
+# Technologies used  
 *	HTML   
 *	Javascript
 *   Jquery
@@ -132,10 +156,8 @@ o	After “things to do”, map section with location pins displayed on the map.
 *	CSS  
   
 # Testing
-Testing.md  
+[Testing.md](testing.md)
 
-# Site logic
-logic.md
 
 # Deployment  
 - Deployment made via GitHub pages.  Fork my repository, then go to Setting on forked repository scroll down to GitHub Pages and select in Source section the branch to be used.  
@@ -153,9 +175,15 @@ logic.md
     - error coming from google API (need to investigate more what is causing it)
     
 - Sometimes warning in console show-up about security for API
-    - error dissapear on the page refresh
+    - error disappear on the page refresh
+    
+- Console displaying: "Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'."
+    - don't know where this one coming from, need to investigate it.
+    
+
 
 # Credits  
+- Full credits for the game to [Frank's Laboratory](https://www.youtube.com/channel/UCEqc149iR-ALYkGM6TG-7vQ)
 
 ## Credits for text and modules
 - [Weather api](https://webdesign.tutsplus.com/tutorials/build-a-simple-weather-app-with-vanilla-javascript--cms-33893)
@@ -165,4 +193,5 @@ logic.md
 
 ## Credits for images used
  - [Favicon creator tool](https://realfavicongenerator.net/)
+ - [jetpack man](https://www.gamedeveloperstudio.com/graphics/viewgraphic.php?page-name=Jet-pack-man-game-character-2d-game-sprite&item=115h1m7u2p5899211p)
 
