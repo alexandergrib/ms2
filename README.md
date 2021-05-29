@@ -18,9 +18,9 @@ https://www.w3.org/TR/geolocation-API/
 # UX  
   
 ## Website owner business goals  
--	My website is aimed to target traveling visitors, to provide them "all in one" source of information they can check before visiting their destination.
+-	My website is aimed to target traveling visitors, to provide them "all in one" source of information they can check before visiting their destination
 -	My goal is to provide information about current weather in selected city.
--	My goal is to provide information about relative news for selected city by displaying news headlines
+-	My goal is to provide information about relative news for selected city by displaying news headlines with clickable links to full article
 -	My goal is to provide information about entertainment places, places to stay and things to do around selected location
 -	Website user should have possibility to switch between restaurants, things to do and stay(hotels) after results are displayed
 -	Website user should have possibility to switch between Centigrade and Fahrenheit for their convenience 
