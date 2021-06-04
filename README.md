@@ -53,10 +53,8 @@
 -	As a user I want to be able to choose in which units to display information metric or imperial  
 -	As a user I want to be able to see current weather in specified destination
 -	As a user I want to be able to see news in the selected destination  
--	As a user I want to be able to see places to visit in the selected destination  
--	As a user I want to be able to see places to stay in the selected destination  
--	As a user I want to be able to see places to eat in the selected destination
--	As a user I want to be able to open a link to webpage of the place provided
+-	As a user I want to be able to see places to stay, eat, or points of interests in the selected destination  
+
   
   
  

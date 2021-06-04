@@ -1,8 +1,8 @@
 # Website functionality
 
-On the first page load browser tries to get  user location with banner requesting to allow use user location.
+On the first load browser tries to get user location with banner requesting to allow using user location.
 If successful it will pass coordinates to weather API, which will get weather information and city name for coordinates received.
-weather API then call News API and passes over city name from weather API response and also calls google Places API to display relevant places for current location.
+Weather API then call News API and passes over city name from weather API response and also calls google Places API to display relevant places for current location.
 
 # Testing
 ## Desktop
@@ -46,3 +46,19 @@ weather API then call News API and passes over city name from weather API respon
 4. Mini-game not working properly on mobile screens as it monitors mouse position to function.
 
 # User Stories testing
+
+-	`As a user I want to be able to search for the required destination and be able to get relevant information` 
+     - Search input field implemented ([input field](assets/img/testing_img/search_field.png))
+-	As a user I want to have possibility of my location to be identified automatically  
+     - Browser tries to get user location on page load ([Location access request](assets/img/testing_img/location_request.png))
+-	As a user I want to be able to choose in which units to display information metric or imperial 
+     - Implemented setting selector where user can choose which units to display([Untints selector](assets/img/testing_img/units_selector.png))
+-	As a user I want to be able to see current weather in specified destination
+     - Weather section implemented ([weather section](assets/img/testing_img/weather.png)).Weather updated on user selected city, also weather and city in header ([weather small](assets/img/testing_img/weather_small.png))
+-	As a user I want to be able to see news in the selected destination  
+     - News section implemented, news are updated based on user selected city. ([news](assets/img/testing_img/news_section.png))
+-	As a user I want to be able to see places to stay, eat, or points of interests in the selected destination 
+     - Selection of choices implemented where user can choose between restaurants, hotels, and things to do in selected destination displayed on map. ([map display selection](assets/img/testing_img/things_to_do_ribbon.png))
+     - Map section implemented displaying places to eat by default, and being updated with user selection. ([map](assets/img/testing_img/map.png))
+  
+  

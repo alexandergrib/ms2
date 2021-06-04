@@ -208,6 +208,9 @@ body {
     background-color: #7b9dbe;
     border: 1px solid #000000;
 }
+#textPlaceHolder p{
+    font-size: 16px;
+}
 
 
 .make-center {
@@ -617,9 +620,11 @@ body {
 
 .place,
 p {
-    font-family: 'open sans', arial, sans-serif;
-    padding-left: 18px;
-    padding-right: 18px;
+    font-family: 'ROBOTO', arial, sans-serif;
+    padding-left: 15%;
+    padding-right: 15%;
+    font-size: 32px;
+    text-align: center;
 }
 
 .details {
