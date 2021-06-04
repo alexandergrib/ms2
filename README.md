@@ -38,13 +38,13 @@
 # UX  
   
 ## Website owner business goals  
--	My website is aimed to target traveling visitors, to provide them "all in one" source of information they can check before visiting their destination.
+-	My website is aimed to target traveling visitors, to provide them "all in one" source of information they can check before visiting their destination
 -	My goal is to provide information about current weather in selected city.
--	My goal is to provide information about relative news for selected city by displaying news headlines
+-	My goal is to provide information about relative news for selected city by displaying news headlines with clickable links to full article
 -	My goal is to provide information about entertainment places, places to stay and things to do around selected location
 -	Website user should have possibility to switch between restaurants, things to do and stay(hotels) after results are displayed
 -	Website user should have possibility to switch between Centigrade and Fahrenheit for their convenience 
--	Website user should be able to click on the pins displayed on map to get more info about their plaice of interest
+-	Website user should be able to click on the "pins" displayed on map to get more info about their plaice of interest
 
 
 ## User goals  
@@ -68,18 +68,18 @@
 # Structure of the website  
 
 The website consists one page with the search field and search button. And have brief instructions what is this website about and how to use it.  On the first-time visiting website, user will be offered to automatically detect their location, or manually enter their city.
-Once current city is identified automatically or entered manually, brief description will disappear, and searched Information will  be placed instead.
+Once current city is identified automatically or entered manually, searched Information will  be diplayed and map section updated.
 User will be offered to select which units to display by clicking on either “C” or “F” button, located next to the search button. By default, “C” option will be active. To clearly display which one is active now, “C” or “F” will show in different font size, active will have 50% bigger font size.
 
-Main page is split into 4 different sections
+Main page is split into 3 different sections
 1.	News section utilize news API to display current countrywide general news for the searched place.
 2.	Weather section is divided into 2 subsections. 
     -	Main section will display today weather forecast with today date, current temperature, and icon for the current weather(clouds, sun, rain, etc.)
     -	Second section will display minimalistic forecast for the next 3 days, and will include date, temperature, and weather icon.
-3.	“Things to do” section located under first two and occupying full screen width, will consist with cards displaying relevant search information for the desired destination.
-    -	On the top of this section will also display selectors where user can choose between (Things to do, Places to eat, Places to stay), after selection made card will be updated with relevant information based on user selection.
-    -	Each card will be linked to relevant webpage for the place found, allowing user to explore place in interest. Page will open in the new page.
+3.	“Things to do” section located under first two and occupying full screen width, will consist with clickable tabs.
 4.	Last Section is a map with pins displayed based on selection made in section 3(things to do). 
+    - Each pin displayed on the map is clickable
+    - Click on pin will open side ribbon displayed over map with place information(Buisness name, Buisness address, and Buisness website).
 
 Bottom of the page will contain footer with contact site owner information and icons for GitHub repository.
   
@@ -125,13 +125,13 @@ I used following colours:
 ## Existing Features    
 ### Home (index.html)
 -	Search field with search button
--	Search field should contain typeahead functionality.
+-	Search field should contain typeahead(autocomplete) functionality.
 -	Pop up message asking user to allow to use user device location
 -	Information section how to use this website and what it offers to the user
 -	Once search is made, Informational section will disappear and new 4 sections will be displayed
--	News section occupying left side 30% of the screen
+-	News section occupying left side 40% of the screen
 -	Weather section located next to the news section and occupying 60% of the screen
--	“Things to do” section occupying 90% of the width located below weather and news section
+-	“Things to do” section occupying 100% of the width located below weather and news section
 -	After “things to do”, map section with location pins displayed on the map. Location for the pins taken from “things to do” section and should be updated on user choice of selection in “things to do” section.
 ### Footer
 -	 Footer containing website owner information
