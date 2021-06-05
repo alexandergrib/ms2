@@ -128,7 +128,6 @@ I used following colours:
 -	Search field should contain typeahead(autocomplete) functionality.
 -	Pop up message asking user to allow to use user device location
 -	Information section how to use this website and what it offers to the user
--	Once search is made, Informational section will disappear and new 4 sections will be displayed
 -	News section occupying left side 40% of the screen
 -	Weather section located next to the news section and occupying 60% of the screen
 -	“Things to do” section occupying 100% of the width located below weather and news section
@@ -136,7 +135,9 @@ I used following colours:
 ### Footer
 -	 Footer containing website owner information
 
-
+## Features  left to implement
+  - Add forecasted weather to show 7 days forecast
+  - Add selector which user can expand to show hourly forecast by clicking daily forecast.
 
  
 # Technologies used  
