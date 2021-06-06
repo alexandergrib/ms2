@@ -224,7 +224,7 @@ body {
 .msg {
     position: relative;
     display: block;
-    top: -2.4vh;
+    top: -40px;
     height: 20px;
     color: #b10000;
     font-size: 1.3em;
@@ -627,6 +627,8 @@ a {
         text-align: center;
     }
 
-
+    .msg{
+        top:0;
+    }
 }
 
