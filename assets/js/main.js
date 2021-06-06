@@ -3,7 +3,7 @@
 /*SEARCH BY USING A CITY NAME (e.g. athens) OR A COMMA-SEPARATED CITY NAME
 ALONG WITH THE COUNTRY CODE (e.g. athens,gr)*/
 
-// const form = document.getElementById("#search--form");
+
 const input = document.querySelector("#searchField");
 const msg = document.querySelector(".search-div .msg");
 const list = document.querySelector(".ajax-section .cities");
@@ -16,7 +16,7 @@ function clearInputField(){
     input.value='';
 }
 
-
+//listen to enter key press
 input.addEventListener("keyup", function(event) {
     event.preventDefault();
     if (event.keyCode === 13) {
@@ -24,7 +24,7 @@ input.addEventListener("keyup", function(event) {
     }
 });
 
-
+//format input text
 function handleInputData(){
     let text = input.value;
     let inputVal = text.replace(/,\s+/g, ',');  //uses regex to fix formatting, if entered (city, country) removes space after ","
@@ -66,7 +66,7 @@ function handleInputData(){
         }
     }
 
-    // deleteMarkers();
+
     getWeather(inputVal);
 }
 
@@ -97,7 +97,7 @@ $('#search-div2 .typeahead').typeahead({
     });
 
 
-//-------------switch between C and F----------------------------------------------------  //maincolor
+//-------------switch between C and F----------------------------------------------------  //
 
 //handle click on setting-gears
 function toggleDropDownMenu() {
@@ -107,7 +107,7 @@ function toggleDropDownMenu() {
 
 
 
-
+//Select 'C' temperature display
 function switchToC() {
     let tempC = document.getElementById("temp-c");
     let tempF = document.getElementById("temp-f");
@@ -126,7 +126,7 @@ function switchToC() {
     toggleDropDownMenu();
     tempIndicator.innerHTML="°C";
 }
-
+//Select 'F' temperature display
 function switchToF() {
     let tempC = document.getElementById("temp-c");
     let tempF = document.getElementById("temp-f");

@@ -1,6 +1,6 @@
 /*jshint esversion: 6 */
 //https://developers.google.com/codelabs/maps-platform/google-maps-nearby-search-js#0
-//98% code in this file from example by google
+//code in this file from example by google
 let pos;
 let map;
 let bounds;
@@ -204,7 +204,7 @@ function showPanel(placeResult) {
     if (placeResult.website) {
         let websitePara = document.createElement('p');
         let websiteLink = document.createElement('a');
-        let websiteUrl = document.createTextNode("Website");//placeResult.website
+        let websiteUrl = document.createTextNode("Website");//add link to website if available
         websiteLink.appendChild(websiteUrl);
         websiteLink.title = placeResult.website;
         websiteLink.href = placeResult.website;

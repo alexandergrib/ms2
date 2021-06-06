@@ -186,7 +186,7 @@ I used following colours:
 
 ## Credits for text and modules
 - [Weather api](https://webdesign.tutsplus.com/tutorials/build-a-simple-weather-app-with-vanilla-javascript--cms-33893)
-- [typeahead](//http://twitter.github.io/typeahead.js/examples/)
+- [typeahead](http://twitter.github.io/typeahead.js/examples/)
 - [world cities database](https://simplemaps.com/data/world-cities)
 - [map](https://developers.google.com/maps/documentation/javascript/examples/place-search-pagination#maps_place_search_pagination-css)
 

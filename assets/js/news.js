@@ -20,7 +20,7 @@ function populateNews(data) {
 
     const newsList = document.querySelector("#news .news--class");
     const articles = data.articles;
-    // console.log(articles);
+
     if (document.querySelector(".news--class").getElementsByTagName('li')) {
         document.querySelector(".news--class").innerHTML = "";
     }

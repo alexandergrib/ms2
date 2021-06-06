@@ -3,7 +3,7 @@
 const apiKey = "888a73a8b27eb54c8d1ba56ed02ec435";
 let coordinates;
 
-//function called in main.js L71
+//this function called in main.js L71
 function getWeather(inputVal) {
 
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=metric`;
@@ -107,12 +107,12 @@ function weatherHandler(data) {
     };
 
     getNearbyPlaces(coordinates, 'restaurants');  //search for nearby places with keyword
-    fetchNews(name);   //TODO: news working activate after project complete
+    fetchNews(name);   //Call news API and pass city name
 
 
 }
 
-
+//Things TO DO ribbon handler
 function searchOnclick(keyword) {
     let restaurants = document.getElementById("restaurants");
     let hotels = document.getElementById("hotels");
