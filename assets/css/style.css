@@ -1,9 +1,10 @@
 
 body {
-    background-color: rgba(143, 143, 143, 0.15);
+    background-color: rgb(201 205 214);
      overflow-x: hidden;
 
 }
+
 
 .header-wrapper {
     display: block;
