@@ -5,8 +5,6 @@ body {
 
 }
 
-
-/*--------------*/
 .header-wrapper {
     display: block;
     background-color: #5d6375;
@@ -58,8 +56,6 @@ body {
     flex: 1 1 auto;
 }
 
-
-
 .search-box {
     /*width: 100%;*/
     position: relative;
@@ -71,6 +67,7 @@ body {
     border-bottom-left-radius: 25px;
     flex-wrap: nowrap;
 }
+
 .search-box span {
     width: 90%;
 }
@@ -132,7 +129,6 @@ body {
     display: block;
 }
 
-
 /*hidden search label*/
 .search-label-visuallyHidden {
     position: absolute !important;
@@ -146,7 +142,6 @@ body {
 /*-------------------*/
 #main {
     margin-top: 20px;
-    /*padding-left: 0px;*/
     padding: 0;
 }
 
@@ -157,10 +152,8 @@ body {
     background-color: #97a1b5;
     text-align: center;
     vertical-align: center;
-    /*vertical-align: middle;*/
     line-height: 25px;
     text-transform: uppercase;
-    /*margin-bottom: 0;*/
 }
 
 #toDoThings:hover {
@@ -220,38 +213,23 @@ body {
 }
 
 
-/*Search button-----------------------------------------------*/
+/*Search button----*/
 
 .navbar-brand {
-    /*position: absolute;*/
     left: 2%;
-    /*width: 65% !important;*/
-    /*margin: 0px auto;*/
-    /*left: 0;*/
-    /*right: 0;*/
-    /*padding: 0;*/
 }
 
-/*input[type=text] {*/
-/*    !*padding: 6px;*!*/
-/*    !*margin-top: 8px;*!*/
-/*    font-size: 17px;*/
-/*    !*border: 1px solid black;*!*/
-/*    border: 1px solid #ced4da;*/
-/*    !*border-radius: 5px;*!*/
-/*    border-radius: .25rem 0 0 .25rem;*/
-/*    width: 10rem;*/
-/*}*/
 
 
 .msg {
-    /*position: fixed;*/
-    /*top: 1vh;*/
+    position: relative;
+    display: block;
+    top: -2.4vh;
     height: 20px;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    color: red;
-    font-size: 1.1em;
+    color: #b10000;
+    font-size: 1.3em;
+    font-weight: 600;
+    padding-top: 5px;
 }
 
 .msg span {
@@ -262,20 +240,19 @@ body {
 /*row under navbar*/
 .search-div{
     background-color: #c9cdd6;
+    height: 52px;
 }
 
-/*display city next to search*/
+/*display city under search */
 #current-city {
-
     margin: 0 auto;
     background-color: #c9cdd6;
-    padding: 6px 6px;
-    border-radius: 5%;
+    padding: 6px 30px;
 
 }
 
 #current-city span{
-        display: inline-block;
+    display: inline-block;
 }
 
 .ribbon-weather-icon{
@@ -324,13 +301,6 @@ body {
     cursor: pointer;
 }
 
-/*#stick {*/
-/*    width: 10px;*/
-/*    height: 30px;*/
-
-
-/*    text-align: center;*/
-/*}*/
 
 #dropdownMenuButton {
     margin-top: 20px;
@@ -342,17 +312,16 @@ body {
 }
 
 .dropdown-item {
-    padding: .1rem .4rem; /*0.25 0.5*/
+    padding: .1rem .4rem;
     text-align: center;
 }
 
-/**/
+
 .hide {
-    /*visibility:hidden;*/ /* hides element but keeps its place*/
-    display: none; /*removes completely*/
+    display: none;
 }
 
-/**/
+
 
 
 #info-text {
@@ -360,61 +329,51 @@ body {
 }
 
 
-/*--weather section----------------------------------*/
+/*--weather section---*/
 
 #weather {
     background-color: #6b7488;
     width: 100%;
-
-
 }
 
 #weather ul {
     list-style: none;
 }
 
-
 .ajax-section {
-    /*margin: 1px;*/
     padding-top: 5px;
     padding-bottom: 5px;
     margin: auto;
-    /*width: 20rem;*/
     width: 100%;
-    height: 100%;
+    height: 550px;
 
 }
 
 .ajax-section .cities {
-    /*width: 20rem;*/
+    position: absolute;
     padding: 0.8vh 1%;
     margin-bottom: 0;
-    /*display: grid;*/
-    /*grid-gap: 32px 20px;*/
-    /*grid-template-columns: repeat(2, 1fr);*/
-    width: 100%;
-    height: 100%;
+    left: 10%;
+    top: 5%;
+    width: 80%;
+    height: 90%;
 }
 
 .ajax-section .city {
-    /*position: relative;*/
-    /*left: 10px;*/
-    padding: 9vh 6%; /*2vh 30%*/
+    padding: 9vh 6%;
     border-radius: 20px;
-
     text-align: center;
     background: #fff;
     color: #53627c;
     height: 100%;
+    box-shadow: 8px 8px;
 }
 
 
 /*weather footer--------------------------*/
 .ajax-section figcaption {
-    margin-top: 18px; /*10px*/
+    margin-top: 18px;
     align-content: center;
-    /*text-align: center; */
-    /*padding-left: 10px;*/
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
@@ -423,7 +382,6 @@ body {
 .ajax-section .city-temp {
     font-size: 5rem;
     font-weight: bold;
-    /*margin-top: 0px;*/
     color: #1e2432;
 }
 
@@ -446,7 +404,7 @@ body {
     overflow: hidden;
 }
 
-/*typeahead ----------------------*/
+/*typeahead --------*/
 
 .typeahead-wrapper {
     display: block;
@@ -493,9 +451,6 @@ body {
 
 }
 
-/*::-webkit-scrollbar {*/
-/*    display: none;*/
-/*}*/
 
 .fa-arrow-down {
     float: right;
@@ -525,7 +480,6 @@ body {
 
 .article a {
     font-size: 1.2em;
-    /*overflow: hidden;*/
     color: #1e2432;
 }
 
@@ -541,7 +495,7 @@ body {
     color: #5d6375;
 }
 
-
+/*--Show info  when hover over news article*/
 .article a[title]:hover:after {
 
     content: attr(title);
@@ -567,12 +521,11 @@ body {
 }
 
 
-/*map------------------------------------------*/
+/*map-------*/
 #map {
-    /*margin-top: 75px;*/
     flex-basis: 0;
     flex-grow: 4;
-    height: 600px; /*100%*/
+    height: 600px;
     width: 100%;
 }
 
@@ -580,9 +533,8 @@ body {
     * Hidden by default. */
 #panel {
     height: 600px;
-    /*width: none;*/
     background-color: white;
-    position: absolute; /*fixed*/
+    position: absolute;
     z-index: 1;
     overflow-x: hidden;
     transition: all .2s ease-out;
@@ -646,7 +598,6 @@ a {
     #news {
         order: 2;
     }
-
 }
 
 @media only screen and (max-width: 485px) {
@@ -658,11 +609,8 @@ a {
         height: 35px;
     }
 
-
-
     #current-city {
         margin-top: 10px;
-        /* width: 90px; */
         margin-left: 10%;
         margin-right: 10%;
     }
