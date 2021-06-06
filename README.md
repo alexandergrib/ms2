@@ -67,24 +67,24 @@
 
 # Structure of the website  
 
-The website consists one page with the search field and search button. And have brief instructions what is this website about and how to use it.  On the first-time visiting website, user will be offered to automatically detect their location, or manually enter their city.
-Once current city is identified automatically or entered manually, searched Information will  be diplayed and map section updated.
-User will be offered to select which units to display by clicking on either “C” or “F” button, located next to the search button. By default, “C” option will be active. To clearly display which one is active now, “C” or “F” will show in different font size, active will have 50% bigger font size.
+The website consists one page with the search field and search button. With brief instructions what is this website about and how to use it.  
+On the first-time visiting website, user will be offered to automatically detect their location.
+Once current city identified automatically or entered manually, searched Information will  be displayed and map section updated.
+User will be offered to select which units to display by clicking on setting button and pick either “C” or “F” selector, located next to the search button. 
+By default, “C” option will be active. To clearly display which one is active now, “C” or “F” will show next to setting button.
 
-Main page is split into 3 different sections
-1.	News section utilize news API to display current countrywide general news for the searched place.
-2.	Weather section is divided into 2 subsections. 
-    -	Main section will display today weather forecast with today date, current temperature, and icon for the current weather(clouds, sun, rain, etc.)
-    -	Second section will display minimalistic forecast for the next 3 days, and will include date, temperature, and weather icon.
-3.	“Things to do” section located under first two and occupying full screen width, will consist with clickable tabs.
-4.	Last Section is a map with pins displayed based on selection made in section 3(things to do). 
+Main page split into 3 different sections
+1.	News section utilize news API to display current city general news for the searched place.
+2.	Weather section divided into 2 subsections. 
+    -	Main section will display current weather forecast, current temperature, and icon for the current weather(clouds, sun, rain, etc.)
+3.	“Things to do” section located under first two and occupying full screen width, will consist three clickable tabs.
+4.	Last Section consist map with pins displayed based on selection made in section 3(things to do). 
     - Each pin displayed on the map is clickable
-    - Click on pin will open side ribbon displayed over map with place information(Buisness name, Buisness address, and Buisness website).
+    - Click on pin will open ribbon displayed over map with place information(Business name, Business address, and Business website).
 
 Bottom of the page will contain footer with contact site owner information and icons for GitHub repository.
   
 
-In case of any of the API get failed, error message will be displayed and default information will be loaded.
 
 ##Adaptivity
 Website will adapt to screen size by rearranging sections and adjusting their width to fit into smaller screen.
@@ -94,7 +94,7 @@ On medium screen size webpage will keep its layouts as on the larger screen but 
 
 
 ### Mobile screen
-On mobile devices and other small screens each section will occupy full width of the screen and will be moved one under another.  
+On mobile devices and other small screens each section will occupy full width of the screen and will be moved one under another. 
 
 
 # Wireframes  
@@ -182,7 +182,7 @@ I used following colours:
 
 
 # Credits  
-- Full credits for the game to [Frank's Laboratory](https://www.youtube.com/channel/UCEqc149iR-ALYkGM6TG-7vQ)
+
 
 ## Credits for text and modules
 - [Weather api](https://webdesign.tutsplus.com/tutorials/build-a-simple-weather-app-with-vanilla-javascript--cms-33893)
@@ -192,5 +192,4 @@ I used following colours:
 
 ## Credits for images used
  - [Favicon creator tool](https://realfavicongenerator.net/)
- - [jetpack man](https://www.gamedeveloperstudio.com/graphics/viewgraphic.php?page-name=Jet-pack-man-game-character-2d-game-sprite&item=115h1m7u2p5899211p)
-
+ 

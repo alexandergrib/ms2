@@ -493,9 +493,9 @@ body {
 
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
+/*::-webkit-scrollbar {*/
+/*    display: none;*/
+/*}*/
 
 .fa-arrow-down {
     float: right;
