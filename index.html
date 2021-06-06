@@ -100,11 +100,6 @@
             <!--    containter for news-->
             <div class="col-auto col-md-6" id="news">
                 <h2 class="d-flex justify-content-center">News</h2>
-                <!--                                <ul class="news&#45;&#45;class">-->
-                <!--                    <li class="article">-->
-                <!--                            News loading...-->
-                <!--                    </li>-->
-                <!--                </ul>-->
                 <ul class="news--class">
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -242,34 +237,6 @@
                            title="Chicago police searching for second gunman in road rage shooting of 21-month-old child"
                            target="_blank">
                             Chicago police searching for second gunman in road rage shooting of 21-month-old child
-                        </a>
-
-                    </li>
-                    <li class="article">
-                        <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-                        <a href="https://www.cinemablend.com/television/2565759/chicago-med-new-med-student-asjha-cooper-vanessa-taylor-maggie-season-6"
-                           title="Why Chicago Med's Newest Med Student Could Change One Character's Life In Season 6"
-                           target="_blank">
-                            Why Chicago Med's Newest Med Student Could Change One Character's Life In Season 6
-                        </a>
-
-                    </li>
-                    <li class="article">
-                        <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-                        <a href="https://www.hotnewhiphop.com/mother-nature-and-valee-put-on-for-chicago-with-new-collab-goofiez-new-song.1990868.html"
-                           title="Mother Nature &amp; Valee Put On For Chicago With New Collab 'GOOFIEZ'"
-                           target="_blank">
-                            Mother Nature &amp; Valee Put On For Chicago With New Collab 'GOOFIEZ'
-                        </a>
-
-                    </li>
-                    <li class="article">
-                        <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-                        <a href="https://abc7chicago.com/media-burn-grant-video-archive-chicago/10503984/"
-                           title="Chicago-based Media Burn Independent Video Archive receives $500K grant to launch new national project"
-                           target="_blank">
-                            Chicago-based Media Burn Independent Video Archive receives $500K grant to launch new
-                            national project
                         </a>
 
                     </li>
@@ -591,6 +558,7 @@
             </div>
         </div>
     </div>
+    <!--  container displaying current coordinates  -->
     <div class="container-fluid">
         <div class="row">
             <div class="col make-center" id="textPlaceHolder"></div>
@@ -606,27 +574,32 @@
 <footer>
     <div class="text-center p-3">
         © 2021 Copyright:
-        <a class="text-dark" href="https://github.com/alexandergrib/ms2">ALEXANDER GRIB <i class="fa fa-github" aria-hidden="true"></i>
-</a>
+        <a class="text-dark" href="https://github.com/alexandergrib/ms2" aria-label="Link to Github">ALEXANDER GRIB <i class="fa fa-github"
+                                                                                           aria-hidden="true"></i>
+        </a>
     </div>
-    <!-- Copyright -->
 </footer>
 
-
+<!--Bootstrap and jquery required files-->
 <script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
 <script src="assets/js/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
 
-
+<!--Autocompletion script-->
 <script src="assets/js/typeahead.bundle.js"></script>
+<!--Script containing city names used in autocompletion-->
 <script src="assets/js/cities.js"></script>
+<!--News API script-->
 <script src="assets/js/news.js"></script>
+<!--Weather APIscript-->
 <script src="assets/js/weather.js"></script>
-
+<!--Script to auto scroll news-->
 <script src="assets/js/scroll.js"></script>
+<!--Google maps script-->
 <script src="assets/js/map.js"></script>
+<!--Main script-->
 <script src="assets/js/main.js"></script>
 <script async
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8QVgU4Ry5cuU67JUZVg7cnIOzInvCt0c&libraries=places&callback=initMap">
