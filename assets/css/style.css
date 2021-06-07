@@ -1,20 +1,23 @@
 
 body {
-    background-color: rgb(201 205 214);
-     overflow-x: hidden;
-
+    background-color: #dcf0ff;
+    overflow-x: hidden;
+    background: url("../img/jonathan-roger-LY1eyQMFeyo-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: 2048px 45%;
+    background-attachment: fixed;
 }
 
 
 .header-wrapper {
     display: block;
-    background-color: #5d6375;
+    background-color: #4eb9ffcc;
 }
 
 .header-wrapper-inside {
     position: relative;
     max-width: 1280px;
-    height: 85px;
+    height: 120px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -35,7 +38,7 @@ body {
 
 /*logo image in navbar*/
 .header-wrapper-inside-left img {
-    height: 60px;
+    height: 80px;
     width: auto;
 }
 
@@ -58,7 +61,6 @@ body {
 }
 
 .search-box {
-    /*width: 100%;*/
     position: relative;
     box-sizing: border-box;
     margin: 0 auto;
@@ -78,6 +80,7 @@ body {
     border: 0;
     border-radius: 25px 0 0 25px;
     width: 100%;
+    height: 55px;
 }
 
 .search-box button {
@@ -113,7 +116,6 @@ body {
 
 .dropdown-content {
     display: none;
-    /*visibility: hidden;*/
     position: absolute;
     top: 30px;
     left: -60px;
@@ -149,7 +151,6 @@ body {
 
 #toDoThings {
     width: 100%;
-
     background-color: #97a1b5;
     text-align: center;
     vertical-align: center;
@@ -193,7 +194,6 @@ body {
 
 /*Text placeholder*/
 #textPlaceHolder {
-
     height: 30px;
     display: inline-block;
     text-align: center;
@@ -202,7 +202,8 @@ body {
     background-color: #7b9dbe;
     border: 1px solid #000000;
 }
-#textPlaceHolder p{
+
+#textPlaceHolder p {
     font-size: 16px;
 }
 
@@ -219,7 +220,6 @@ body {
 .navbar-brand {
     left: 2%;
 }
-
 
 
 .msg {
@@ -239,24 +239,24 @@ body {
 }
 
 /*row under navbar*/
-.search-div{
-    background-color: #c9cdd6;
+.search-div {
+    background-color: #dcf0ff4a;
     height: 52px;
 }
 
 /*display city under search */
 #current-city {
+    max-width: 1280px;
     margin: 0 auto;
-    background-color: #c9cdd6;
     padding: 6px 30px;
-
+    height: 40px;
 }
 
-#current-city span{
+#current-city span {
     display: inline-block;
 }
 
-.ribbon-weather-icon{
+.ribbon-weather-icon {
     height: 1.8em;
     width: auto;
 }
@@ -323,18 +323,19 @@ body {
 }
 
 
-
-
 #info-text {
-    padding-top: 10px;
+    padding-top: 20px;
+    height: 300px;
+
 }
 
 
 /*--weather section---*/
 
 #weather {
-    background-color: #6b7488;
+    background-color: #a4cded;
     width: 100%;
+    border-left: 1px solid black;
 }
 
 #weather ul {
@@ -438,11 +439,10 @@ body {
 
 /*news section----------------------*/
 #news {
-    background-color: #97a1b5;
-    width: 100%; /*650px*/
+    background-color: #a4cced;
+    width: 100%;
     padding-bottom: 20px;
-
-
+    border-right: 1px solid black;
 }
 
 .news--class {
@@ -471,7 +471,6 @@ body {
     padding: 5px 0;
     margin-bottom: 5px;
     margin-left: -7px;
-    /*white-space: nowrap;*/
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -496,7 +495,7 @@ body {
     color: #5d6375;
 }
 
-/*--Show info  when hover over news article*/
+/*Show info  when hover over news article*/
 .article a[title]:hover:after {
 
     content: attr(title);
@@ -526,7 +525,7 @@ body {
 #map {
     flex-basis: 0;
     flex-grow: 4;
-    height: 600px;
+    height: 650px;
     width: 100%;
 }
 
@@ -576,7 +575,7 @@ p {
     font-family: 'ROBOTO', arial, sans-serif;
     padding-left: 15%;
     padding-right: 15%;
-    font-size: 32px;
+    font-size: 31px;
     text-align: center;
 }
 
@@ -594,6 +593,10 @@ a {
     padding-right: 10px;
 }
 
+footer {
+    padding: 21px 0;
+    background-color: #6ac4ff;
+}
 
 @media only screen and (max-width: 768px) {
     #news {
@@ -606,7 +609,8 @@ a {
         margin-bottom: 5px;
         padding-left: 5px;
     }
-    .navbar-brand img{
+
+    .navbar-brand img {
         height: 35px;
     }
 
@@ -615,7 +619,8 @@ a {
         margin-left: 10%;
         margin-right: 10%;
     }
-    #info--message{
+
+    #info--message {
         height: 40px;
         font-size: 0.9em;
         align-self: center;
@@ -623,13 +628,13 @@ a {
         margin-top: -5px;
     }
 
-    #textPlaceHolder{
+    #textPlaceHolder {
         height: 55px;
         text-align: center;
     }
 
-    .msg{
-        top:0;
+    .msg {
+        top: 0;
     }
 }
 
