@@ -1,13 +1,13 @@
 <svg width="200" height="150" xmlns="http://www.w3.org/2000/svg">
  <g>
   <title>Layer 1</title>
-  <text fill="#ffffff" stroke-width="0" x="79.80848" y="132.93519" id="svg_2" font-size="24" font-family="Noto Sans JP" text-anchor="start" xml:space="preserve" stroke="#000" transform="matrix(3.36085 0 0 2.94246 -269.817 -252.302)">SPOT</text>
-  <text fill="#ffffff" stroke-width="0" x="81.28937" y="113.59319" id="svg_1" font-size="24" font-family="Noto Sans JP" text-anchor="start" xml:space="preserve" stroke="#000" transform="matrix(2.4173 0 0 4.08938 -193.007 -383.956)">LOCAL</text>
-  <ellipse stroke="#000" ry="12.5" rx="9" id="svg_3" cy="112.0946" cx="115.23238" stroke-width="0" fill="#000000"/>
-  <line stroke="#000" id="svg_5" y2="92.12155" x2="104.44239" y1="84.04863" x1="100.49019" fill="none"/>
-  <line transform="rotate(-7.24618 111.657 84.6844)" stroke="#000" id="svg_6" y2="89.24165" x2="112.11703" y1="80.12706" x1="111.19791" fill="none"/>
-  <line id="svg_7" y2="89.08846" x2="123.80514" y1="81.27596" x1="124.32597" stroke="#000" fill="none"/>
-  <line stroke="#000" id="svg_8" y2="93.62277" x2="133.05759" y1="86.25451" x1="138.4957" fill="none"/>
+  <text transform="matrix(3.36085 0 0 3.33616 -269.817 -304.902)" stroke="#000" xml:space="preserve" text-anchor="start" font-family="Noto Sans JP" font-size="24" id="svg_2" y="132.93519" x="79.80848" stroke-width="0" fill="#ffffff">SPOT</text>
+  <text transform="matrix(2.4173 0 0 3.50317 -193.007 -330.287)" stroke="#000" xml:space="preserve" text-anchor="start" font-family="Noto Sans JP" font-size="24" id="svg_1" y="113.59319" x="81.28937" stroke-width="0" fill="#ffffff">LOCAL</text>
+  <ellipse fill="#000000" stroke-width="0" cx="115.42731" cy="112.0946" id="svg_3" rx="9" ry="12.5" stroke="#000"/>
+  <line fill="none" x1="100.49019" y1="84.04863" x2="104.44239" y2="92.12155" id="svg_5" stroke="#000"/>
+  <line fill="none" x1="111.19791" y1="80.12706" x2="112.11703" y2="89.24165" id="svg_6" stroke="#000" transform="rotate(-7.24618 111.657 84.6844)"/>
+  <line fill="none" stroke="#000" x1="124.32597" y1="81.27596" x2="123.80514" y2="89.08846" id="svg_7"/>
+  <line fill="none" x1="138.4957" y1="86.25451" x2="133.05759" y2="93.62277" id="svg_8" stroke="#000"/>
  </g>
 
 </svg>

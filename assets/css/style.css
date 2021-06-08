@@ -2,10 +2,7 @@
 body {
     background-color: #dcf0ff;
     overflow-x: hidden;
-    background: url("../img/jonathan-roger-LY1eyQMFeyo-unsplash.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 55vh;
-    background-attachment: fixed;
+
 }
 
 
@@ -144,8 +141,9 @@ body {
 
 /*-------------------*/
 #main {
-    margin-top: 20px;
+    margin-top: 5px;
     padding: 0;
+
 }
 
 
@@ -240,7 +238,7 @@ body {
 
 /*row under navbar*/
 .search-div {
-    background-color: #dcf0ff4a;
+    background-color: #bbf0fe;
     height: 52px;
 }
 
@@ -325,10 +323,18 @@ body {
 
 #info-text {
     padding-top: 20px;
-    height: 300px;
+    height: 450px;
+
+    background: url("../img/jonathan-roger-LY1eyQMFeyo-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 110%;
 
 }
 
+#info-text p {
+    font-size: 3.5em;
+
+}
 
 /*--weather section---*/
 
@@ -602,6 +608,8 @@ footer {
     #news {
         order: 2;
     }
+
+
 }
 
 @media only screen and (max-width: 485px) {
@@ -635,6 +643,9 @@ footer {
 
     .msg {
         top: 0;
+    }
+      #info-text p {
+        font-size: 1.5em;
     }
 }
 

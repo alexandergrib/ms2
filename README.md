@@ -179,8 +179,9 @@ I used following colours:
 - Console displaying: "Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'."
     - don't know where this one coming from, need to investigate it.
     
-
-
+- Gap is visible between edge of the page and side of the browser where is scroll located(Chrome only) and scroll bar itself styled by the browser, there is no gap visible in mozilla browser.
+    - it looks like bug of Chrome browser itself. If the classic scroll bar displayed then issue is not present.
+  
 # Credits  
 
 
