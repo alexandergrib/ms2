@@ -339,13 +339,13 @@ body {
     width: auto;
     background-size: cover;
     background: url("../img/78786.png") repeat-x center center;
-    opacity: 0.4;
+    opacity: 0.17;
 }
 
 #info-text p {
     font-size: 3.5em;
     opacity: unset !important;
-
+color: #211187;
 }
 
 /*--weather section---*/
