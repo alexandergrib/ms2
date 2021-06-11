@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Armata&family=Gochi+Hand&family=Grandstander:ital,wght@1,200&family=Reenie+Beanie&display=swap');
 
 body {
     background-color: #dcf0ff;
@@ -323,7 +324,7 @@ body {
 
 #info-text {
     padding-top: 20px;
-    height: 350px;
+    height: 150px;
     width: 100%;
     background-color: rgba(224, 227, 255, 0.27);
 }
@@ -331,11 +332,11 @@ body {
 #info-text:before {
     content: "";
     position: absolute;
-    top: 180px;
+    top: 143px;
     right: 0;
     bottom: 0;
     left: 0;
-    height: 340px;
+    height: 200px;
     width: auto;
     background-size: cover;
     background: url("../img/78786.png") repeat-x center center;
@@ -343,9 +344,10 @@ body {
 }
 
 #info-text p {
+    font-family: "sans-serif";
     font-size: 3.5em;
     opacity: unset !important;
-color: #211187;
+    color: #211187;
 }
 
 /*--weather section---*/
@@ -617,6 +619,9 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
+    #info-text p {
+        font-size: 2.5em;
+    }
     #news {
         order: 2;
     }
