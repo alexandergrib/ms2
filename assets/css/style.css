@@ -241,6 +241,7 @@ body {
 .search-div {
     background-color: #6ac4ff;
     height: 52px;
+    border-top: 1px solid #68768236;
 }
 
 /*display city under search */
@@ -348,6 +349,7 @@ body {
     font-size: 2.8em;
     opacity: unset !important;
     color: #211187;
+    text-shadow: 5px 5px #bed5e8;
 }
 
 /*--weather section---*/
