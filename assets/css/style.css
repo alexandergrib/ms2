@@ -239,7 +239,7 @@ body {
 
 /*row under navbar*/
 .search-div {
-    background-color: #bbf0fe;
+    background-color: #6ac4ff;
     height: 52px;
 }
 
@@ -332,11 +332,11 @@ body {
 #info-text:before {
     content: "";
     position: absolute;
-    top: 143px;
+    top: 88px;
     right: 0;
     bottom: 0;
     left: 0;
-    height: 200px;
+    height: 800px;
     width: auto;
     background-size: cover;
     background: url("../img/78786.png") repeat-x center center;
@@ -345,7 +345,7 @@ body {
 
 #info-text p {
     font-family: "sans-serif";
-    font-size: 3.5em;
+    font-size: 2.8em;
     opacity: unset !important;
     color: #211187;
 }
@@ -353,7 +353,7 @@ body {
 /*--weather section---*/
 
 #weather {
-    background-color: #a4cded;
+    background-color: #a4cced12;
     width: 100%;
     border-left: 1px solid black;
 }
@@ -378,17 +378,18 @@ body {
     left: 10%;
     top: 5%;
     width: 80%;
-    height: 90%;
+    height: 72%;
 }
 
 .ajax-section .city {
-    padding: 9vh 6%;
+    padding: 1vh 6%;
     border-radius: 20px;
     text-align: center;
-    background: #fff;
+    background: #ffffff70;
     color: #53627c;
-    height: 100%;
-    box-shadow: 8px 8px;
+    height: 80%;
+    box-shadow: 8px 8px #7b767645;
+    border: 2px solid;
 }
 
 
@@ -402,7 +403,7 @@ body {
 
 /*temperature digits----------------*/
 .ajax-section .city-temp {
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: bold;
     color: #1e2432;
 }
@@ -421,9 +422,11 @@ body {
 }
 
 .ajax-section .city-icon {
-    width: 80px;
+    width: 70px;
     height: auto;
     overflow: hidden;
+    background-color: #2121de69;
+    border-radius: 50%;
 }
 
 /*typeahead --------*/
@@ -459,10 +462,10 @@ body {
 
 /*news section----------------------*/
 #news {
-    background-color: #a4cced;
+    background-color: #a4cced12;
     width: 100%;
     padding-bottom: 20px;
-    border-right: 1px solid black;
+
 }
 
 .news--class {
@@ -622,6 +625,7 @@ footer {
     #info-text p {
         font-size: 2.5em;
     }
+
     #news {
         order: 2;
     }
