@@ -324,15 +324,17 @@ body {
 #info-text {
     padding-top: 20px;
     height: 450px;
+    width: 100%;
+    background-size: 100% 168px;
+    background: url("../img/78786.png") repeat-x center center;
+    opacity: 0.4;
 
-    background: url("../img/jonathan-roger-LY1eyQMFeyo-unsplash.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 110%;
 
 }
 
 #info-text p {
     font-size: 3.5em;
+    opacity: unset !important;
 
 }
 
