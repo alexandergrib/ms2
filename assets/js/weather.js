@@ -108,7 +108,7 @@ function weatherHandler(data) {
 
     getNearbyPlaces(coordinates, 'restaurants');  //search for nearby places with keyword
     fetchNews(name);   //Call news API and pass city name
-
+    getCovidInfo(sys.country); //Calls covid API covid.js
 
 }
 

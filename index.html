@@ -4,7 +4,7 @@
     <title>Local spot | Find your local info!</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"  content="Local spot. Find your local info!">
+    <meta name="description" content="Local spot. Find your local info!">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
@@ -26,8 +26,9 @@
     <div class="header-wrapper" id="search-div2">
         <div class="header-wrapper-inside">
             <div class="header-wrapper-inside-left">
-                <a class="navbar-brand" href="#"><img src="assets/img/vintage-1064142_640.png" alt="Logo" height="80" width="80"></a>
-                <a class="navbar-brand" href="#"><img src="assets/img/FVE-image.svg" alt="Logo" height="80" width="106.67"></a>
+                <a class="navbar-brand" href="#"><img src="assets/img/vintage-1064142_640.png" alt="Logo" height="80"
+                                                      width="80"></a>
+                <a class="navbar-brand" href="#"><img src="assets/img/FVE-image.svg" alt="Logo" height="80" width="106"></a>
                 <!--logo img-->
             </div>
             <!--        Search box -->
@@ -87,7 +88,7 @@
 <!--Info text placeholder-->
 <div id="info-text" class="row-fluid make-center">
     <p class="col-12">Enter your location to read local news, weather report and places to visit.
-     </p>
+    </p>
 
 </div>
 
@@ -514,28 +515,79 @@
 
             <!--container for weather-->
             <div class="col-auto col-md-6" id="weather">
+                <div class="row ">
+                    <div class="col-12 ajax-section">
 
+                        <ul class="cities">
+                            <li class="city">
+                                <h2 class="city-name" data-name="London,GB">
+                                    <span>London</span><br>
+                                    <sup>GB</sup>
+                                </h2>
+                                <div class="city-temp">20<sup>°C</sup></div>
+                                <figure class="">
+                                    <img class="city-icon"
+                                         src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/01d.svg"
+                                         alt="clear sky">
+                                    <figcaption>clear sky</figcaption>
+                                </figure>
+                            </li>
+                        </ul>
 
-                <div class="ajax-section">
-
-                    <ul class="cities">
-                        <li class="city">
-                            <h2 class="city-name" data-name="London,GB">
-                                <span>London</span><br>
-                                <sup>GB</sup>
-                            </h2>
-                            <div class="city-temp">20<sup>°C</sup></div>
-                            <figure class="">
-                                <img class="city-icon"
-                                     src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/01d.svg"
-                                     alt="clear sky">
-                                <figcaption>clear sky</figcaption>
-                            </figure>
-                        </li>
-                    </ul>
-
+                    </div>
                 </div>
+                <div class="row justify-content-center" id="covid_info_wrapper">
+                    <div class="col-12 col-md-6">
+                        <div class="covid_info_cells" id="covid_global_info">
+                            <div class="row">
+                                <h3 class="col-12 justify-content-center">COVID-19 Global stats</h3>
+                            </div>
+                            <div class="row justify-content-center">
 
+                                <div class="col-6">
+
+                                    <ul>
+                                        <li>NewConfirmed</li>
+                                        <li>NewDeaths</li>
+                                        <li>TotalDeaths</li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-6">
+                                    <ul>
+                                        <li>1231231</li>
+                                        <li>23423423</li>
+                                        <li>23423423</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="covid_info_cells" id="covid_by_country">
+                            <div class="row justify-content-center">
+                                <h3 class="col-12">COVID-19 GB stats</h3>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-6">
+                                    <ul>
+                                        <li>NewConfirmed</li>
+                                        <li>NewDeaths</li>
+                                        <li>TotalDeaths</li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-6">
+                                    <ul>
+                                        <li>1231231</li>
+                                        <li>32423423</li>
+                                        <li>23423423</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -573,8 +625,9 @@
 <footer>
     <div class="text-center p-3">
         © 2021 Copyright:
-        <a class="text-dark" href="https://github.com/alexandergrib/ms2" aria-label="Link to Github">ALEXANDER GRIB <i class="fa fa-github"
-                                                                                           aria-hidden="true"></i>
+        <a class="text-dark" href="https://github.com/alexandergrib/ms2" aria-label="Link to Github">ALEXANDER GRIB <i
+                class="fa fa-github"
+                aria-hidden="true"></i>
         </a>
     </div>
 </footer>
@@ -596,6 +649,8 @@
 <script src="assets/js/weather.js"></script>
 <!--Script to auto scroll news-->
 <script src="assets/js/scroll.js"></script>
+<!--Covid info script-->
+<script src="assets/js/covid.js"></script>
 <!--Google maps script-->
 <script src="assets/js/map.js"></script>
 <!--Main script-->
