@@ -180,7 +180,7 @@ body {
     border: 1px solid black;
     vertical-align: middle;
     display: inline-block;
-    padding-top: 1px;
+    padding-top: 15px;
 }
 
 
@@ -619,7 +619,7 @@ body {
 #map {
     flex-basis: 0;
     flex-grow: 4;
-    height: 650px;
+    height: 750px;
     width: 100%;
 }
 
@@ -688,7 +688,7 @@ a {
 }
 
 footer {
-    position: fixed;
+    position: relative;
     Width: 100%;
     bottom: 0;
     padding: 21px 0;
