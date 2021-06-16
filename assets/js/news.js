@@ -1,4 +1,4 @@
-
+/*jshint esversion: 6 */
 function fetchNews(searchQuestion) {
     fetch(`https://newscatcher.p.rapidapi.com/v1/search_free?q=${searchQuestion}%2Bnews&lang=en&page_size=50&media=True`, {
         "method": "GET",

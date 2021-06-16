@@ -55,7 +55,7 @@ function weatherHandler(data) {
                 <div class="city-temp">${Math.round(temperature)}<sup>°${tempIndicator}</sup></div>
                 <figure>
                   <img class="city-icon" src="${icon}" alt="${
-            weather[0]["description"]
+            weather[0].description
         }">
                   <figcaption>${weather[0].description}</figcaption>
                 </figure>
@@ -77,7 +77,7 @@ function weatherHandler(data) {
                 <div class="city-temp">${Math.round(temperature)}<sup>°${tempIndicator}</sup></div>
                 <figure>
                   <img class="city-icon" src="${icon}" alt="${
-            weather[0]["description"]
+            weather[0].description
         }">
                   <figcaption>${weather[0].description}</figcaption>
                 </figure>

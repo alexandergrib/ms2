@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 // https://codepen.io/jamesreegan/pen/OVMVvg
 //Animation code found on code pen, I only changed classes name
 

@@ -179,9 +179,41 @@ I used following colours:
 [Testing.md](testing.md)
 
 
-# Deployment  
-- Deployment made via GitHub pages.  Fork my repository, then go to Setting on forked repository scroll down to GitHub Pages and select in Source section the branch to be used.  
-  
+# Deployment
+
+## Deploying on GitHub Pages
+ 1.  Log into  [GitHub](https://github.com/)  or  [create an account](https://github.com/).
+2.  Locate the  [GitHub Repository](https://github.com/alexandergrib/ms1).
+3.  At the top of the repository, select Settings from the menu items.
+4.  Scroll down the Settings page to the "GitHub Pages" section.
+5.  Under "Source" click the drop-down menu labelled "None" and select "Master Branch".
+6.  Upon selection, the page will automatically refresh meaning that the website is now deployed.
+7.  Scroll back down to the "GitHub Pages" section to retrieve the deployed link.
+
+
+## Forking the Repository
+
+1.  Log into  [GitHub](https://github.com/)  or  [create an account](https://github.com/).
+2.  Locate the  [GitHub Repository](https://github.com/alexandergrib/ms1).
+3.  At the top of the repository, on the right side of the page, select "Fork".
+4.  You should now have a copy of the original repository in your GitHub account.
+    
+## How to run this project within a local IDE, such as Pycharm/VScode
+
+1.  Log into  [GitHub](https://github.com/)  or  [create an account](https://github.com/).    
+2.  Locate the  [GitHub Repository](https://github.com/alexandergrib/ms1).    
+3.  Under the repository name, click "Clone or download".    
+4.  In the Clone with HTTPs section, copy the clone URL for the repository.    
+5.  In your local IDE open the terminal.    
+6.  Change the current working directory to the location where you want the cloned directory to be made.    
+7.  Type 'git clone', and then paste the URL you copied in Step 3.    
+    > git clone  [https://github.com/USERNAME/REPOSITORY](https://github.com/USERNAME/REPOSITORY)
+        
+8.  Press Enter. Your local clone will be created.
+    
+
+Further reading and troubleshooting on cloning a repository from GitHub  [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository). 
+
 # Problems encountered: 
 - After searching for place map did not center itself to that selected location
   - Fixed by setting new boundaries instead of extending previous (bounds = new google.maps.LatLngBounds();) 
@@ -192,16 +224,16 @@ I used following colours:
 
 
 - Console error (Failed to load resource: the server responded with a status of 403 ())
-    - error coming from google API (need to investigate more what is causing it)
+    - Error coming from google API itself, after page refresh error disappear
     
 - Sometimes warning in console shows-up about security for API
     - error disappears on the page refresh
     
 - Console displaying: "Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'."
-    - don't know where this one is coming from, need to investigate it further.
+    - This issue coming from GitHub pages [more info about it here](https://github.blog/changelog/2021-04-27-github-pages-permissions-policy-interest-cohort-header-added-to-all-pages-sites/)
     
-- Gap is visible between edge of the page and side of the browser where scroll is located (Chrome only) and scroll bar itself styled by the browser, there is no gap visible in mozilla browser.
-    - it looks like bug of Chrome browser itself. If the classic scroll bar disisplayed then issue is not present.
+- Gap is visible between edge of the page and side of the browser where scroll located ([Chrome only](assets/img/testing_img/gap_chrome.png)) and scroll bar itself styled by the browser, there is no gap visible in [mozilla browser](assets/img/testing_img/no_gap_mozilla.png).
+    - it looks like bug of Chrome browser itself. If the classic scroll bar displayed then issue is not present.
   
 # Credits  
 
@@ -215,5 +247,5 @@ I used following colours:
 ## Credits for images used
   - [Favicon creator tool](https://realfavicongenerator.net/)
   - [Logo](https://pixabay.com/illustrations/vintage-sign-nautical-ship-compass-1064142/)Image by Oberholster Venita from Pixabay
-  - [Background](<a href='https://www.freepik.com/vectors/background'>Background vector created by rawpixel.com - www.freepik.com</a>)
-  
+  - [Background](https://www.freepik.com/vectors/background Background vector created by rawpixel.com - www.freepik.com)
+  - [404 page background](Photo by https://unsplash.com/@nate_dumlao Nathan Dumlao)
