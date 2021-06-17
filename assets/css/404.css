@@ -43,21 +43,13 @@ body{
     font-family: "Gochi", "ROBOTO", serif;
     position: absolute;
     top: 80vh;
-    color: #000000;
+    color: #ffffff;
     font-size: 40px;
     left: 50%;
     transform: translate(-50%, 0%);
+    text-transform: uppercase;
 }
 
-/*#canvas1{*/
-/*    position: absolute;*/
-/*    top: 35%;*/
-/*    left: 50%;*/
-/*    transform: translate(-25%, -25%);*/
-/*    !*border: 5px solid black;*!*/
-/*    width: 300px;*/
-/*    height: 300px;*/
-/*}*/
 
 .container a{
     display: block;

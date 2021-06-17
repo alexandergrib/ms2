@@ -130,7 +130,7 @@ This done to keep individual section code separated for readability and keep fil
 
 # HTML/CSS validation
 - HTML validator: No errors or warnings to show.
-
+- CSS Validator: Show 1 warning (Imported style sheets are not checked in direct input and file upload modes) this just tell me that the validator doesn't check imported stylesheets(in my case, this is the google fonts import). 
 
 
 # Usability testing done by a real user
