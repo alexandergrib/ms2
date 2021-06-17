@@ -5,7 +5,8 @@ ALONG WITH THE COUNTRY CODE (e.g. athens,gr)*/
 
 
 const input = document.querySelector("#searchField");
-const msg = document.querySelector(".search-div .msg");
+const msg = document.querySelector(".search-wrapper .msg");
+
 const list = document.querySelector(".ajax-section .cities");
 
 
@@ -65,9 +66,15 @@ function handleInputData(){
             return;
         }
     }
+    //Checks if inputVal not empty
+    if (inputVal){
+        getWeather(inputVal);
+    } else {
+        //if empty call for "london" as a default data
+        getWeather('london');
+    }
 
 
-    getWeather(inputVal);
 }
 
 

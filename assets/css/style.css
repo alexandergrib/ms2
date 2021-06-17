@@ -139,6 +139,21 @@ body {
     white-space: nowrap;
 }
 
+
+/*info/error message*/
+#info--message {
+    display: block;
+    position: absolute;
+    top: 127px;
+    font-size: 20px;
+    text-align: center;
+    left: 50%;
+    transform: translate(-45%, 0px);
+    color: red;
+    width: 100%;
+}
+
+
 /*-------------------*/
 #main {
     margin-top: 5px;
@@ -441,7 +456,8 @@ body {
     width: 100%;
     padding: 30px 0;
 }
-.extra_space{
+
+.extra_space {
     padding-bottom: 10px;
 }
 
@@ -736,11 +752,11 @@ footer {
     }
 
     #info--message {
-        height: 40px;
-        font-size: 0.9em;
-        align-self: center;
+        top: 92px;
+        font-size: 15px;
         text-align: center;
-        margin-top: -5px;
+        left: 50%;
+        transform: translate(-45%, 0px);
     }
 
     #textPlaceHolder {
