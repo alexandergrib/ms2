@@ -6,19 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Local spot. Find your local info!">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-
     <!--    font awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--    bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
           integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-
     <!--    main css-->
     <link href="./assets/css/style.css" rel="stylesheet" type="text/css">
-
-
 </head>
 <body>
 
@@ -33,14 +28,13 @@
             </div>
             <!--        Search box -->
             <div class="header-wrapper-inside-right">
-
                 <div class="search-wrapper">
                     <div class="input-group search-box">
                         <label for="searchField" class="search-label-visuallyHidden">search field</label>
                         <input id="searchField"
                                class="typeahead form-control"
                                type="text"
-                               placeholder="Search for a city"
+                               placeholder="Enter city name (London, GB)"
                                name="search"
                                aria-describedby="info--message"
                                onclick="clearInputField()">
@@ -65,37 +59,30 @@
                             </div>
                         </div>
                     </div>
-                    <p class="msg" id="info--message">Please search for destination <span>(London or London, GB)</span></p>
+                    <p class="msg" id="info--message">Please search for your spot <span>(London or London, GB)</span></p>
                 </div>
-
             </div>
         </div>
     </div>
 </header>
 
-
-<!--Search place holder-->
+<!--found place name row under logo icon-->
 <div class="search-div" id="search-div">
     <div class="row justify-content-center">
         <div class="col-sm-12">
             <div id="current-city"></div>
-<!--            <p class="msg" id="info&#45;&#45;message">Please search for destination <span>(London or London, GB)</span></p>-->
         </div>
-
     </div>
-
 </div>
 
-<!--Info text placeholder-->
+<!--about website info text -->
 <div id="info-text" class="row-fluid make-center">
     <p class="col-12">Enter your location to read local news, weather report and places to visit.
     </p>
-
 </div>
 
-
-<!--whole page div wrapper-->
-<div id="main" class="container-fluid"> <!-- class hide removes whole section -->
+<!--main page div wrapper-->
+<div id="main" class="container-fluid">
     <div class="container-fluid">
         <div class="row justify-content-center">
             <!--    containter for news-->
@@ -108,7 +95,6 @@
                            title="Chicago Sky Unveil Three New Uniforms Ahead of 2021 WNBA Season" target="_blank">
                             Chicago Sky Unveil Three New Uniforms Ahead of 2021 WNBA Season
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -117,7 +103,6 @@
                            target="_blank">
                             Toddler critically wounded in suspected road-rage shooting in Chicago, police say
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -125,7 +110,6 @@
                            title="Chicago Riverwalk Opening Friday" target="_blank">
                             Chicago Riverwalk Opening Friday
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -135,32 +119,6 @@
                             Greater Chicago Food Depository awards $2.6M in new grants, expanding food access on South
                             and West Sides
                         </a>
-
-                    </li>
-                    <li class="article">
-                        <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-                        <a href="https://www.npr.org/2021/04/09/985494970/amanda-williams-how-can-color-bring-new-life-to-old-houses"
-                           title="Amanda Williams: How Can Color Bring New Life To Old Houses?" target="_blank">
-                            Amanda Williams: How Can Color Bring New Life To Old Houses?
-                        </a>
-
-                    </li>
-                    <li class="article">
-                        <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-                        <a href="https://chicago.cbslocal.com/2021/04/09/paws-pet-of-the-week-elon/"
-                           title="PAWS Pet Of The Week: Elon" target="_blank">
-                            PAWS Pet Of The Week: Elon
-                        </a>
-
-                    </li>
-                    <li class="article">
-                        <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-                        <a href="https://www.wpxi.com/news/trending/toddler-critically-wounded-suspected-road-rage-shooting-chicago-police-say/WPY4PILQJFDOLBSXULZBHMGYJ4/"
-                           title="Toddler critically wounded in suspected road-rage shooting in Chicago, police say"
-                           target="_blank">
-                            Toddler critically wounded in suspected road-rage shooting in Chicago, police say
-                        </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -169,7 +127,6 @@
                            target="_blank">
                             COVID-19 vaccine Q &amp; A: Submit your questions for Chicago Dept. of Public Health
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -178,7 +135,6 @@
                            target="_blank">
                             Democratic Illinois governor, Chicago mayor booed at White Sox home opener
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -187,7 +143,6 @@
                            target="_blank">
                             Toddler critically wounded in suspected road-rage shooting in Chicago, police say
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -195,7 +150,6 @@
                            title="Here's what you need to know about COVID-19 vaccines in Illinois" target="_blank">
                             Here's what you need to know about COVID-19 vaccines in Illinois
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -205,7 +159,6 @@
                             Metra Adding More Trains As People Start Returning To Office, But Roll Toward Normalcy Is
                             Slow
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -213,7 +166,6 @@
                            title="Star Trek planning a mission to Chicago in 2022" target="_blank">
                             Star Trek planning a mission to Chicago in 2022
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -222,7 +174,6 @@
                            target="_blank">
                             Chicago Mayor Lightfoot And Gov. Pritzker Receive Boos At White Sox Game
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -230,7 +181,6 @@
                            title="1-year-old boy shot in head in road rage incident in Chicago" target="_blank">
                             1-year-old boy shot in head in road rage incident in Chicago
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -239,7 +189,6 @@
                            target="_blank">
                             Chicago police searching for second gunman in road rage shooting of 21-month-old child
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -247,7 +196,6 @@
                            title="Chicago Fire defeat Forward Madison 2-0 in preseason match" target="_blank">
                             Chicago Fire defeat Forward Madison 2-0 in preseason match
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -257,7 +205,6 @@
                             How Chicago P.D.'s Upton Will Handle Halstead's Big Confession And Complicated New Case,
                             According To Tracy Spiridakos
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -265,7 +212,6 @@
                            title="Harris: Vaccinated can be 'role models' for friends, family" target="_blank">
                             Harris: Vaccinated can be 'role models' for friends, family
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -273,7 +219,6 @@
                            title="Photos: New DePaul coach Tony Stubblefield" target="_blank">
                             Photos: New DePaul coach Tony Stubblefield
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -283,7 +228,6 @@
                             Our Chicago: Town hall with Chicago religious leaders to address trust, safety around
                             COVID-19 vaccines
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -293,7 +237,6 @@
                             Our Chicago: Town hall with Chicago religious leaders address trust, safety around COVID-19
                             vaccines
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -303,7 +246,6 @@
                             Our Chicago: Town hall with Chicago religious leaders addresses trust, safety around
                             COVID-19 vaccines
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -311,7 +253,6 @@
                            title="Photos: New Loyola coach Drew Valentine" target="_blank">
                             Photos: New Loyola coach Drew Valentine
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -319,7 +260,6 @@
                            title="Searching for Dark Matter with a Superconducting Qubit" target="_blank">
                             Searching for Dark Matter with a Superconducting Qubit
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -327,7 +267,6 @@
                            title="How to Invest in the NYSE Chicago Exchange" target="_blank">
                             How to Invest in the NYSE Chicago Exchange
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -335,7 +274,6 @@
                            title="Proof Kim Kardashian and Chicago West Are Twins " target="_blank">
                             Proof Kim Kardashian and Chicago West Are Twins "Forever" in Adorable New Photos
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -343,7 +281,6 @@
                            title="A Windy City Welcome: Rethinking Hospitality Design in Chicago" target="_blank">
                             A Windy City Welcome: Rethinking Hospitality Design in Chicago
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -352,7 +289,6 @@
                            target="_blank">
                             Nation's first quantum startup accelerator, Duality, launches at UChicago's Polsky and CQE
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -360,7 +296,6 @@
                            title="Chicago plays New England in season opener" target="_blank">
                             Chicago plays New England in season opener
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -369,7 +304,6 @@
                            target="_blank">
                             How to Watch White Sox, Bulls, Blackhawks Games on NBC Sports Chicago Plus 2
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -378,7 +312,6 @@
                            target="_blank">
                             Chicago Fire vs. Forward Madison: Preseason Gameday Guide and How to Watch
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -386,7 +319,6 @@
                            title="Feder: Kontender network brings more sports talk to Chicago" target="_blank">
                             Feder: Kontender network brings more sports talk to Chicago
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -396,7 +328,6 @@
                             The Signature Six: Hospitality is poised for a rebound, FuboTV is betting on Chicago, and
                             more…
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -405,7 +336,6 @@
                            target="_blank">
                             Mayor Lightfoot Opens South Side Library, Announces Start Of ‘One Summer Chicago'
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -414,7 +344,6 @@
                            target="_blank">
                             Chicago's Hidden Sushi ‘Speakeasy' Reopens With New Take on Intimate Dining
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -424,7 +353,6 @@
                             Chicago Fire Department Rings Bell To Mark The Anniversary Of Death Of Mario Araujo, First
                             CFD Member To Die Of COVID-19
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -433,7 +361,6 @@
                            target="_blank">
                             Toddler critically wounded in suspected road-rage shooting in Chicago, police say
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -445,36 +372,10 @@
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-                        <a href="https://www.dailyherald.com/business/20210407/meet-chicago-northwest-president-announces-departure-"
-                           title="Meet Chicago Northwest president announces departure" target="_blank">
-                            Meet Chicago Northwest president announces departure
-                        </a>
-
-                    </li>
-                    <li class="article">
-                        <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-                        <a href="https://www.wftv.com/news/trending/toddler-critically-wounded-suspected-road-rage-shooting-chicago-police-say/WPY4PILQJFDOLBSXULZBHMGYJ4/"
-                           title="Toddler critically wounded in suspected road-rage shooting in Chicago, police say"
-                           target="_blank">
-                            Toddler critically wounded in suspected road-rage shooting in Chicago, police say
-                        </a>
-
-                    </li>
-                    <li class="article">
-                        <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-                        <a href="https://chicago.suntimes.com/entertainment-and-culture/2021/4/9/22375561/chicago-riverwalk-vendors-phased-reopening"
-                           title="Riverwalk vendors begin phased reopening Friday" target="_blank">
-                            Riverwalk vendors begin phased reopening Friday
-                        </a>
-
-                    </li>
-                    <li class="article">
-                        <i class="fa fa-newspaper-o" aria-hidden="true"></i>
                         <a href="https://www.breitbart.com/politics/2021/04/11/60-expressway-shootings-in-mayor-lightfoots-chicago/"
                            title="60 Expressway Shootings Across Mayor Lightfoot's Chicago" target="_blank">
                             60 Expressway Shootings Across Mayor Lightfoot's Chicago
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -482,7 +383,6 @@
                            title="60 Expressway Shootings in Mayor Lightfoot's Chicago" target="_blank">
                             60 Expressway Shootings in Mayor Lightfoot's Chicago
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -491,7 +391,6 @@
                            target="_blank">
                             New local vaccine initiative aims to work with faith leaders as vaccination rates rise
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -499,7 +398,6 @@
                            title="Chicago Public Library expands Sunday hours, opens Altgeld branch" target="_blank">
                             Chicago Public Library expands Sunday hours, opens Altgeld branch
                         </a>
-
                     </li>
                     <li class="article">
                         <i class="fa fa-newspaper-o" aria-hidden="true"></i>
@@ -513,7 +411,6 @@
                 </ul>
                 <i class="fa fa-arrow-down" aria-hidden="true"></i>
             </div>
-
             <!--container for weather-->
             <div class="col-auto col-md-6" id="weather">
                 <div class="row ">
@@ -569,6 +466,7 @@
                             <div class="row justify-content-center">
                                 <h3 class="col-12" id="covid_local_hdr">COVID-19 in United Kingdom</h3>
                             </div>
+                            <!-- container with COVID-19 info table-->
                             <div class="row justify-content-center table_style_wrapper">
                                 <div class="col">
                                     <table class="table_style">
@@ -586,16 +484,13 @@
                                         </tr>
                                     </table>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
-
     <!--container for things to do-->
     <div class="container-fluid" id="toDoThings">
         <div class="row">
@@ -622,7 +517,6 @@
     <div id="panel"></div>
     <!--The div element for the map -->
     <div id="map"></div>
-
 </div>
 <!--footer-->
 <footer>
@@ -634,14 +528,13 @@
         </a>
     </div>
 </footer>
-
+<!--Scripts loading section-->
 <!--Bootstrap and jquery required files-->
 <script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
 <script src="assets/js/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
-
 <!--Autocompletion script. This script created by twitter typeahead-->
 <script src="assets/js/typeahead.bundle.js"></script>
 <!--Script containing city names used in autocompletion-->
@@ -661,7 +554,5 @@
 <script async
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8QVgU4Ry5cuU67JUZVg7cnIOzInvCt0c&libraries=places&callback=initMap">
 </script>
-
-
 </body>
 </html>

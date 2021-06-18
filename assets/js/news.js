@@ -14,44 +14,30 @@ function fetchNews(searchQuestion) {
         });
 }
 
-
-
 function populateNews(data) {
-
     const newsList = document.querySelector("#news .news--class");
     const articles = data.articles;
-
     if (document.querySelector(".news--class").getElementsByTagName('li')) {
         document.querySelector(".news--class").innerHTML = "";
     }
     if (articles.length > 0) {
         for (let i = 0; i < articles.length; i++) {
-            let markup = `
-                <i class="fa fa-newspaper-o" aria-hidden="true"></i>                
+            let markup = `<i class="fa fa-newspaper-o" aria-hidden="true"></i>                
                 <a href="${articles[i].link}" title="${articles[i].title}" target="_blank">
-                    ${articles[i].title}
-                </a>
-                
-              `;
+                    ${articles[i].title}</a>`;
             //Executes on first search for the city
             const li = document.createElement("li");
             li.classList.add("article");
-
             li.innerHTML = markup;
             newsList.appendChild(li);
         }
     } else {
-        let markup = `
-                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                <strong>No news found, please try again later.</strong>
-                
-              `;
+        let markup = `<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                <strong>No news found, please try again later.</strong>`;
         //Executes on first search for the city
         const li = document.createElement("li");
         li.classList.add("article");
-
         li.innerHTML = markup;
         newsList.appendChild(li);
     }
-
 }

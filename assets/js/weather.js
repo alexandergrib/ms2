@@ -5,7 +5,6 @@ let coordinates;
 
 //this function called in main.js L71
 function getWeather(inputVal) {
-
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=metric`;
     fetch(url)
         .then(response => response.json())
@@ -13,33 +12,20 @@ function getWeather(inputVal) {
         .catch(() => {
             msg.textContent = "Please search for a valid city.";
         });
-
     msg.textContent = "";
-
 }
-
 
 function getWeatherByCoordinates(lat, lon) {
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
     fetch(url)
         .then(response => response.json())
         .then(data => weatherHandler(data));
-
     msg.textContent = "";
-
-
 }
 
-
 function weatherHandler(data) {
-
     const {coord, main, name, sys, weather} = data;
-
-
     const icon = `https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`;
-
-
-
     let temperature = main.temp;
     let tempIndicator = "C";
     //Check if weather item exists and replaces itself with new data
@@ -54,18 +40,12 @@ function weatherHandler(data) {
                 </h2>
                 <div class="city-temp">${Math.round(temperature)}<sup>°${tempIndicator}</sup></div>
                 <figure>
-                  <img class="city-icon" src="${icon}" alt="${
-            weather[0].description
-        }">
+                  <img class="city-icon" src="${icon}" alt="${weather[0].description}">
                   <figcaption>${weather[0].description}</figcaption>
-                </figure>
-              `;
+                </figure>`;
         li.innerHTML = markup;
-
         listItem.parentNode.replaceChild(li, listItem);
-
     } else {
-
         //Executes on first search for the city
         const li = document.createElement("li");
         li.classList.add("city");
@@ -76,40 +56,29 @@ function weatherHandler(data) {
                 </h2>
                 <div class="city-temp">${Math.round(temperature)}<sup>°${tempIndicator}</sup></div>
                 <figure>
-                  <img class="city-icon" src="${icon}" alt="${
-            weather[0].description
-        }">
+                  <img class="city-icon" src="${icon}" alt="${weather[0].description}">
                   <figcaption>${weather[0].description}</figcaption>
-                </figure>
-              `;
+                </figure>`;
         li.innerHTML = markup;
-
-
         list.appendChild(li);
     }
-
-
     document.getElementById("textPlaceHolder").innerHTML = `<p>
          Your location: ${name}, ${coord.lat}, ${coord.lon} 
-</p>            
-`;  //Display your search query
-
+        </p>`;
+    //Display your search query
     document.getElementById("current-city").innerHTML = `<div>         
          <span class="ribbon-temp">${Math.round(temperature)}°${tempIndicator}</span>              
          <span><img class="ribbon-weather-icon" src="${icon}" alt="${weather[0].description}"></span>
          <span>${name}, ${sys.country}</span>       
-</div>            
-`;
+        </div>`;
     //post coordinates
     coordinates = {
         lat: coord.lat,
         lng: coord.lon
     };
-
     getNearbyPlaces(coordinates, 'restaurants');  //search for nearby places with keyword
     fetchNews(name);   //Call news API and pass city name
     getCovidInfo(sys.country); //Calls covid API covid.js
-
 }
 
 //Things TO DO ribbon handler
@@ -117,8 +86,6 @@ function searchOnclick(keyword) {
     let restaurants = document.getElementById("restaurants");
     let hotels = document.getElementById("hotels");
     let entertainment = document.getElementById("entertainment");
-
-
     getNearbyPlaces(coordinates, keyword);
     if (keyword === "restaurants") {
         restaurants.classList.add("mainColor");

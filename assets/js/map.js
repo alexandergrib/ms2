@@ -14,8 +14,6 @@ function initMap() {
     bounds = new google.maps.LatLngBounds();
     infoWindow = new google.maps.InfoWindow();
     currentInfoWindow = infoWindow;
-
-
     infoPane = document.getElementById('panel');
 
     // Try HTML5 geolocation
@@ -30,7 +28,6 @@ function initMap() {
                 zoom: 10
             });
             bounds.extend(pos);
-
             infoWindow.setPosition(pos);
             infoWindow.setContent('You are here');
             infoWindow.open(map);
@@ -39,10 +36,8 @@ function initMap() {
             // Call Places Nearby Search on user's location
             getNearbyPlaces(pos, 'restaurants');
 
-
             //Call weather API
             getWeatherByCoordinates(pos.lat, pos.lng);
-
 
         }, () => {
             // Browser supports geolocation, but user has denied permission
@@ -50,7 +45,6 @@ function initMap() {
         });
     } else {
         // Browser doesn't support geolocation
-
         handleLocationError(false, infoWindow);
     }
 }
@@ -63,7 +57,6 @@ function handleLocationError(browserHasGeolocation, infoWindow) {
         center: pos,
         zoom: 10
     });
-
     // Display an InfoWindow at the map center
     infoWindow.setPosition(pos);
     infoWindow.setContent(browserHasGeolocation ?
@@ -71,14 +64,9 @@ function handleLocationError(browserHasGeolocation, infoWindow) {
         'Error: Your browser doesn\'t support geolocation.');
     infoWindow.open(map);
     currentInfoWindow = infoWindow;
-
     // Call Places Nearby Search on the default location
     getNearbyPlaces(pos, 'restaurants');
-
-
-
 }
-
 
 // Perform a Places Nearby Search Request
 function getNearbyPlaces(position, keyword) {
@@ -93,11 +81,9 @@ function getNearbyPlaces(position, keyword) {
         zoom: 10
     });
     map.setCenter(position);
-
     service = new google.maps.places.PlacesService(map);
     service.nearbySearch(request, nearbyCallback);
 }
-
 
 // Handle the results (up to 20) of the Nearby Search
 function nearbyCallback(results, status) {
@@ -114,8 +100,6 @@ function createMarkers(places) {
             map: map,
             title: place.name
         });
-
-
         // Add click listener to each marker
         google.maps.event.addListener(marker, 'click', () => {
             let request = {
@@ -123,7 +107,6 @@ function createMarkers(places) {
                 fields: ['name', 'formatted_address', 'geometry', 'rating',
                     'website', 'photos']
             };
-
             /* Only fetch the details of a place when the user clicks on a marker.
              * If we fetch the details for all place results as soon as we get
              * the search response, we will hit API rate limits. */
@@ -131,17 +114,13 @@ function createMarkers(places) {
                 showDetails(placeResult, marker, status);
             });
         });
-
         // Adjust the map bounds to include the location of this marker
         bounds.extend(place.geometry.location);
     });
     /* Once all the markers have been placed, adjust the bounds of the map to
      * show all the markers within the visible area. */
-
-
     map.fitBounds(bounds);
 }
-
 
 // Builds an InfoWindow to display details above the marker
 function showDetails(placeResult, marker, status) {
@@ -151,7 +130,6 @@ function showDetails(placeResult, marker, status) {
         if (placeResult.rating) rating = placeResult.rating;
         placeInfowindow.setContent('<div class="marker--div"><strong>' + placeResult.name +
             '</strong><br>' + 'Rating: ' + rating + '</div>');
-
         placeInfowindow.open(marker.map, marker);
         currentInfoWindow.close();
         currentInfoWindow = placeInfowindow;
@@ -161,31 +139,25 @@ function showDetails(placeResult, marker, status) {
     }
 }
 
-
 // Displays place details in a sidebar
 function showPanel(placeResult) {
     // If infoPane is already open, close it
     if (infoPane.classList.contains("open")) {
         infoPane.classList.remove("open");
     }
-
     // Clear the previous details
     while (infoPane.lastChild) {
         infoPane.removeChild(infoPane.lastChild);
     }
-
     /*  Display a Place Photo with the Place Details */
     // Add the primary photo, if there is one
     if (placeResult.photos) {
         let firstPhoto = placeResult.photos[0];
-
         let photo = document.createElement('img');
         photo.classList.add('hero');
         photo.src = firstPhoto.getUrl();
-
         infoPane.appendChild(photo);
     }
-
     // Add place details with text formatting
     let name = document.createElement('h1');
     name.classList.add('place');
