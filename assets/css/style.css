@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Armata&family=Gochi+Hand&family=Grandstander:ital,wght@1,200&family=Reenie+Beanie&display=swap');
-
+html{
+    overflow-x: hidden;
+}
 body {
     background-color: #dcf0ff;
     overflow-x: hidden;
@@ -367,7 +369,7 @@ body {
     font-size: 2.8em;
     opacity: unset !important;
     color: #211187;
-    text-shadow: 5px 5px #bed5e8;
+    text-shadow: 5px 5px 4px #bed5e8;
     font-style: italic;
 }
 
@@ -709,6 +711,9 @@ footer {
 @media only screen and (max-width: 768px) {
     #info-text p {
         font-size: 2.5em;
+    }
+    .article a {
+    font-size: 1.2em;
     }
 
     #news {

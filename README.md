@@ -1,10 +1,12 @@
 
 
-# Milestone 2 project  
+# Milestone 2 project
+
+`To open links please use CTR+click to open in the new window.`
   
 ## [Live website on github pages](https://alexandergrib.github.io/ms2/)  
   
-![Responsive display](assets/img/responsive.PNG)
+![Responsive display](assets/img/responsive.png)
 
 ---
 
@@ -33,8 +35,6 @@
   * [Credits for images used](#credits-for-images-used)
 
 
-
-
 # UX  
   
 ## Website owner business goals  
@@ -47,9 +47,7 @@
 -   My goal is to provide the user all features on desktop and mobile devices
 -	Website user should have a possibility to switch between Centigrade and Fahrenheit for their convenience 
 -	Website user should be able to click on the "pins" displayed on map to get more info about their place of interest
--	Website user should have a possibility to switch between restaurants, things to do and stay(hotels) after results displayed 
-
-
+-	Website user should have a possibility to switch between restaurants, things to do and stay(hotels) after results displayed
 
 ## User goals  
 -	As a user I want to be able to search for the required destination and be able to get relevant information 
@@ -59,16 +57,7 @@
 -   As a user I want to be able to see current and up to date COVID-19 information in the selected destination  
 -	As a user I want to be able to see news in the selected destination  
 -	As a user I want to be able to see places to stay, eat, or points of interests in the selected destination  
-  
-  
  
-
-  
-  
-
-
-
-
 # Structure of the website  
 
 The website consists one page with the search field and search button. With brief instructions what this website is about.  
@@ -81,7 +70,7 @@ To clearly display which one is active now, “C” or “F” will show next to
 The main page is split into 3 different sections:
 1.	News section utilizes news API to display general news for the searched location
 2.	Weather section is divided into 2 subsections:
-    - First section displays current temperature and the icon of the current weather (clouds, sun, rain, etc.)
+    - First section displays current temperature, and the icon of the current weather (clouds, sun, rain, etc.)
     - Secondary section displays COVID-19 information of global statistics and local information based on searched country. 
 3.	“Things to do” section located under first two and occupying full screen width, consists of three clickable tabs.
 4.	Last Section consists of the map with pins displayed based on selection made in section 3(things to do). 
@@ -89,22 +78,14 @@ The main page is split into 3 different sections:
     - A click on pin opens a ribbon displayed over map with place information (Business name, Business address, and Business website).
 
 5. Bottom of the page contains a footer with contact site owner information and icon for the GitHub repository.
-  
 
-# logic of website
+# Logic of website
 
 On the first load browser tries to get user location with a banner requesting user to allow to use their location.
 If allowed, browser will pass detected coordinates to weather API, which will get weather information and city name from API for the coordinates received.
 Weather API will then call News API and pass over city name from weather API response to fetch news. Then weather API calls google Places API to display places around current location. And send request to covid19API to get the latest data about COVID-19 statistics.
 
 If user reject detection location from the browser, site will load "generic/static" information for the city of London. Then after loading, the website will wait for the user to make a search, to update weather, news, COVID-19, and map information.
-
-
-
-
-
-
-
 
 ##Adaptivity
 Website adapts to screen size by rearranging sections and adjusting their width to fit into smaller screen. Minimum screen size supported is 300px wide.
@@ -121,26 +102,21 @@ On mobile devices and other small screens each section occupies full width of th
 Wireframes can be found here: 
 - [Desktop](wirefames/wireframes/Desktop.png)
 - [Mobile](wirefames/wireframes/Mobile.png)
-To open links please use CTR+click to open in the new window.
+
   ---
+
 # Surface  
 ## Fonts  
 I decided to use Google Roboto font and Sans-Serif as a fallback font.  
-I think Roboto font is a most used font across whole internet and it would not look too different for the user coming from any website they used to use.  This will create a more familiar feeling for the users.
+I think Roboto font is a most used font across whole internet, and it would not look too different for the user coming from any website they used to use.  This will create a more familiar feeling for the users.
+
 ## Colors  
 I used following colours:  
-- Body background color: #8F8F8F26
-- News section color: #97A1B5
-- Weather section background: #6A7488 
-- menu color: #4DA5EF7F  
-- Info section color: #FBFBFB
-- Text color: #25383F  
-
-    
-## Images    
-## Text  
-
-
+- Body background color: #6AC4FF
+- News section color: #D8EDFE
+- Weather section background: #D8EDFE
+- menu color: #6AC4FF
+- Info section color: #4da5ef80
 
 # Features    
 ## Existing Features    
@@ -153,13 +129,13 @@ I used following colours:
 -	Weather section located next to the news section and occupying 60% of the screen
 -	“Things to do” section occupying 100% of the width located below weather and news section
 -	After “things to do”, is a map section with location pins displayed on the map. Location for the pins taken from “things to do” section and should be updated on user choice of selection in “things to do” section.
+
 ### Footer
 -	 Footer containing website owner information
 
 ## Features  left to implement
   - Add forecasted weather to show 7 days forecast
   - Add selector which user can expand to show hourly forecast by clicking daily forecast.
-
  
 # Technologies used  
 *	HTML   
@@ -178,18 +154,16 @@ I used following colours:
 # Testing
 [Testing.md](testing.md)
 
-
 # Deployment
 
 ## Deploying on GitHub Pages
- 1.  Log into  [GitHub](https://github.com/)  or  [create an account](https://github.com/).
+1.  Log into  [GitHub](https://github.com/)  or  [create an account](https://github.com/).
 2.  Locate the  [GitHub Repository](https://github.com/alexandergrib/ms1).
 3.  At the top of the repository, select Settings from the menu items.
 4.  Scroll down the Settings page to the "GitHub Pages" section.
 5.  Under "Source" click the drop-down menu labelled "None" and select "Master Branch".
 6.  Upon selection, the page will automatically refresh meaning that the website is now deployed.
 7.  Scroll back down to the "GitHub Pages" section to retrieve the deployed link.
-
 
 ## Forking the Repository
 
@@ -208,9 +182,7 @@ I used following colours:
 6.  Change the current working directory to the location where you want the cloned directory to be made.    
 7.  Type 'git clone', and then paste the URL you copied in Step 3.    
     > git clone  [https://github.com/USERNAME/REPOSITORY](https://github.com/USERNAME/REPOSITORY)
-        
 8.  Press Enter. Your local clone will be created.
-    
 
 Further reading and troubleshooting on cloning a repository from GitHub  [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository). 
 
@@ -221,7 +193,6 @@ Further reading and troubleshooting on cloning a repository from GitHub  [here](
 - News API free version worked only on localhost, to use it online I had to upgrade to paid account.
     - switched API to Rapidapi.com. Tried to use Google search news, but response time was 3-4 seconds, this caused significant delay after page loaded and populating news feed.
     - Switched to Newscatcher API from Rapidapi.com this helped to decrease response time down to 200-300ms.
-
 
 - Console error (Failed to load resource: the server responded with a status of 403 ())
     - Error coming from google API itself, after page refresh error disappear
@@ -234,9 +205,18 @@ Further reading and troubleshooting on cloning a repository from GitHub  [here](
     
 - Gap is visible between edge of the page and side of the browser where scroll located ([Chrome only](assets/img/testing_img/gap_chrome.png)) and scroll bar itself styled by the browser, there is no gap visible in [mozilla browser](assets/img/testing_img/no_gap_mozilla.png).
     - it looks like bug of Chrome browser itself. If the classic scroll bar displayed then issue is not present.
-  
-# Credits  
+ 
 
+- When I tried using import/export functions I was getting [console errors](assets/img/testing_img/import_errors.png) and imported function was not working.
+    - To solve this issue i decided to take different approach(maybe bit more challenging for future code maintenance) recommended by tutor assistant.
+    - I separated files and added them in HTML in specific order, where main.js file loads last allowing other files to load fist. This done this way to preload functions into computer memory which are then called later in main.js file.
+ 
+# Credits
+
+## Acknowledgements
+1. My mentor for his support and input.
+2. Tutor support team for their helpful advice
+3. My peers on slack for their generosity in sharing their knowledge and experience.
 
 ## Credits for text and modules
   - [Weather api](https://webdesign.tutsplus.com/tutorials/build-a-simple-weather-app-with-vanilla-javascript--cms-33893)

@@ -1,18 +1,19 @@
 /*jshint esversion: 6 */
-/*SUBSCRIBE HERE FOR API KEY: https://home.openweathermap.org/users/sign_up*/
+
 const apiKey = "888a73a8b27eb54c8d1ba56ed02ec435";
 let coordinates;
+const message = document.querySelector(".search-wrapper .msg");
 
-//this function called in main.js L71
+
 function getWeather(inputVal) {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=metric`;
     fetch(url)
         .then(response => response.json())
         .then(data => weatherHandler(data))
         .catch(() => {
-            msg.textContent = "Please search for a valid city.";
+            message.textContent = "Please search for a valid city.";
         });
-    msg.textContent = "";
+    message.textContent = "";
 }
 
 function getWeatherByCoordinates(lat, lon) {
@@ -20,7 +21,7 @@ function getWeatherByCoordinates(lat, lon) {
     fetch(url)
         .then(response => response.json())
         .then(data => weatherHandler(data));
-    msg.textContent = "";
+    message.textContent = "";
 }
 
 function weatherHandler(data) {
@@ -71,18 +72,17 @@ function weatherHandler(data) {
          <span><img class="ribbon-weather-icon" src="${icon}" alt="${weather[0].description}"></span>
          <span>${name}, ${sys.country}</span>       
         </div>`;
-    //post coordinates
     coordinates = {
         lat: coord.lat,
         lng: coord.lon
     };
-    getNearbyPlaces(coordinates, 'restaurants');  //search for nearby places with keyword
-    fetchNews(name);   //Call news API and pass city name
-    getCovidInfo(sys.country); //Calls covid API covid.js
+    getNearbyPlaces(coordinates, 'restaurants');
+    fetchNews(name);
+    getCovidInfo(sys.country);
 }
 
 //Things TO DO ribbon handler
-function searchOnclick(keyword) {
+function searchOnClick(keyword) {
     let restaurants = document.getElementById("restaurants");
     let hotels = document.getElementById("hotels");
     let entertainment = document.getElementById("entertainment");

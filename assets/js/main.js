@@ -7,7 +7,6 @@ ALONG WITH THE COUNTRY CODE (e.g. athens,gr)*/
 const input = document.querySelector("#searchField");
 const msg = document.querySelector(".search-wrapper .msg");
 const list = document.querySelector(".ajax-section .cities");
-
 let temperature;
 let tempIndicator;
 
@@ -15,7 +14,6 @@ function clearInputField() {
     input.value = '';
 }
 
-//listen to enter key press
 input.addEventListener("keyup", function (event) {
     event.preventDefault();
     if (event.keyCode === 13) {
@@ -23,7 +21,6 @@ input.addEventListener("keyup", function (event) {
     }
 });
 
-//format input text
 function handleInputData() {
     let text = input.value;
     let inputVal = text.replace(/,\s+/g, ',');  //uses regex to fix formatting, if entered (city, country) removes space after ","
@@ -57,7 +54,7 @@ function handleInputData() {
             return;
         }
     }
-    //Checks if inputVal not empty
+    //Checks if input field data empty
     if (inputVal) {
         getWeather(inputVal);
     } else {
@@ -87,11 +84,13 @@ $('#search-div2 .typeahead').typeahead({
     });
 
 //-------------switch between C and F--------------------------------//
+
 //handle click on setting-gears
 function toggleDropDownMenu() {
     let dropdownMenu = document.getElementsByClassName("dropdown-content").item(0);
     dropdownMenu.classList.toggle("show-dropdown-content");
 }
+
 //Select 'C' temperature display
 function switchToC() {
     let tempC = document.getElementById("temp-c");
@@ -111,6 +110,7 @@ function switchToC() {
     toggleDropDownMenu();
     tempIndicator.innerHTML = "°C";
 }
+
 //Select 'F' temperature display
 function switchToF() {
     let tempC = document.getElementById("temp-c");
@@ -130,8 +130,10 @@ function switchToF() {
     toggleDropDownMenu();
     tempIndicator.innerHTML = "°F";
 }
+
 // Event listener to close map side panel on click
 function closeRibbon() {
     document.getElementById("panel").classList.remove("open");
     document.getElementById("panel").innerHTML = "";
 }
+

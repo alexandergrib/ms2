@@ -32,13 +32,10 @@ function initMap() {
             infoWindow.setContent('You are here');
             infoWindow.open(map);
             map.setCenter(pos);
-
             // Call Places Nearby Search on user's location
             getNearbyPlaces(pos, 'restaurants');
-
             //Call weather API
             getWeatherByCoordinates(pos.lat, pos.lng);
-
         }, () => {
             // Browser supports geolocation, but user has denied permission
             handleLocationError(true, infoWindow);
