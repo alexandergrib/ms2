@@ -6,7 +6,7 @@
   
 ## [Live website on github pages](https://alexandergrib.github.io/ms2/)  
   
-![Responsive display](assets/img/responsive.png)
+![Responsive display](assets/img/testing_img/responsive.png)
 
 ---
 
@@ -15,25 +15,26 @@
 - [UX](#ux)
   * [Website owner business goals](#website-owner-business-goals)
   * [User goals](#user-goals)
+- [Strategy table](#Strategy-table)    
 - [Structure of the website](#structure-of-the-website)
     + [Medium size](#medium-size)
     + [Mobile screen](#mobile-screen)
+- [Logic of website](#Logic-of-website)
 - [Wireframes](#wireframes)
 - [Surface](#surface)
   * [Fonts](#fonts)
   * [Colors](#colors)
-  * [Images](#images)
-  * [Text](#text)
 - [Features](#features)
+- [Languages Used](#Languages-Used)  
 - [Technologies used](#technologies-used)
 - [Testing](#testing)
-- [Site logic](#site-logic)
 - [Deployment](#deployment)
 - [Problems encountered:](#problems-encountered)
 - [Credits](#credits)
   * [Credits for text and modules](#credits-for-text-and-modules)
   * [Credits for images used](#credits-for-images-used)
 
+---
 
 # UX  
   
@@ -58,6 +59,24 @@
 -	As a user I want to be able to see news in the selected destination  
 -	As a user I want to be able to see places to stay, eat, or points of interests in the selected destination  
  
+
+# Strategy table
+
+| | Features | Importance  | Viability |
+|:---:|---|:---:|:---:|
+|1|Loaction  search|5|5 |
+|2|Loaction  search|5|5|
+|3|Location to be identified automatically|4|5|
+|4|Choose units to display|4|5|
+|5|Current weather|5|5|
+|6|COVID-19 information|4|5|
+|7|News|5|5|
+|8|Places to stay, eat, or points of interests|4|4|
+|9|Map|4|4|
+
+As you can see all the stated features have a high Importance and Viability score so will be included in the project.
+
+
 # Structure of the website  
 
 The website consists one page with the search field and search button. With brief instructions what this website is about.  
@@ -87,7 +106,7 @@ Weather API will then call News API and pass over city name from weather API res
 
 If user reject detection location from the browser, site will load "generic/static" information for the city of London. Then after loading, the website will wait for the user to make a search, to update weather, news, COVID-19, and map information.
 
-##Adaptivity
+## Adaptivity
 Website adapts to screen size by rearranging sections and adjusting their width to fit into smaller screen. Minimum screen size supported is 300px wide.
 
 ### Medium size
@@ -116,7 +135,7 @@ I used following colours:
 - News section color: #D8EDFE
 - Weather section background: #D8EDFE
 - menu color: #6AC4FF
-- Info section color: #4da5ef80
+- Info section color: #4DA5EF80
 
 # Features    
 ## Existing Features    
@@ -136,20 +155,38 @@ I used following colours:
 ## Features  left to implement
   - Add forecasted weather to show 7 days forecast
   - Add selector which user can expand to show hourly forecast by clicking daily forecast.
+  - Create filter to sort places results by categories (Food: café, restaurants, pubs, ...etc), and by user rating.
+  - Create feature 'Navigate to selected place on map'
  
-# Technologies used  
+# Languages Used
 *	HTML   
 *	Javascript
-*   Jquery
-*	Bootstrap  
-*	Fontawesome  
-*	Google API    
-*	Github  
-*	Git  
-*	Balsamiq  
-*   RapidApi
-*	[Trello](https://trello.com/b/fu6IEy31/ms2-prject) for KANBAN project organizing
 *	CSS  
+*   Jquery
+
+
+# Technologies used  
+*	Bootstrap
+     - Bootstrap was used to assist with the responsiveness and styling of the website.
+*	Fontawesome  
+     - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
+*	Google API  
+     - Was used to create and update map with geolocation pins.
+*	Github
+     -GitHub is used to store the projects code after being pushed from Git.
+*	Git  
+     - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+*	Balsamiq  
+     - Balsamiq was used to create the wireframes during the design process.
+*   Photoshop:
+     - Photoshop was used to create the logo, resizing and editing images for the website.    
+*   RapidApi
+    - Rapid API was used to talk to the API and receive required data.
+*	[Trello](https://trello.com/b/fu6IEy31/ms2-prject) 
+     - Was used for KANBAN project organizing
+* Chrome/Mozilla developers tools
+    - Extensively used to trace styling issues and for trying new features 
+
   
 # Testing
 [Testing.md](testing.md)
@@ -187,29 +224,30 @@ I used following colours:
 Further reading and troubleshooting on cloning a repository from GitHub  [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository). 
 
 # Problems encountered: 
-- After searching for place map did not center itself to that selected location
+- After searching for place map did not center itself to selected location
   - Fixed by setting new boundaries instead of extending previous (bounds = new google.maps.LatLngBounds();) 
 
 - News API free version worked only on localhost, to use it online I had to upgrade to paid account.
     - switched API to Rapidapi.com. Tried to use Google search news, but response time was 3-4 seconds, this caused significant delay after page loaded and populating news feed.
     - Switched to Newscatcher API from Rapidapi.com this helped to decrease response time down to 200-300ms.
 
-- Console error (Failed to load resource: the server responded with a status of 403 ())
+- Occasional console error (Failed to load resource: the server responded with a status of 403 ())
     - Error coming from google API itself, after page refresh error disappear
     
-- Sometimes warning in console shows-up about security for API
+- Occasional warning in console shows-up about security for API
     - error disappears on the page refresh
     
 - Console displaying: "Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'."
     - This issue coming from GitHub pages [more info about it here](https://github.blog/changelog/2021-04-27-github-pages-permissions-policy-interest-cohort-header-added-to-all-pages-sites/)
     
-- Gap is visible between edge of the page and side of the browser where scroll located ([Chrome only](assets/img/testing_img/gap_chrome.png)) and scroll bar itself styled by the browser, there is no gap visible in [mozilla browser](assets/img/testing_img/no_gap_mozilla.png).
+- Gap is visible between right edge of the page and side of the browser where scroll located ([Chrome only](assets/img/testing_img/gap_chrome.png)), there is no gap visible in [mozilla browser](assets/img/testing_img/no_gap_mozilla.png).
     - it looks like bug of Chrome browser itself. If the classic scroll bar displayed then issue is not present.
+    - Fixed by setting html selector in css to overfow-x: hidden
  
 
 - When I tried using import/export functions I was getting [console errors](assets/img/testing_img/import_errors.png) and imported function was not working.
-    - To solve this issue i decided to take different approach(maybe bit more challenging for future code maintenance) recommended by tutor assistant.
-    - I separated files and added them in HTML in specific order, where main.js file loads last allowing other files to load fist. This done this way to preload functions into computer memory which are then called later in main.js file.
+    - To solve this issue i decided to take different approach(maybe bit more challenging for future code maintenance), but it was recommended by tutor assistant.
+    - I separated files and added them into HTML in specific order, where main.js file loads last allowing other files to load fist. This done this way to preload functions into computer memory which are then called later in main.js file.
  
 # Credits
 
@@ -217,6 +255,7 @@ Further reading and troubleshooting on cloning a repository from GitHub  [here](
 1. My mentor for his support and input.
 2. Tutor support team for their helpful advice
 3. My peers on slack for their generosity in sharing their knowledge and experience.
+4. Code Institute for their readme [template](https://github.com/Code-Institute-Solutions/SampleREADME)
 
 ## Credits for text and modules
   - [Weather api](https://webdesign.tutsplus.com/tutorials/build-a-simple-weather-app-with-vanilla-javascript--cms-33893)
@@ -227,5 +266,5 @@ Further reading and troubleshooting on cloning a repository from GitHub  [here](
 ## Credits for images used
   - [Favicon creator tool](https://realfavicongenerator.net/)
   - [Logo](https://pixabay.com/illustrations/vintage-sign-nautical-ship-compass-1064142/)Image by Oberholster Venita from Pixabay
-  - [Background](https://www.freepik.com/vectors/background Background vector created by rawpixel.com - www.freepik.com)
-  - [404 page background](Photo by https://unsplash.com/@nate_dumlao Nathan Dumlao)
+  - [Background image](https://www.freepik.com/vectors/background) Background vector created by rawpixel.com
+  - [404 page background](https://unsplash.com/@nate_dumlao) Nathan Dumlao

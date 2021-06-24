@@ -29,9 +29,9 @@
 9. Manually enter NEW city name
     - observe suggestions/autocomplete displaying
     - select suggestion/autocomplete or finish typing and press search button or press enter
-        - new city should be displayed and weather, news, COVID-19, and map updated (there is possible error if city
-          exists in more than one country, if that a case use search with
-          country `city, (2 letter country - US, GB, RU...etc.)` )
+        - new city should be displayed and weather, news, COVID-19, and map updated (there is possible issue if city
+          exists in more than one country, it will display first match. If that a case use search with
+          country code `city, (2 letter country - US, GB, RU...etc.)` )
     - try search for non-existent city
         - Error message will be displayed
     - try search on empty field
@@ -51,7 +51,7 @@
     - error message will display ("You already know the weather for <city name>")
 11. Reset browser cash reload page, disallow to detect location automatically. Do NOT enter any city name, leave search
     field blank, and press on search button.
-    - error message will display ("Please search for a valid city.")
+    - Site will load default city (London, UK)
 
 # User Stories testing
 
@@ -81,8 +81,8 @@
 
 ## JSHINT code check
 
-All of these *.js files below show undefined variables, those variables defined one .js and get call from another .js
-file. This done to keep individual section code separated for readability and keep files sizes low for faster loading.
+All of these *.js files below show undefined variables, those variables is defined in one .js and get called from another .js
+file. This done to keep individual section of code separated for readability and keep files sizes low for faster loading.
 
 - main.js
 - map.js
@@ -91,10 +91,18 @@ file. This done to keep individual section code separated for readability and ke
 
 ## HTML/CSS validation
 
-- HTML validator: No errors or warnings to show.
-- CSS Validator: Show 1 warning (Imported style sheets are not checked in direct input and file upload modes) this just
+- HTML validator results: No errors or warnings to show.
+- CSS Validator results: Show 1 warning (Imported style sheets are not checked in direct input and file upload modes) this just
   tell me that the validator doesn't check imported stylesheets(in my case, this is the google fonts import).
+  
 
+
+## Further Testing
+- The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
+- The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
+- A large amount of testing was done to ensure that all pages were linking correctly.
+- Console output was used to test functions are working correctly during development stage. 
+- Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
 
 # Usability testing done by a real user
 
@@ -133,6 +141,8 @@ Assessment categories:
     - Would be great to see extended forecast in the weather for a chosen location, currently shows today's weather.
       Would like to see 3, 10-day forecast Ability to subscribe to the updates the website's content: example - email
       alerts when a new restaurant is added in my area.
+      
+        * `Noted for posible future website improvements`
 
 ### Case 2:
 
@@ -154,13 +164,15 @@ Assessment categories:
 4. `Stress test use cases`
 
     - Entered city "Ashgabat" and noticed covid data has not been updated.
+        * `This happens because API cannot recognize this country, or there no data in the database`
 
 5. `Strengths and weaknesses points`
 
     - Strength: friendly UI, explicit navigation, not cluttered with many filters and sorting. Easy to use.
     - Weaknesses: no search/filter within each category (hotels - it shows me hotels based on Google’s choice, restaurants - same). Would be good to have one filter where user can apply them based on his preference. 
-
+        * `Noted for posible future website improvements`
 6. ` Any potential future additions or enhancements`
     - Reduce news font size in mobile version.
     - 7 days Weather forecast, to have ability to plan entertainment.
     - Transport section, add an option how to get there from my current location.
+        * `Noted for posible future website improvements`
