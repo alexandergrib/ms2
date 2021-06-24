@@ -1,7 +1,5 @@
 /*jshint esversion: 6 */
-//api from here https://documenter.getpostman.com/view/10808728/SzS8rjbc#00030720-fae3-4c72-8aea-ad01ba17adf8
-//function called from weather.js L111
-
+//api example from here https://documenter.getpostman.com/view/10808728/SzS8rjbc#00030720-fae3-4c72-8aea-ad01ba17adf8
 
 function getCovidInfo(country) {
     const url = `https://api.covid19api.com/summary`;
