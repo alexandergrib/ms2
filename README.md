@@ -65,14 +65,13 @@
 | | Features | Importance  | Viability |
 |:---:|---|:---:|:---:|
 |1|Loaction  search|5|5 |
-|2|Loaction  search|5|5|
-|3|Location to be identified automatically|4|5|
-|4|Choose units to display|4|5|
-|5|Current weather|5|5|
-|6|COVID-19 information|4|5|
-|7|News|5|5|
-|8|Places to stay, eat, or points of interests|4|4|
-|9|Map|4|4|
+|2|Location to be identified automatically|4|5|
+|3|Choose units to display|4|5|
+|4|Current weather|5|5|
+|5|COVID-19 information|4|5|
+|6|News|5|5|
+|7|Places to stay, eat, or points of interests|4|4|
+|8|Map|4|4|
 
 As you can see all the stated features have a high Importance and Viability score so will be included in the project.
 
