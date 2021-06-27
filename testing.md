@@ -92,8 +92,8 @@ file. This done to keep individual section of code separated for readability and
 ## HTML/CSS validation
 
 - HTML validator results: No errors or warnings to show.
-- CSS Validator results: Show 1 warning (Imported style sheets are not checked in direct input and file upload modes) this just
-  tell me that the validator doesn't check imported stylesheets(in my case, this is the google fonts import).
+- CSS Validator results: Show 1 warning (Imported style sheets are not checked in direct input and file upload modes) this
+  tells me that the validator doesn't check imported stylesheets(in my case, this is the google fonts import).
   
 
 

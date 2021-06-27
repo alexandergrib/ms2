@@ -134,7 +134,7 @@ I used following colours:
 - Body background color: #6AC4FF
 - News section color: #D8EDFE
 - Weather section background: #D8EDFE
-- menu color: #6AC4FF
+- Menu color: #6AC4FF
 - Info section color: #4DA5EF80
 
 # Features    
@@ -195,7 +195,7 @@ I used following colours:
 
 ## Deploying on GitHub Pages
 1.  Log into  [GitHub](https://github.com/)  or  [create an account](https://github.com/).
-2.  Locate the  [GitHub Repository](https://github.com/alexandergrib/ms1).
+2.  Locate the  [GitHub Repository](https://github.com/alexandergrib/ms2).
 3.  At the top of the repository, select Settings from the menu items.
 4.  Scroll down the Settings page to the "GitHub Pages" section.
 5.  Under "Source" click the drop-down menu labelled "None" and select "Master Branch".
@@ -212,7 +212,7 @@ I used following colours:
 ## How to run this project within a local IDE, such as Pycharm/VScode
 
 1.  Log into  [GitHub](https://github.com/)  or  [create an account](https://github.com/).    
-2.  Locate the  [GitHub Repository](https://github.com/alexandergrib/ms1).    
+2.  Locate the  [GitHub Repository](https://github.com/alexandergrib/ms2).    
 3.  Under the repository name, click "Clone or download".    
 4.  In the Clone with HTTPs section, copy the clone URL for the repository.    
 5.  In your local IDE open the terminal.    
@@ -225,7 +225,7 @@ Further reading and troubleshooting on cloning a repository from GitHub  [here](
 
 # Problems encountered: 
 - After searching for place map did not center itself to selected location
-  - Fixed by setting new boundaries instead of extending previous (bounds = new google.maps.LatLngBounds();) 
+  - Fixed by setting up new boundaries instead of extending previous (bounds = new google.maps.LatLngBounds();) 
 
 - News API free version worked only on localhost, to use it online I had to upgrade to paid account.
     - switched API to Rapidapi.com. Tried to use Google search news, but response time was 3-4 seconds, this caused significant delay after page loaded and populating news feed.
@@ -247,7 +247,7 @@ Further reading and troubleshooting on cloning a repository from GitHub  [here](
 
 - When I tried using import/export functions I was getting [console errors](assets/img/testing_img/import_errors.png) and imported function was not working.
     - To solve this issue i decided to take different approach(maybe bit more challenging for future code maintenance), but it was recommended by tutor assistant.
-    - I separated files and added them into HTML in specific order, where main.js file loads last allowing other files to load fist. This done this way to preload functions into computer memory which are then called later in main.js file.
+      - I separated files and added them into HTML in specific order, where main.js file loads last allowing other files to load fist. This done this way to preload functions into computer memory which are then called later in main.js file.
  
 # Credits
 
