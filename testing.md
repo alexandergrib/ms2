@@ -175,4 +175,4 @@ Assessment categories:
     - Reduce news font size in mobile version.
     - 7 days Weather forecast, to have ability to plan entertainment.
     - Transport section, add an option how to get there from my current location.
-        * `Noted for posible future website improvements`
+        * `Noted for posible future website improvements`.
